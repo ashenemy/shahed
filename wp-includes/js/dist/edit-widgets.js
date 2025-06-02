@@ -851,7 +851,7 @@ function ComplementaryAreaToggle({
   });
 }
 
-;// ./node_modules/@wordpress/interface/build-module/components/complementary-area-header/index.js
+;// ./node_modules/@wordpress/interface/build-module/components/complementary-area-header.php/index.js
 /**
  * External dependencies
  */
@@ -877,7 +877,7 @@ const ComplementaryAreaHeader = ({
     ...toggleButtonProps
   });
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
-    className: dist_clsx('components-panel__header', 'interface-complementary-area-header', className),
+    className: dist_clsx('components-panel__header', 'interface-complementary-area-header.php', className),
     tabIndex: -1,
     children: [children, toggleButton]
   });
@@ -1438,7 +1438,7 @@ function InterfaceSkeleton({
   useHTMLClass('interface-interface-skeleton__html-container');
   const defaultLabels = {
     /* translators: accessibility text for the top bar landmark region. */
-    header: (0,external_wp_i18n_namespaceObject._x)('Header', 'header landmark area'),
+    header: (0,external_wp_i18n_namespaceObject._x)('Header', 'header.php landmark area'),
     /* translators: accessibility text for the content landmark region. */
     body: (0,external_wp_i18n_namespaceObject.__)('Content'),
     /* translators: accessibility text for the secondary sidebar landmark region. */
@@ -3513,7 +3513,7 @@ const redo = /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(exter
 });
 /* harmony default export */ const library_redo = (redo);
 
-;// ./node_modules/@wordpress/edit-widgets/build-module/components/header/undo-redo/undo.js
+;// ./node_modules/@wordpress/edit-widgets/build-module/components/header.php/undo-redo/undo.js
 /**
  * WordPress dependencies
  */
@@ -3547,7 +3547,7 @@ function UndoButton(props, ref) {
 }
 /* harmony default export */ const undo_redo_undo = ((0,external_wp_element_namespaceObject.forwardRef)(UndoButton));
 
-;// ./node_modules/@wordpress/edit-widgets/build-module/components/header/undo-redo/redo.js
+;// ./node_modules/@wordpress/edit-widgets/build-module/components/header.php/undo-redo/redo.js
 /**
  * WordPress dependencies
  */
@@ -3582,7 +3582,7 @@ function RedoButton(props, ref) {
 }
 /* harmony default export */ const undo_redo_redo = ((0,external_wp_element_namespaceObject.forwardRef)(RedoButton));
 
-;// ./node_modules/@wordpress/edit-widgets/build-module/components/header/document-tools/index.js
+;// ./node_modules/@wordpress/edit-widgets/build-module/components/header.php/document-tools/index.js
 /**
  * WordPress dependencies
  */
@@ -3630,13 +3630,13 @@ function DocumentTools() {
   const toggleListView = (0,external_wp_element_namespaceObject.useCallback)(() => setIsListViewOpened(!isListViewOpen), [setIsListViewOpened, isListViewOpen]);
   const toggleInserterSidebar = (0,external_wp_element_namespaceObject.useCallback)(() => setIsInserterOpened(!isInserterOpen), [setIsInserterOpened, isInserterOpen]);
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_blockEditor_namespaceObject.NavigableToolbar, {
-    className: "edit-widgets-header-toolbar",
+    className: "edit-widgets-header.php-toolbar",
     "aria-label": (0,external_wp_i18n_namespaceObject.__)('Document tools'),
     variant: "unstyled",
     children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.ToolbarItem, {
       ref: inserterSidebarToggleRef,
       as: external_wp_components_namespaceObject.Button,
-      className: "edit-widgets-header-toolbar__inserter-toggle",
+      className: "edit-widgets-header.php-toolbar__inserter-toggle",
       variant: "primary",
       isPressed: isInserterOpen,
       onMouseDown: event => {
@@ -3655,7 +3655,7 @@ function DocumentTools() {
         as: undo_redo_redo
       }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.ToolbarItem, {
         as: external_wp_components_namespaceObject.Button,
-        className: "edit-widgets-header-toolbar__list-view-toggle",
+        className: "edit-widgets-header.php-toolbar__list-view-toggle",
         icon: list_view,
         isPressed: isListViewOpen
         /* translators: button label text should, if possible, be under 16 characters. */,
@@ -4150,7 +4150,7 @@ function MoreMenu() {
   });
 }
 
-;// ./node_modules/@wordpress/edit-widgets/build-module/components/header/index.js
+;// ./node_modules/@wordpress/edit-widgets/build-module/components/header.php/index.js
 /**
  * WordPress dependencies
  */
@@ -4180,7 +4180,7 @@ function Header() {
   }), []);
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_ReactJSXRuntime_namespaceObject.Fragment, {
     children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
-      className: "edit-widgets-header",
+      className: "edit-widgets-header.php",
       children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
         className: "edit-widgets-header__navigable-toolbar-wrapper",
         children: [isLargeViewport && /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("h1", {
@@ -4461,7 +4461,7 @@ function ListViewSidebar() {
       className: "edit-widgets-editor__list-view-panel",
       onKeyDown: closeOnEscape,
       children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
-        className: "edit-widgets-editor__list-view-panel-header",
+        className: "edit-widgets-editor__list-view-panel-header.php",
         children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("strong", {
           children: (0,external_wp_i18n_namespaceObject.__)('List View')
         }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.Button, {

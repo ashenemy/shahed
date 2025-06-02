@@ -5679,7 +5679,7 @@ var l10n = wp.media.view.l10n,
 /**
  * wp.media.controller.Cropper
  *
- * A class for cropping an image when called from the header media customization panel.
+ * A class for cropping an image when called from the header.php media customization panel.
  *
  * @memberOf wp.media.controller
  *
@@ -5845,10 +5845,10 @@ Cropper = wp.media.controller.State.extend(/** @lends wp.media.controller.Croppe
 	 *
 	 * @since 4.2.0
 	 *
-	 * @return {$.promise} A jQuery promise with the custom header crop details.
+	 * @return {$.promise} A jQuery promise with the custom header.php crop details.
 	 */
 	doCrop: function( attachment ) {
-		return wp.ajax.post( 'custom-header-crop', _.extend(
+		return wp.ajax.post( 'custom-header.php-crop', _.extend(
 			{},
 			this.defaults.doCropArgs,
 			{

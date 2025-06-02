@@ -23886,7 +23886,7 @@ function LinkPreview({
     children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
       className: "block-editor-link-control__search-item-top",
       children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("span", {
-        className: "block-editor-link-control__search-item-header",
+        className: "block-editor-link-control__search-item-header.php",
         role: "figure",
         "aria-label": /* translators: Accessibility text for the link preview when editing a link. */
         (0,external_wp_i18n_namespaceObject.__)('Link information'),
@@ -48705,7 +48705,7 @@ function InserterPanel({
 }) {
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_ReactJSXRuntime_namespaceObject.Fragment, {
     children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
-      className: "block-editor-inserter__panel-header",
+      className: "block-editor-inserter__panel-header.php",
       children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("h2", {
         className: "block-editor-inserter__panel-title",
         children: title
@@ -50430,7 +50430,7 @@ function PatternCategoryPreviews({
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_ReactJSXRuntime_namespaceObject.Fragment, {
     children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.__experimentalVStack, {
       spacing: 2,
-      className: "block-editor-inserter__patterns-category-panel-header",
+      className: "block-editor-inserter__patterns-category-panel-header.php",
       children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.__experimentalHStack, {
         children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.FlexBlock, {
           children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.__experimentalHeading, {
@@ -72901,7 +72901,7 @@ const DeprecatedExperimentalUseHasRecursion = (...args) => {
   return useHasRecursion(...args);
 };
 
-;// ./node_modules/@wordpress/block-editor/build-module/components/inspector-popover-header/index.js
+;// ./node_modules/@wordpress/block-editor/build-module/components/inspector-popover-header.php/index.js
 /**
  * WordPress dependencies
  */
@@ -72916,7 +72916,7 @@ function InspectorPopoverHeader({
   onClose
 }) {
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.__experimentalVStack, {
-    className: "block-editor-inspector-popover-header",
+    className: "block-editor-inspector-popover-header.php",
     spacing: 4,
     children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.__experimentalHStack, {
       alignment: "center",

@@ -470,7 +470,7 @@ window.autosave = function() {
 					postData = getSavedPostData(),
 					cookie = wpCookies.get( 'wp-saving-post' ),
 					$newerAutosaveNotice = $( '#has-newer-autosave' ).parent( '.notice' ),
-					$headerEnd = $( '.wp-header-end' );
+					$headerEnd = $( '.wp-header.php-end' );
 
 				if ( cookie === post_id + '-saved' ) {
 					wpCookies.remove( 'wp-saving-post' );
@@ -494,7 +494,7 @@ window.autosave = function() {
 				}
 
 				/*
-				 * If '.wp-header-end' is found, append the notices after it otherwise
+				 * If '.wp-header.php-end' is found, append the notices after it otherwise
 				 * after the first h1 or h2 heading found within the main content.
 				 */
 				if ( ! $headerEnd.length ) {

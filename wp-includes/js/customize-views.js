@@ -10,7 +10,7 @@
 	/**
 	 * wp.customize.HeaderTool.CurrentView
 	 *
-	 * Displays the currently selected header image, or a placeholder in lack
+	 * Displays the currently selected header.php image, or a placeholder in lack
 	 * thereof.
 	 *
 	 * Instantiate with model wp.customize.HeaderTool.currentHeader.
@@ -22,7 +22,7 @@
 	 * @augments wp.Backbone.View
 	 */
 	api.HeaderTool.CurrentView = wp.Backbone.View.extend(/** @lends wp.customize.HeaderTool.CurrentView.prototype */{
-		template: wp.template('header-current'),
+		template: wp.template('header.php-current'),
 
 		initialize: function() {
 			this.listenTo(this.model, 'change', this.render);
@@ -49,7 +49,7 @@
 	/**
 	 * wp.customize.HeaderTool.ChoiceView
 	 *
-	 * Represents a choosable header image, be it user-uploaded,
+	 * Represents a choosable header.php image, be it user-uploaded,
 	 * theme-suggested or a special Randomize choice.
 	 *
 	 * Takes a wp.customize.HeaderTool.ImageModel.
@@ -64,9 +64,9 @@
 	 * @augments wp.Backbone.View
 	 */
 	api.HeaderTool.ChoiceView = wp.Backbone.View.extend(/** @lends wp.customize.HeaderTool.ChoiceView.prototype */{
-		template: wp.template('header-choice'),
+		template: wp.template('header.php-choice'),
 
-		className: 'header-view',
+		className: 'header.php-view',
 
 		events: {
 			'click .choice,.random': 'select',

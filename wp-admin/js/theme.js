@@ -711,7 +711,7 @@ themes.view.Details = wp.Backbone.View.extend({
 
 		// Constrain tabbing within the modal.
 		$el.on( 'keydown.wp-themes', function( event ) {
-			var $firstFocusable = $el.find( '.theme-header button:not(.disabled)' ).first(),
+			var $firstFocusable = $el.find( '.theme-header.php button:not(.disabled)' ).first(),
 				$lastFocusable = $el.find( '.theme-actions a:visible' ).last();
 
 			// Check for the Tab key.

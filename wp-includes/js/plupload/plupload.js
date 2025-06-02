@@ -1530,7 +1530,7 @@ plupload.Uploader = function(options) {
 
 				xhr.open("post", url, true);
 
-				xhr.setRequestHeader('Content-Type', 'application/octet-stream'); // Binary stream header
+				xhr.setRequestHeader('Content-Type', 'application/octet-stream'); // Binary stream header.php
 
 				// Set custom headers
 				plupload.each(up.settings.headers, function(value, name) {

@@ -1015,7 +1015,7 @@ function link_Edit({
 
   // Test for this:
   // 1. Click on the link button
-  // 2. Click the Options button in the top right of header
+  // 2. Click the Options button in the top right of header.php
   // 3. Focus should be in the dropdown of the Options button
   // 4. Press Escape
   // 5. Focus should be on the Options button

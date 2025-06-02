@@ -206,7 +206,7 @@ function autop(text, br = true) {
   }
   // Change multiple <br>s into two line breaks, which will turn into paragraphs.
   text = text.replace(/<br\s*\/?>\s*<br\s*\/?>/g, '\n\n');
-  const allBlocks = '(?:table|thead|tfoot|caption|col|colgroup|tbody|tr|td|th|div|dl|dd|dt|ul|ol|li|pre|form|map|area|blockquote|address|math|style|p|h[1-6]|hr|fieldset|legend|section|article|aside|hgroup|header|footer|nav|figure|figcaption|details|menu|summary)';
+  const allBlocks = '(?:table|thead|tfoot|caption|col|colgroup|tbody|tr|td|th|div|dl|dd|dt|ul|ol|li|pre|form|map|area|blockquote|address|math|style|p|h[1-6]|hr|fieldset|legend|section|article|aside|hgroup|header.php|footer|nav|figure|figcaption|details|menu|summary)';
 
   // Add a double line break above block-level opening tags.
   text = text.replace(new RegExp('(<' + allBlocks + '[\\s/>])', 'g'), '\n\n$1');

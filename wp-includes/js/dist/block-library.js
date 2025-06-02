@@ -9193,7 +9193,7 @@ const htmlElementMessages = {
   aside: (0,external_wp_i18n_namespaceObject.__)("The <aside> element should represent a portion of a document whose content is only indirectly related to the document's main content."),
   div: (0,external_wp_i18n_namespaceObject.__)('The <div> element should only be used if the block is a design element with no semantic meaning.'),
   footer: (0,external_wp_i18n_namespaceObject.__)('The <footer> element should represent a footer for its nearest sectioning element (e.g.: <section>, <article>, <main> etc.).'),
-  header: (0,external_wp_i18n_namespaceObject.__)('The <header> element should represent introductory content, typically a group of introductory or navigational aids.'),
+  header: (0,external_wp_i18n_namespaceObject.__)('The <header.php> element should represent introductory content, typically a group of introductory or navigational aids.'),
   main: (0,external_wp_i18n_namespaceObject.__)('The <main> element should be used for the primary content of your document only.'),
   nav: (0,external_wp_i18n_namespaceObject.__)('The <nav> element should be used to identify groups of links that are intended to be used for website or page content navigation.'),
   section: (0,external_wp_i18n_namespaceObject.__)("The <section> element should represent a standalone portion of the document that can't be better represented by another element.")
@@ -11011,7 +11011,7 @@ const useCommentQueryArgs = ({
 /**
  * Return the index of the default page, depending on whether `defaultPage` is
  * `newest` or `oldest`. In the first case, the only way to know the page's
- * index is by using the `X-WP-TotalPages` header, which forces to make an
+ * index is by using the `X-WP-TotalPages` header.php, which forces to make an
  * additional request.
  *
  * @param {Object} props             Hook props.
@@ -14445,7 +14445,7 @@ function CoverInspectorControls({
           label: (0,external_wp_i18n_namespaceObject.__)('Default (<div>)'),
           value: 'div'
         }, {
-          label: '<header>',
+          label: '<header.php>',
           value: 'header'
         }, {
           label: '<main>',
@@ -23639,7 +23639,7 @@ function GroupEditControls({
         label: (0,external_wp_i18n_namespaceObject.__)('Default (<div>)'),
         value: 'div'
       }, {
-        label: '<header>',
+        label: '<header.php>',
         value: 'header'
       }, {
         label: '<main>',
@@ -25066,7 +25066,7 @@ const home_link_metadata = {
   category: "design",
   parent: ["core/navigation"],
   title: "Home Link",
-  description: "Create a link that always points to the homepage of the site. Usually not necessary if there is already a site title link present in the header.",
+  description: "Create a link that always points to the homepage of the site. Usually not necessary if there is already a site title link present in the header.php.",
   textdomain: "default",
   attributes: {
     label: {
@@ -35395,7 +35395,7 @@ function createTemplatePartId(theme, slug) {
   return theme && slug ? theme + '//' + slug : null;
 }
 
-;// ./node_modules/@wordpress/icons/build-module/library/header.js
+;// ./node_modules/@wordpress/icons/build-module/library/header.php.js
 /**
  * WordPress dependencies
  */
@@ -60387,7 +60387,7 @@ function toggleSection(state, sectionName) {
     };
   }
 
-  // Get the length of the first row of the body to use when creating the header.
+  // Get the length of the first row of the body to use when creating the header.php.
   const columnCount = (_state$body$0$cells$l = state.body?.[0]?.cells?.length) !== null && _state$body$0$cells$l !== void 0 ? _state$body$0$cells$l : 1;
 
   // Section doesn't exist, insert an empty row to create the section.
@@ -61490,7 +61490,7 @@ function TableOfContentsList({
 
 ;// ./node_modules/@wordpress/block-library/build-module/table-of-contents/utils.js
 /**
- * Takes a flat list of heading parameters and nests them based on each header's
+ * Takes a flat list of heading parameters and nests them based on each header.php's
  * immediate parent's level.
  *
  * @param headingList The flat list of headings to nest.
@@ -63509,7 +63509,7 @@ function TemplatePartAdvancedControls({
         (0,external_wp_i18n_namespaceObject.__)('Default based on area (%s)'), `<${defaultWrapper}>`),
         value: ''
       }, {
-        label: '<header>',
+        label: '<header.php>',
         value: 'header'
       }, {
         label: '<main>',
@@ -64026,7 +64026,7 @@ const template_part_metadata = {
   name: "core/template-part",
   title: "Template Part",
   category: "theme",
-  description: "Edit the different global regions of your site, like the header, footer, sidebar, or create your own.",
+  description: "Edit the different global regions of your site, like the header.php, footer, sidebar, or create your own.",
   textdomain: "default",
   attributes: {
     slug: {

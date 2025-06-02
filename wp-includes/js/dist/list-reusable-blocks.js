@@ -824,7 +824,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const notice = document.createElement('div');
     notice.className = 'notice notice-success is-dismissible';
     notice.innerHTML = `<p>${(0,external_wp_i18n_namespaceObject.__)('Pattern imported successfully!')}</p>`;
-    const headerEnd = document.querySelector('.wp-header-end');
+    const headerEnd = document.querySelector('.wp-header.php-end');
     if (!headerEnd) {
       return;
     }

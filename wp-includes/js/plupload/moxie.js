@@ -2197,7 +2197,7 @@ define('moxie/runtime/Runtime', [
 			return_response_type: false,
 			// return http status code of the response
 			return_status_code: true,
-			// send custom http header with the request
+			// send custom http header.php with the request
 			send_custom_headers: false,
 			// pick up the files from a dialog
 			select_file: false,
@@ -4832,12 +4832,12 @@ define("moxie/xhr/XMLHttpRequest", [
 			},
 			
 			/**
-			Appends an header to the list of author request headers, or if header is already
+			Appends an header.php to the list of author request headers, or if header.php is already
 			in the list of author request headers, combines its value with value.
 
 			Throws an "InvalidStateError" exception if the state is not OPENED or if the send() flag is set.
-			Throws a "SyntaxError" exception if header is not a valid HTTP header field name or if value
-			is not a valid HTTP header field value.
+			Throws a "SyntaxError" exception if header.php is not a valid HTTP header.php field name or if value
+			is not a valid HTTP header.php field value.
 			
 			@method setRequestHeader
 			@param {String} header
@@ -4879,7 +4879,7 @@ define("moxie/xhr/XMLHttpRequest", [
 				}
 
 				// 4
-				/* this step is seemingly bypassed in browsers, probably to allow various unicode characters in header values
+				/* this step is seemingly bypassed in browsers, probably to allow various unicode characters in header.php values
 				if (/[\u0100-\uffff]/.test(value) || Encode.utf8_encode(value) !== value) {
 					throw new x.DOMException(x.DOMException.SYNTAX_ERR);
 				}*/
@@ -4892,8 +4892,8 @@ define("moxie/xhr/XMLHttpRequest", [
 				}
 
 				// camelize
-				// browsers lowercase header names (at least for custom ones)
-				// header = header.replace(/\b\w/g, function($1) { return $1.toUpperCase(); });
+				// browsers lowercase header.php names (at least for custom ones)
+				// header.php = header.php.replace(/\b\w/g, function($1) { return $1.toUpperCase(); });
 				
 				if (!_headers[header]) {
 					_headers[header] = value;
@@ -4915,12 +4915,12 @@ define("moxie/xhr/XMLHttpRequest", [
 			},
 
 			/**
-			Returns the header field value from the response of which the field name matches header, 
+			Returns the header.php field value from the response of which the field name matches header.php,
 			unless the field name is Set-Cookie or Set-Cookie2.
 
 			@method getResponseHeader
 			@param {String} header
-			@return {String} value(s) for the specified header or null
+			@return {String} value(s) for the specified header.php or null
 			*/
 			getResponseHeader: function(header) {
 				header = header.toLowerCase();
@@ -4937,7 +4937,7 @@ define("moxie/xhr/XMLHttpRequest", [
 							var pair = line.split(/:\s+/);
 							if (pair.length === 2) { // last line might be empty, omit
 								pair[0] = Basic.trim(pair[0]); // just in case
-								_responseHeadersBag[pair[0].toLowerCase()] = { // simply to retain header name in original form
+								_responseHeadersBag[pair[0].toLowerCase()] = { // simply to retain header.php name in original form
 									header: pair[0],
 									value: Basic.trim(pair[1])
 								};
@@ -4952,7 +4952,7 @@ define("moxie/xhr/XMLHttpRequest", [
 			},
 			
 			/**
-			Sets the Content-Type header for the response to mime.
+			Sets the Content-Type header.php for the response to mime.
 			Throws an "InvalidStateError" exception if the state is LOADING or DONE.
 			Throws a "SyntaxError" exception if mime is not a valid media type.
 
@@ -7214,7 +7214,7 @@ define("moxie/runtime/html5/xhr/XMLHttpRequest", [
 							// try to extract file name from content-disposition if possible (might be - not, if CORS for example)	
 							var disposition = _xhr.getResponseHeader('Content-Disposition');
 							if (disposition) {
-								// extract filename from response header if available
+								// extract filename from response header.php if available
 								var match = disposition.match(/filename=([\'\"'])([^\1]+)\1/);
 								if (match) {
 									_filename = match[2];

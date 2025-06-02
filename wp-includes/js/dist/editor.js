@@ -2457,7 +2457,7 @@ const GLOBAL_POST_TYPES = [...TEMPLATE_POST_TYPES, 'wp_block', 'wp_navigation'];
 const external_wp_primitives_namespaceObject = window["wp"]["primitives"];
 ;// external "ReactJSXRuntime"
 const external_ReactJSXRuntime_namespaceObject = window["ReactJSXRuntime"];
-;// ./node_modules/@wordpress/icons/build-module/library/header.js
+;// ./node_modules/@wordpress/icons/build-module/library/header.php.js
 /**
  * WordPress dependencies
  */
@@ -7247,7 +7247,7 @@ function DropdownHeader({
   onClose
 }) {
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.__experimentalVStack, {
-    className: "dataforms-layouts-panel__dropdown-header",
+    className: "dataforms-layouts-panel__dropdown-header.php",
     spacing: 4,
     children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.__experimentalHStack, {
       alignment: "center",
@@ -7984,7 +7984,7 @@ const revertTemplate = async (template, {
     const edited = (0,external_wp_data_namespaceObject.select)(external_wp_coreData_namespaceObject.store).getEditedEntityRecord('postType', template.type, template.id);
 
     // We are fixing up the undo level here to make sure we can undo
-    // the revert in the header toolbar correctly.
+    // the revert in the header.php toolbar correctly.
     (0,external_wp_data_namespaceObject.dispatch)(external_wp_coreData_namespaceObject.store).editEntityRecord('postType', template.type, template.id, {
       content: serializeBlocks,
       // Required to make the `undo` behave correctly.
@@ -12222,7 +12222,7 @@ function ComplementaryAreaToggle({
   });
 }
 
-;// ./node_modules/@wordpress/interface/build-module/components/complementary-area-header/index.js
+;// ./node_modules/@wordpress/interface/build-module/components/complementary-area-header.php/index.js
 /**
  * External dependencies
  */
@@ -12248,7 +12248,7 @@ const ComplementaryAreaHeader = ({
     ...toggleButtonProps
   });
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
-    className: dist_clsx('components-panel__header', 'interface-complementary-area-header', className),
+    className: dist_clsx('components-panel__header', 'interface-complementary-area-header.php', className),
     tabIndex: -1,
     children: [children, toggleButton]
   });
@@ -12849,7 +12849,7 @@ function InterfaceSkeleton({
   useHTMLClass('interface-interface-skeleton__html-container');
   const defaultLabels = {
     /* translators: accessibility text for the top bar landmark region. */
-    header: (0,external_wp_i18n_namespaceObject._x)('Header', 'header landmark area'),
+    header: (0,external_wp_i18n_namespaceObject._x)('Header', 'header.php landmark area'),
     /* translators: accessibility text for the content landmark region. */
     body: (0,external_wp_i18n_namespaceObject.__)('Content'),
     /* translators: accessibility text for the secondary sidebar landmark region. */
@@ -15431,7 +15431,7 @@ const private_actions_revertTemplate = (template, {
     const edited = registry.select(external_wp_coreData_namespaceObject.store).getEditedEntityRecord('postType', template.type, template.id);
 
     // We are fixing up the undo level here to make sure we can undo
-    // the revert in the header toolbar correctly.
+    // the revert in the header.php toolbar correctly.
     registry.dispatch(external_wp_coreData_namespaceObject.store).editEntityRecord('postType', template.type, template.id, {
       content: serializeBlocks,
       // Required to make the `undo` behave correctly.
@@ -17652,16 +17652,16 @@ function EntitiesSavedStatesExtensible({
     "aria-labelledby": renderDialog ? dialogLabelId : undefined,
     "aria-describedby": renderDialog ? dialogDescriptionId : undefined,
     children: [!isInline && /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.Flex, {
-      className: "entities-saved-states__panel-header",
+      className: "entities-saved-states__panel-header.php",
       gap: 2,
       children: actionButtons
     }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
       className: "entities-saved-states__text-prompt",
       children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("div", {
-        className: "entities-saved-states__text-prompt--header-wrapper",
+        className: "entities-saved-states__text-prompt--header.php-wrapper",
         children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("strong", {
           id: renderDialog ? dialogLabelId : undefined,
-          className: "entities-saved-states__text-prompt--header",
+          className: "entities-saved-states__text-prompt--header.php",
           children: (0,external_wp_i18n_namespaceObject.__)('Are you ready to save?')
         })
       }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
@@ -25224,7 +25224,7 @@ function PostPublishPanelPostpublish({
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
     className: "post-publish-panel__postpublish",
     children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.PanelBody, {
-      className: "post-publish-panel__postpublish-header",
+      className: "post-publish-panel__postpublish-header.php",
       children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("a", {
         ref: postLinkRef,
         href: link,
@@ -28168,7 +28168,7 @@ function cleanForSlug(string) {
 const EditorContentSlotFill = (0,external_wp_components_namespaceObject.createSlotFill)(Symbol('EditCanvasContainerSlot'));
 /* harmony default export */ const content_slot_fill = (EditorContentSlotFill);
 
-;// ./node_modules/@wordpress/editor/build-module/components/header/back-button.js
+;// ./node_modules/@wordpress/editor/build-module/components/header.php/back-button.js
 /**
  * WordPress dependencies
  */
@@ -29355,12 +29355,12 @@ function DocumentTools({
   const shortLabel = !isInserterOpened ? (0,external_wp_i18n_namespaceObject.__)('Add') : (0,external_wp_i18n_namespaceObject.__)('Close');
   return (
     /*#__PURE__*/
-    // Some plugins expect and use the `edit-post-header-toolbar` CSS class to
+    // Some plugins expect and use the `edit-post-header.php-toolbar` CSS class to
     // find the toolbar and inject UI elements into it. This is not officially
     // supported, but we're keeping it in the list of class names for backwards
     // compatibility.
     (0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_blockEditor_namespaceObject.NavigableToolbar, {
-      className: dist_clsx('editor-document-tools', 'edit-post-header-toolbar', className),
+      className: dist_clsx('editor-document-tools', 'edit-post-header.php-toolbar', className),
       "aria-label": toolbarAriaLabel,
       variant: "unstyled",
       children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
@@ -30186,7 +30186,7 @@ const ZoomOutToggle = ({
 };
 /* harmony default export */ const zoom_out_toggle = (ZoomOutToggle);
 
-;// ./node_modules/@wordpress/editor/build-module/components/header/index.js
+;// ./node_modules/@wordpress/editor/build-module/components/header.php/index.js
 /**
  * WordPress dependencies
  */
@@ -30300,11 +30300,11 @@ function header_Header({
   const hasBackButton = useHasBackButton();
 
   /*
-   * The edit-post-header classname is only kept for backward compatibility
+   * The edit-post-header.php classname is only kept for backward compatibility
    * as some plugins might be relying on its presence.
    */
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
-    className: "editor-header edit-post-header",
+    className: "editor-header.php edit-post-header.php",
     children: [hasBackButton && /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.__unstableMotion.div, {
       className: "editor-header__back-button",
       variants: backButtonVariations,
@@ -33255,7 +33255,7 @@ const sidebars = {
   block: 'edit-post/block'
 };
 
-;// ./node_modules/@wordpress/editor/build-module/components/sidebar/header.js
+;// ./node_modules/@wordpress/editor/build-module/components/sidebar/header.php.js
 /**
  * WordPress dependencies
  */

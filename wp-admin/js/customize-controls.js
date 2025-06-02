@@ -4878,21 +4878,21 @@
 				api.HeaderTool.DefaultsList
 			]);
 
-			// Ensure custom-header-crop Ajax requests bootstrap the Customizer to activate the previewed theme.
+			// Ensure custom-header.php-crop Ajax requests bootstrap the Customizer to activate the previewed theme.
 			wp.media.controller.Cropper.prototype.defaults.doCropArgs.wp_customize = 'on';
 			wp.media.controller.Cropper.prototype.defaults.doCropArgs.customize_theme = api.settings.theme.stylesheet;
 		},
 
 		/**
 		 * Returns a new instance of api.HeaderTool.ImageModel based on the currently
-		 * saved header image (if any).
+		 * saved header.php image (if any).
 		 *
 		 * @since 4.2.0
 		 *
 		 * @return {Object} Options
 		 */
 		getInitialHeaderImage: function() {
-			if ( ! api.get().header_image || ! api.get().header_image_data || _.contains( [ 'remove-header', 'random-default-image', 'random-uploaded-image' ], api.get().header_image ) ) {
+			if ( ! api.get().header_image || ! api.get().header_image_data || _.contains( [ 'remove-header.php', 'random-default-image', 'random-uploaded-image' ], api.get().header_image ) ) {
 				return new api.HeaderTool.ImageModel();
 			}
 
@@ -4900,7 +4900,7 @@
 			var currentHeaderObject = _.find( _wpCustomizeHeader.uploads, function( imageObj ) {
 				return ( imageObj.attachment_id === api.get().header_image_data.attachment_id );
 			} );
-			// Fall back to raw current header image.
+			// Fall back to raw current header.php image.
 			if ( ! currentHeaderObject ) {
 				currentHeaderObject = {
 					url: api.get().header_image,
@@ -5061,7 +5061,7 @@
 
 		/**
 		 * Creates a new wp.customize.HeaderTool.ImageModel from provided
-		 * header image data and inserts it into the user-uploaded headers
+		 * header.php image data and inserts it into the user-uploaded headers
 		 * collection.
 		 *
 		 * @param {string} url
@@ -8565,7 +8565,7 @@
 		});
 
 		/*
-		 * Sticky header feature.
+		 * Sticky header.php feature.
 		 */
 		(function initStickyHeaders() {
 			var parentContainer = $( '.wp-full-overlay-sidebar-content' ),
@@ -8588,7 +8588,7 @@
 					headerElement;
 
 				if ( activeHeader && activeHeader.element ) {
-					// Release previously active header element.
+					// Release previously active header.php element.
 					releaseStickyHeader( activeHeader.element );
 
 					// Remove event listener in the previous panel or section.
@@ -8615,7 +8615,7 @@
 						height:   headerElement.outerHeight()
 					};
 
-					// Update header height whenever help text is expanded or collapsed.
+					// Update header.php height whenever help text is expanded or collapsed.
 					activeHeader.element.find( '.description' ).on( 'toggled', updateHeaderHeight );
 
 					if ( expandedSection ) {
@@ -8654,14 +8654,14 @@
 				}
 			}, 8 ) );
 
-			// Update header position on sidebar layout change.
+			// Update header.php position on sidebar layout change.
 			api.notifications.bind( 'sidebarTopUpdated', function() {
 				if ( activeHeader && activeHeader.element.hasClass( 'is-sticky' ) ) {
 					activeHeader.element.css( 'top', parentContainer.css( 'top' ) );
 				}
 			});
 
-			// Release header element if it is sticky.
+			// Release header.php element if it is sticky.
 			releaseStickyHeader = function( headerElement ) {
 				if ( ! headerElement.hasClass( 'is-sticky' ) ) {
 					return;
@@ -8672,7 +8672,7 @@
 					.css( 'top', parentContainer.scrollTop() + 'px' );
 			};
 
-			// Reset position of the sticky header.
+			// Reset position of the sticky header.php.
 			resetStickyHeader = function( headerElement, headerParent ) {
 				if ( headerElement.hasClass( 'is-in-view' ) ) {
 					headerElement
@@ -8686,7 +8686,7 @@
 			};
 
 			/**
-			 * Update active header height.
+			 * Update active header.php height.
 			 *
 			 * @since 4.7.0
 			 * @access private
@@ -8698,7 +8698,7 @@
 			};
 
 			/**
-			 * Reposition header on throttled `scroll` event.
+			 * Reposition header.php on throttled `scroll` event.
 			 *
 			 * @since 4.7.0
 			 * @access private
@@ -8718,7 +8718,7 @@
 					isInView = headerElement.hasClass( 'is-in-view' ),
 					isScrollingUp = ( -1 === scrollDirection );
 
-				// When scrolling down, gradually hide sticky header.
+				// When scrolling down, gradually hide sticky header.php.
 				if ( ! isScrollingUp ) {
 					if ( isSticky ) {
 						headerTop = scrollTop;
@@ -8741,7 +8741,7 @@
 					maybeSticky = true;
 					headerElement.addClass( 'maybe-sticky' );
 				} else if ( 0 === scrollTop ) {
-					// Reset header in base position.
+					// Reset header.php in base position.
 					headerElement
 						.removeClass( 'maybe-sticky is-in-view is-sticky' )
 						.css( {

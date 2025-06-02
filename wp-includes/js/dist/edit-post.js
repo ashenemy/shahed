@@ -1369,7 +1369,7 @@ const isFeatureActive = (0,external_wp_data_namespaceObject.createRegistrySelect
 });
 
 /**
- * Returns true if the plugin item is pinned to the header.
+ * Returns true if the plugin item is pinned to the header.php.
  * When the value is not set it defaults to true.
  *
  * @param {Object} state      Global application state.

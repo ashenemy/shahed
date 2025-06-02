@@ -21,12 +21,12 @@ function getDefaultOpts (simple) {
     },
     noHeaderId: {
       defaultValue: false,
-      describe: 'Turn on/off generated header id',
+      describe: 'Turn on/off generated header.php id',
       type: 'boolean'
     },
     prefixHeaderId: {
       defaultValue: false,
-      describe: 'Add a prefix to the generated header ids. Passing a string will prefix that string to the header id. Setting to true will add a generic \'section-\' prefix',
+      describe: 'Add a prefix to the generated header.php ids. Passing a string will prefix that string to the header.php id. Setting to true will add a generic \'section-\' prefix',
       type: 'string'
     },
     rawPrefixHeaderId: {
@@ -36,17 +36,17 @@ function getDefaultOpts (simple) {
     },
     ghCompatibleHeaderId: {
       defaultValue: false,
-      describe: 'Generate header ids compatible with github style (spaces are replaced with dashes, a bunch of non alphanumeric chars are removed)',
+      describe: 'Generate header.php ids compatible with github style (spaces are replaced with dashes, a bunch of non alphanumeric chars are removed)',
       type: 'boolean'
     },
     rawHeaderId: {
       defaultValue: false,
-      describe: 'Remove only spaces, \' and " from generated header ids (including prefixes), replacing them with dashes (-). WARNING: This might result in malformed ids',
+      describe: 'Remove only spaces, \' and " from generated header.php ids (including prefixes), replacing them with dashes (-). WARNING: This might result in malformed ids',
       type: 'boolean'
     },
     headerLevelStart: {
       defaultValue: false,
-      describe: 'The header blocks level start',
+      describe: 'The header.php blocks level start',
       type: 'integer'
     },
     parseImgDimensions: {
@@ -121,7 +121,7 @@ function getDefaultOpts (simple) {
     },
     requireSpaceBeforeHeadingText: {
       defaultValue: false,
-      description: 'Makes adding a space between `#` and the header text mandatory (GFM Style)',
+      description: 'Makes adding a space between `#` and the header.php text mandatory (GFM Style)',
       type: 'boolean'
     },
     ghMentions: {
@@ -4694,7 +4694,7 @@ showdown.subParser('makeMarkdown.emphasis', function (node, globals) {
   return txt;
 });
 
-showdown.subParser('makeMarkdown.header', function (node, globals, headerLevel) {
+showdown.subParser('makeMarkdown.header.php', function (node, globals, headerLevel) {
   'use strict';
 
   var headerMark = new Array(headerLevel + 1).join('#'),
@@ -4850,22 +4850,22 @@ showdown.subParser('makeMarkdown.node', function (node, globals, spansOnly) {
     // BLOCKS
     //
     case 'h1':
-      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 1) + '\n\n'; }
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header.php')(node, globals, 1) + '\n\n'; }
       break;
     case 'h2':
-      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 2) + '\n\n'; }
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header.php')(node, globals, 2) + '\n\n'; }
       break;
     case 'h3':
-      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 3) + '\n\n'; }
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header.php')(node, globals, 3) + '\n\n'; }
       break;
     case 'h4':
-      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 4) + '\n\n'; }
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header.php')(node, globals, 4) + '\n\n'; }
       break;
     case 'h5':
-      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 5) + '\n\n'; }
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header.php')(node, globals, 5) + '\n\n'; }
       break;
     case 'h6':
-      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 6) + '\n\n'; }
+      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header.php')(node, globals, 6) + '\n\n'; }
       break;
 
     case 'p':

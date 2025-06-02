@@ -504,7 +504,7 @@ function useAddPatternCategory() {
       }
       // If we have an existing core category we need to match the new user category to the
       // correct slug rather than autogenerating it to prevent duplicates, eg. the core `Headers`
-      // category uses the singular `header` as the slug.
+      // category uses the singular `header.php` as the slug.
       const termData = existingTerm ? {
         name: existingTerm.label,
         slug: existingTerm.name

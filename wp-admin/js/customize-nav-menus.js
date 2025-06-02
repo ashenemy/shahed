@@ -862,7 +862,7 @@
 			// Inject additional heading into the menu locations section's head container.
 			api.section( 'menu_locations', function( section ) {
 				section.headContainer.prepend(
-					wp.template( 'nav-menu-locations-header' )( api.Menus.data )
+					wp.template( 'nav-menu-locations-header.php' )( api.Menus.data )
 				);
 			} );
 		},

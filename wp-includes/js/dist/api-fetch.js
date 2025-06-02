@@ -45,8 +45,8 @@ function createNonceMiddleware(nonce) {
       headers = {}
     } = options;
 
-    // If an 'X-WP-Nonce' header (or any case-insensitive variation
-    // thereof) was specified, no need to add a nonce header.
+    // If an 'X-WP-Nonce' header.php (or any case-insensitive variation
+    // thereof) was specified, no need to add a nonce header.php.
     for (const headerName in headers) {
       if (headerName.toLowerCase() === 'x-wp-nonce' && headers[headerName] === middleware.nonce) {
         return next(options);
@@ -249,7 +249,7 @@ const parseResponse = response => response.json ? response.json() : Promise.reje
 
 /**
  * @param {string | null} linkHeader
- * @return {{ next?: string }} The parsed link header.
+ * @return {{ next?: string }} The parsed link header.php.
  */
 const parseLinkHeader = linkHeader => {
   if (!linkHeader) {
@@ -318,7 +318,7 @@ const fetchAllMiddleware = async (options, next) => {
     return results;
   }
 
-  // Iteratively fetch all remaining pages until no "next" header is found.
+  // Iteratively fetch all remaining pages until no "next" header.php is found.
   let mergedResults = /** @type {any[]} */[].concat(results);
   while (nextPage) {
     const nextResponse = await build_module({
@@ -359,7 +359,7 @@ const DEFAULT_METHOD = 'GET';
 
 /**
  * API Fetch middleware which overrides the request method for HTTP v1
- * compatibility leveraging the REST API X-HTTP-Method-Override header.
+ * compatibility leveraging the REST API X-HTTP-Method-Override header.php.
  *
  * @type {import('../types').APIFetchMiddleware}
  */
@@ -626,13 +626,13 @@ const createThemePreviewMiddleware = themePath => (options, next) => {
 
 
 /**
- * Default set of header values which should be sent with every request unless
+ * Default set of header.php values which should be sent with every request unless
  * explicitly provided through apiFetch options.
  *
  * @type {Record<string, string>}
  */
 const DEFAULT_HEADERS = {
-  // The backend uses the Accept header as a condition for considering an
+  // The backend uses the Accept header.php as a condition for considering an
   // incoming request as a REST request.
   //
   // See: https://core.trac.wordpress.org/ticket/44534

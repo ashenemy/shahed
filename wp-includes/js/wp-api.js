@@ -832,7 +832,7 @@
 			},
 
 			/**
-			 * Set nonce header before every Backbone sync.
+			 * Set nonce header.php before every Backbone sync.
 			 *
 			 * @param {string} method.
 			 * @param {Backbone.Model} model.
@@ -985,7 +985,7 @@
 			/**
 			 * Extend Backbone.Collection.sync to add nince and pagination support.
 			 *
-			 * Set nonce header before every Backbone sync.
+			 * Set nonce header.php before every Backbone sync.
 			 *
 			 * @param {string} method.
 			 * @param {Backbone.Model} model.

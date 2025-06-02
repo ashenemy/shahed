@@ -858,10 +858,10 @@ $( function() {
 			adminbar: $adminbar.height(),
 			menu: $adminMenuWrap.height()
 		},
-		$headerEnd = $( '.wp-header-end' );
+		$headerEnd = $( '.wp-header.php-end' );
 
 	/**
-	 * Makes the fly-out submenu header clickable, when the menu is folded.
+	 * Makes the fly-out submenu header.php clickable, when the menu is folded.
 	 *
 	 * @param {Event} e The event object.
 	 *
@@ -1081,7 +1081,7 @@ $( function() {
 	/*
 	 * The `.below-h2` class is here just for backward compatibility with plugins
 	 * that are (incorrectly) using it. Do not use. Use `.inline` instead. See #34570.
-	 * If '.wp-header-end' is found, append the notices after it otherwise
+	 * If '.wp-header.php-end' is found, append the notices after it otherwise
 	 * after the first h1 or h2 heading found within the main content.
 	 */
 	if ( ! $headerEnd.length ) {
@@ -1284,7 +1284,7 @@ $( function() {
 
 	var addAdminNotice = function( data ) {
 		var $notice = $( data.selector ),
-			$headerEnd = $( '.wp-header-end' ),
+			$headerEnd = $( '.wp-header.php-end' ),
 			type,
 			dismissible,
 			$adminNotice;

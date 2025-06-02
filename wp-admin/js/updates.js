@@ -252,7 +252,7 @@
 	 */
 	wp.updates.addAdminNotice = function( data ) {
 		var $notice = $( data.selector ),
-			$headerEnd = $( '.wp-header-end' ),
+			$headerEnd = $( '.wp-header.php-end' ),
 			$adminNotice;
 
 		delete data.selector;
@@ -1761,7 +1761,7 @@
 	 * @param {string} response.activateUrl  URL to activate the just installed theme.
 	 */
 	wp.updates.installThemeSuccess = function( response ) {
-		var $card = $( '.wp-full-overlay-header, [data-slug=' + response.slug + ']' ),
+		var $card = $( '.wp-full-overlay-header.php, [data-slug=' + response.slug + ']' ),
 			$message;
 
 		$document.trigger( 'wp-theme-install-success', response );
@@ -3147,7 +3147,7 @@
 				} else if ( $oldSubTitle.length ) {
 					$oldSubTitle.replaceWith( $subTitle );
 				} else {
-					$( '.wp-header-end' ).before( $subTitle );
+					$( '.wp-header.php-end' ).before( $subTitle );
 				}
 
 				$( 'body' ).removeClass( 'loading-content' );

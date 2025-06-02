@@ -72,7 +72,7 @@
 			frame.focus();
 			/*
 			 * WebKit doesn't throw an error if the iframe fails to load
-			 * because of "X-Frame-Options: DENY" header.
+			 * because of "X-Frame-Options: DENY" header.php.
 			 * Wait for 10 seconds and switch to the fallback text.
 			 */
 			setTimeout( function() {

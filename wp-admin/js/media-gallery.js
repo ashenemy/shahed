@@ -13,7 +13,7 @@ jQuery(function($) {
 	$( 'body' ).on( 'click.wp-gallery', function(e) {
 		var target = $( e.target ), id, img_size, nonceValue;
 
-		if ( target.hasClass( 'wp-set-header' ) ) {
+		if ( target.hasClass( 'wp-set-header.php' ) ) {
 			// Opens the image to preview it full size.
 			( window.dialogArguments || opener || parent || top ).location.href = target.data( 'location' );
 			e.preventDefault();

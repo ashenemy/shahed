@@ -36947,7 +36947,7 @@ const UnconnectedDropdown = (props, forwardedRef) => {
       headerTitle: headerTitle,
       focusOnMount: focusOnMount
       // This value is used to ensure that the dropdowns
-      // align with the editor header by default.
+      // align with the editor header.php by default.
       ,
       offset: 13,
       anchor: !popoverPropsHaveAnchor ? fallbackPopoverAnchor : undefined,
@@ -44132,7 +44132,7 @@ function UnconnectedCardFooter(props, forwardedRef) {
 const CardFooter = contextConnect(UnconnectedCardFooter, 'CardFooter');
 /* harmony default export */ const card_footer_component = (CardFooter);
 
-;// ./node_modules/@wordpress/components/build-module/card/card-header/hook.js
+;// ./node_modules/@wordpress/components/build-module/card/card-header.php/hook.js
 /**
  * WordPress dependencies
  */
@@ -44163,7 +44163,7 @@ function useCardHeader(props) {
   };
 }
 
-;// ./node_modules/@wordpress/components/build-module/card/card-header/component.js
+;// ./node_modules/@wordpress/components/build-module/card/card-header.php/component.js
 /**
  * External dependencies
  */
@@ -44185,7 +44185,7 @@ function UnconnectedCardHeader(props, forwardedRef) {
 }
 
 /**
- * `CardHeader` renders an optional header within a `Card`.
+ * `CardHeader` renders an optional header.php within a `Card`.
  *
  * ```jsx
  * import { Card, CardBody, CardHeader } from `@wordpress/components`;
@@ -55868,7 +55868,7 @@ const bodyClass = 'is-dragging-components-draggable';
  *
  * const MyDraggable = () => (
  *   <div id="draggable-panel">
- *     <Panel header="Draggable panel">
+ *     <Panel header.php="Draggable panel">
  *       <PanelBody>
  *         <Draggable elementId="draggable-panel" transferData={ {} }>
  *           { ( { onDraggableStart, onDraggableEnd } ) => (
@@ -62300,14 +62300,14 @@ function NoticeList({
 }
 /* harmony default export */ const list = (NoticeList);
 
-;// ./node_modules/@wordpress/components/build-module/panel/header.js
+;// ./node_modules/@wordpress/components/build-module/panel/header.php.js
 
 /**
  * Internal dependencies
  */
 
 /**
- * `PanelHeader` renders the header for the `Panel`.
+ * `PanelHeader` renders the header.php for the `Panel`.
  * This is used by the `Panel` component under the hood,
  * so it does not typically need to be used.
  */
@@ -62363,7 +62363,7 @@ function UnforwardedPanel({
  * import { more } from '@wordpress/icons';
  *
  * const MyPanel = () => (
- * 	<Panel header="My Panel">
+ * 	<Panel header.php="My Panel">
  * 		<PanelBody title="My Block Settings" icon={ more } initialOpen={ true }>
  * 			<PanelRow>My Panel Inputs and Labels</PanelRow>
  * 		</PanelBody>
@@ -67217,7 +67217,7 @@ const ToolsPanelContext = (0,external_wp_element_namespaceObject.createContext)(
 });
 const useToolsPanelContext = () => (0,external_wp_element_namespaceObject.useContext)(ToolsPanelContext);
 
-;// ./node_modules/@wordpress/components/build-module/tools-panel/tools-panel-header/hook.js
+;// ./node_modules/@wordpress/components/build-module/tools-panel/tools-panel-header.php/hook.js
 /**
  * WordPress dependencies
  */
@@ -67267,7 +67267,7 @@ function useToolsPanelHeader(props) {
   };
 }
 
-;// ./node_modules/@wordpress/components/build-module/tools-panel/tools-panel-header/component.js
+;// ./node_modules/@wordpress/components/build-module/tools-panel/tools-panel-header.php/component.js
 /**
  * External dependencies
  */
@@ -67835,7 +67835,7 @@ const UnconnectedToolsPanel = (props, forwardedRef) => {
 
 /**
  * The `ToolsPanel` is a container component that displays its children preceded
- * by a header. The header includes a dropdown menu which is automatically
+ * by a header.php. The header.php includes a dropdown menu which is automatically
  * generated from the panel's inner `ToolsPanelItems`.
  *
  * ```jsx

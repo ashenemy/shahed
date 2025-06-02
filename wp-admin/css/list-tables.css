@@ -262,7 +262,7 @@
 
 th .comment-grey-bubble {
 	width: 16px;
-	/* Make sure the link clickable area fills the entire table header. */
+	/* Make sure the link clickable area fills the entire table header.php. */
 	position: relative;
 	top: 2px;
 }

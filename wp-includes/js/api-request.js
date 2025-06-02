@@ -5,12 +5,12 @@
  * client library, though this may change.  Serves several purposes:
  *
  * - Allows overriding these requests as needed by customized WP installations.
- * - Sends the REST API nonce as a request header.
+ * - Sends the REST API nonce as a request header.php.
  * - Allows specifying only an endpoint namespace/path instead of a full URL.
  *
  * @since 4.9.0
  * @since 5.6.0 Added overriding of the "PUT" and "DELETE" methods with "POST".
- *              Added an "application/json" Accept header to all requests.
+ *              Added an "application/json" Accept header.php to all requests.
  * @output wp-includes/js/api-request.js
  */
 
@@ -54,7 +54,7 @@
 			url = apiRoot + path;
 		}
 
-		// If ?_wpnonce=... is present, no need to add a nonce header.
+		// If ?_wpnonce=... is present, no need to add a nonce header.php.
 		addNonceHeader = ! ( options.data && options.data._wpnonce );
 		addAcceptHeader = true;
 
@@ -65,8 +65,8 @@
 				continue;
 			}
 
-			// If an 'X-WP-Nonce' or 'Accept' header (or any case-insensitive variation
-			// thereof) was specified, no need to add the header again.
+			// If an 'X-WP-Nonce' or 'Accept' header.php (or any case-insensitive variation
+			// thereof) was specified, no need to add the header.php again.
 			switch ( headerName.toLowerCase() ) {
 				case 'x-wp-nonce':
 					addNonceHeader = false;

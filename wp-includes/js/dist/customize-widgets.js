@@ -539,10 +539,10 @@ function Inserter({
     className: "customize-widgets-layout__inserter-panel",
     "aria-labelledby": inserterTitleId,
     children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
-      className: "customize-widgets-layout__inserter-panel-header",
+      className: "customize-widgets-layout__inserter-panel-header.php",
       children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("h2", {
         id: inserterTitleId,
-        className: "customize-widgets-layout__inserter-panel-header-title",
+        className: "customize-widgets-layout__inserter-panel-header.php-title",
         children: (0,external_wp_i18n_namespaceObject.__)('Add a block')
       }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.Button, {
         size: "small",
@@ -973,7 +973,7 @@ function MoreMenu() {
   });
 }
 
-;// ./node_modules/@wordpress/customize-widgets/build-module/components/header/index.js
+;// ./node_modules/@wordpress/customize-widgets/build-module/components/header.php/index.js
 /**
  * External dependencies
  */
@@ -1011,11 +1011,11 @@ function Header({
   }, [sidebar]);
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_ReactJSXRuntime_namespaceObject.Fragment, {
     children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("div", {
-      className: dist_clsx('customize-widgets-header', {
+      className: dist_clsx('customize-widgets-header.php', {
         'is-fixed-toolbar-active': isFixedToolbarActive
       }),
       children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_blockEditor_namespaceObject.NavigableToolbar, {
-        className: "customize-widgets-header-toolbar",
+        className: "customize-widgets-header.php-toolbar",
         "aria-label": (0,external_wp_i18n_namespaceObject.__)('Document tools'),
         children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.ToolbarButton, {
           icon: !(0,external_wp_i18n_namespaceObject.isRTL)() ? library_undo : library_redo
@@ -1034,7 +1034,7 @@ function Header({
           onClick: sidebar.redo,
           className: "customize-widgets-editor-history-button redo-button"
         }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.ToolbarButton, {
-          className: "customize-widgets-header-toolbar__inserter-toggle",
+          className: "customize-widgets-header.php-toolbar__inserter-toggle",
           isPressed: isInserterOpened,
           variant: "primary",
           icon: library_plus,

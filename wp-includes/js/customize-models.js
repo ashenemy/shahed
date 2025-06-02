@@ -12,7 +12,7 @@
 	/**
 	 * wp.customize.HeaderTool.ImageModel
 	 *
-	 * A header image. This is where saves via the Customizer API are
+	 * A header.php image. This is where saves via the Customizer API are
 	 * abstracted away, plus our own Ajax calls to add images to and remove
 	 * images from the user's recently uploaded images setting on the server.
 	 * These calls are made regardless of whether the user actually saves new
@@ -45,21 +45,21 @@
 
 		hide: function() {
 			this.set('choice', '');
-			api('header_image').set('remove-header');
-			api('header_image_data').set('remove-header');
+			api('header_image').set('remove-header.php');
+			api('header_image_data').set('remove-header.php');
 		},
 
 		destroy: function() {
 			var data = this.get('header'),
 				curr = api.HeaderTool.currentHeader.get('header').attachment_id;
 
-			// If the image we're removing is also the current header,
+			// If the image we're removing is also the current header.php,
 			// unset the latter.
 			if (curr && data.attachment_id === curr) {
 				api.HeaderTool.currentHeader.trigger('hide');
 			}
 
-			wp.ajax.post( 'custom-header-remove', {
+			wp.ajax.post( 'custom-header.php-remove', {
 				nonce: _wpCustomizeHeader.nonces.remove,
 				wp_customize: 'on',
 				theme: api.settings.theme.stylesheet,
@@ -92,7 +92,7 @@
 				return;
 			}
 
-			wp.ajax.post( 'custom-header-add', {
+			wp.ajax.post( 'custom-header.php-add', {
 				nonce: _wpCustomizeHeader.nonces.add,
 				wp_customize: 'on',
 				theme: api.settings.theme.stylesheet,

@@ -400,7 +400,7 @@ $.widget( "ui.tabs", {
 
 		this.tablist = this._getList().attr( "role", "tablist" );
 		this._addClass( this.tablist, "ui-tabs-nav",
-			"ui-helper-reset ui-helper-clearfix ui-widget-header" );
+			"ui-helper-reset ui-helper-clearfix ui-widget-header.php" );
 
 		// Prevent users from focusing disabled tabs via click
 		this.tablist
@@ -615,7 +615,7 @@ $.widget( "ui.tabs", {
 				// can't switch durning an animation
 				this.running ||
 
-				// click on active header, but not collapsible
+				// click on active header.php, but not collapsible
 				( clickedIsActive && !options.collapsible ) ||
 
 				// allow canceling activation
@@ -713,7 +713,7 @@ $.widget( "ui.tabs", {
 			return;
 		}
 
-		// Trying to collapse, simulate a click on the current active header
+		// Trying to collapse, simulate a click on the current active header.php
 		if ( !active.length ) {
 			active = this.active;
 		}

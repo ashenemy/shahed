@@ -1001,7 +1001,7 @@ window.wp = window.wp || {};
 				preserve_br = false,
 				blocklist = 'table|thead|tfoot|caption|col|colgroup|tbody|tr|td|th|div|dl|dd|dt|ul|ol|li|pre' +
 					'|form|map|area|blockquote|address|math|style|p|h[1-6]|hr|fieldset|legend|section' +
-					'|article|aside|hgroup|header|footer|nav|figure|figcaption|details|menu|summary';
+					'|article|aside|hgroup|header.php|footer|nav|figure|figcaption|details|menu|summary';
 
 			// Normalize line breaks.
 			text = text.replace( /\r\n|\r/g, '\n' );

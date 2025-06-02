@@ -69,7 +69,7 @@ return $.widget( "ui.progressbar", {
 		this._addClass( "ui-progressbar", "ui-widget ui-widget-content" );
 
 		this.valueDiv = $( "<div>" ).appendTo( this.element );
-		this._addClass( this.valueDiv, "ui-progressbar-value", "ui-widget-header" );
+		this._addClass( this.valueDiv, "ui-progressbar-value", "ui-widget-header.php" );
 		this._refreshValue();
 	},
 

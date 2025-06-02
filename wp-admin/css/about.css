@@ -28,7 +28,7 @@
 	--text: #1e1e1e;
 	--text-light: #fff;
 
-	/* Accent colors: used in header, on special classes. */
+	/* Accent colors: used in header.php, on special classes. */
 	--accent-1: #3858e9; /* Link color */
 	--accent-2: #3858e9; /* Accent background */
 	--accent-3: #ededed; /* hr background */
@@ -180,7 +180,7 @@
 	margin-bottom: 0;
 }
 
-/* Section header is alone in a container. */
+/* Section header.php is alone in a container. */
 .about__section .is-section-header:first-child:last-child {
 	padding: 0;
 }

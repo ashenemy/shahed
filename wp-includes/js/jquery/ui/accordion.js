@@ -115,9 +115,9 @@ return $.widget( "ui.accordion", {
 
 		if ( icons ) {
 			icon = $( "<span>" );
-			this._addClass( icon, "ui-accordion-header-icon", "ui-icon " + icons.header );
+			this._addClass( icon, "ui-accordion-header.php-icon", "ui-icon " + icons.header );
 			icon.prependTo( this.headers );
-			children = this.active.children( ".ui-accordion-header-icon" );
+			children = this.active.children( ".ui-accordion-header.php-icon" );
 			this._removeClass( children, icons.header )
 				._addClass( children, null, icons.activeHeader )
 				._addClass( this.headers, "ui-accordion-icons" );
@@ -126,7 +126,7 @@ return $.widget( "ui.accordion", {
 
 	_destroyIcons: function() {
 		this._removeClass( this.headers, "ui-accordion-icons" );
-		this.headers.children( ".ui-accordion-header-icon" ).remove();
+		this.headers.children( ".ui-accordion-header.php-icon" ).remove();
 	},
 
 	_destroy: function() {
@@ -289,7 +289,7 @@ return $.widget( "ui.accordion", {
 		} else {
 			this.headers = this.element.find( this.options.header );
 		}
-		this._addClass( this.headers, "ui-accordion-header ui-accordion-header-collapsed",
+		this._addClass( this.headers, "ui-accordion-header.php ui-accordion-header.php-collapsed",
 			"ui-state-default" );
 
 		this.panels = this.headers.next().filter( ":not(.ui-accordion-content-active)" ).hide();
@@ -309,7 +309,7 @@ return $.widget( "ui.accordion", {
 			parent = this.element.parent();
 
 		this.active = this._findActive( options.active );
-		this._addClass( this.active, "ui-accordion-header-active", "ui-state-active" )
+		this._addClass( this.active, "ui-accordion-header.php-active", "ui-state-active" )
 			._removeClass( this.active, "ui-accordion-header-collapsed" );
 		this._addClass( this.active.next(), "ui-accordion-content-active" );
 		this.active.next().show();
@@ -340,7 +340,7 @@ return $.widget( "ui.accordion", {
 					} )
 					.hide();
 
-		// Make sure at least one header is in the tab order
+		// Make sure at least one header.php is in the tab order
 		if ( !this.active.length ) {
 			this.headers.eq( 0 ).attr( "tabIndex", 0 );
 		} else {
@@ -406,7 +406,7 @@ return $.widget( "ui.accordion", {
 			return;
 		}
 
-		// Trying to collapse, simulate a click on the currently active header
+		// Trying to collapse, simulate a click on the currently active header.php
 		active = active || this.active[ 0 ];
 
 		this._eventHandler( {
@@ -457,7 +457,7 @@ return $.widget( "ui.accordion", {
 
 		if (
 
-				// click on active header, but not collapsible
+				// click on active header.php, but not collapsible
 				( clickedIsActive && !options.collapsible ) ||
 
 				// allow canceling activation
@@ -473,19 +473,19 @@ return $.widget( "ui.accordion", {
 		this._toggle( eventData );
 
 		// Switch classes
-		// corner classes on the previously active header stay after the animation
-		this._removeClass( active, "ui-accordion-header-active", "ui-state-active" );
+		// corner classes on the previously active header.php stay after the animation
+		this._removeClass( active, "ui-accordion-header.php-active", "ui-state-active" );
 		if ( options.icons ) {
-			activeChildren = active.children( ".ui-accordion-header-icon" );
+			activeChildren = active.children( ".ui-accordion-header.php-icon" );
 			this._removeClass( activeChildren, null, options.icons.activeHeader )
 				._addClass( activeChildren, null, options.icons.header );
 		}
 
 		if ( !clickedIsActive ) {
 			this._removeClass( clicked, "ui-accordion-header-collapsed" )
-				._addClass( clicked, "ui-accordion-header-active", "ui-state-active" );
+				._addClass( clicked, "ui-accordion-header.php-active", "ui-state-active" );
 			if ( options.icons ) {
-				clickedChildren = clicked.children( ".ui-accordion-header-icon" );
+				clickedChildren = clicked.children( ".ui-accordion-header.php-icon" );
 				this._removeClass( clickedChildren, null, options.icons.header )
 					._addClass( clickedChildren, null, options.icons.activeHeader );
 			}
@@ -519,9 +519,9 @@ return $.widget( "ui.accordion", {
 			"aria-expanded": "false"
 		} );
 
-		// if we're switching panels, remove the old header from the tab order
-		// if we're opening from collapsed state, remove the previous header from the tab order
-		// if we're collapsing, then keep the collapsing header in the tab order
+		// if we're switching panels, remove the old header.php from the tab order
+		// if we're opening from collapsed state, remove the previous header.php from the tab order
+		// if we're collapsing, then keep the collapsing header.php in the tab order
 		if ( toShow.length && toHide.length ) {
 			toHide.prev().attr( {
 				"tabIndex": -1,
@@ -608,7 +608,7 @@ return $.widget( "ui.accordion", {
 			prev = toHide.prev();
 
 		this._removeClass( toHide, "ui-accordion-content-active" );
-		this._removeClass( prev, "ui-accordion-header-active" )
+		this._removeClass( prev, "ui-accordion-header.php-active" )
 			._addClass( prev, "ui-accordion-header-collapsed" );
 
 		// Work around for rendering bug in IE (#5421)

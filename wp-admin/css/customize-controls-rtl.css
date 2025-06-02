@@ -1850,7 +1850,7 @@ p.customize-section-description {
 .in-themes-panel #customize-save-button-wrapper,
 .in-themes-panel #customize-header-actions .spinner,
 .in-themes-panel #customize-header-actions .customize-controls-preview-toggle {
-	margin-top: -46px; /* Height of header actions bar */
+	margin-top: -46px; /* Height of header.php actions bar */
 }
 
 .in-themes-panel #customize-footer-actions,

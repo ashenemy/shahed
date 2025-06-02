@@ -653,19 +653,19 @@ module.exports = window["React"];
     // for inflate use constant limit in 65536 bytes
     //
 
-    /* space at extra (only when reading header) */
+    /* space at extra (only when reading header.php) */
     // this.extra_max  = 0;
     /* pointer to zero-terminated file name or Z_NULL */
     this.name       = '';
-    /* space at name (only when reading header) */
+    /* space at name (only when reading header.php) */
     // this.name_max   = 0;
     /* pointer to zero-terminated comment or Z_NULL */
     this.comment    = '';
-    /* space at comment (only when reading header) */
+    /* space at comment (only when reading header.php) */
     // this.comm_max   = 0;
-    /* true if there was or will be a header crc */
+    /* true if there was or will be a header.php crc */
     this.hcrc       = 0;
-    /* true when done reading gzip header (not used when writing a gzip file) */
+    /* true when done reading gzip header.php (not used when writing a gzip file) */
     this.done       = false;
   }
 
@@ -740,7 +740,7 @@ module.exports = window["React"];
     var beg;                    /* inflate()'s initial strm.output */
     var end;                    /* while out < end, enough space available */
   //#ifdef INFLATE_STRICT
-    var dmax;                   /* maximum distance from zlib header */
+    var dmax;                   /* maximum distance from zlib header.php */
   //#endif
     var wsize;                  /* window size or zero if not using window */
     var whave;                  /* valid bytes in the window */
@@ -1085,7 +1085,7 @@ module.exports = window["React"];
   /* ===========================================================================*/
 
 
-  var    HEAD = 1;       /* i: waiting for magic header */
+  var    HEAD = 1;       /* i: waiting for magic header.php */
   var    FLAGS = 2;      /* i: waiting for method and flags (gzip) */
   var    TIME = 3;       /* i: waiting for modification time (gzip) */
   var    OS = 4;         /* i: waiting for extra flags and operating system (gzip) */
@@ -1093,7 +1093,7 @@ module.exports = window["React"];
   var    EXTRA = 6;      /* i: waiting for extra bytes (gzip) */
   var    NAME = 7;       /* i: waiting for end of file name (gzip) */
   var    COMMENT = 8;    /* i: waiting for end of comment (gzip) */
-  var    HCRC = 9;       /* i: waiting for header crc (gzip) */
+  var    HCRC = 9;       /* i: waiting for header.php crc (gzip) */
   var    DICTID = 10;    /* i: waiting for dictionary check value */
   var    DICT = 11;      /* waiting for inflateSetDictionary() call */
   var        TYPE = 12;      /* i: waiting for type bits, including last-flag bit */
@@ -1144,12 +1144,12 @@ module.exports = window["React"];
     this.last = false;          /* true if processing last block */
     this.wrap = 0;              /* bit 0 true for zlib, bit 1 true for gzip */
     this.havedict = false;      /* true if dictionary provided */
-    this.flags = 0;             /* gzip header method and flags (0 if zlib) */
-    this.dmax = 0;              /* zlib header max distance (INFLATE_STRICT) */
+    this.flags = 0;             /* gzip header.php method and flags (0 if zlib) */
+    this.dmax = 0;              /* zlib header.php max distance (INFLATE_STRICT) */
     this.check = 0;             /* protected copy of check value */
     this.total = 0;             /* protected copy of output count */
     // TODO: may be {}
-    this.head = null;           /* where to save gzip header information */
+    this.head = null;           /* where to save gzip header.php information */
 
     /* sliding window */
     this.wbits = 0;             /* log base 2 of requested window size */
@@ -1417,7 +1417,7 @@ module.exports = window["React"];
     var last_bits, last_op, last_val; // paked "last" denormalized (JS specific)
     var len;                    /* length to copy for repeats, bits to drop */
     var ret;                    /* return code */
-    var hbuf = new utils.Buf8(4);    /* buffer for gzip header crc calculation */
+    var hbuf = new utils.Buf8(4);    /* buffer for gzip header.php crc calculation */
     var opts;
 
     var n; // temporary var for NEED_BITS
@@ -1466,7 +1466,7 @@ module.exports = window["React"];
             bits += 8;
           }
           //===//
-          if ((state.wrap & 2) && hold === 0x8b1f) {  /* gzip header */
+          if ((state.wrap & 2) && hold === 0x8b1f) {  /* gzip header.php */
             state.check = 0/*crc32(0L, Z_NULL, 0)*/;
             //=== CRC2(state.check, hold);
             hbuf[0] = hold & 0xff;
@@ -1481,13 +1481,13 @@ module.exports = window["React"];
             state.mode = FLAGS;
             break;
           }
-          state.flags = 0;           /* expect zlib header */
+          state.flags = 0;           /* expect zlib header.php */
           if (state.head) {
             state.head.done = false;
           }
-          if (!(state.wrap & 1) ||   /* check if zlib header allowed */
+          if (!(state.wrap & 1) ||   /* check if zlib header.php allowed */
             (((hold & 0xff)/*BITS(8)*/ << 8) + (hold >> 8)) % 31) {
-            strm.msg = 'incorrect header check';
+            strm.msg = 'incorrect header.php check';
             state.mode = BAD;
             break;
           }
@@ -1510,7 +1510,7 @@ module.exports = window["React"];
             break;
           }
           state.dmax = 1 << len;
-          //Tracev((stderr, "inflate:   zlib header ok\n"));
+          //Tracev((stderr, "inflate:   zlib header.php ok\n"));
           strm.adler = state.check = 1/*adler32(0L, Z_NULL, 0)*/;
           state.mode = hold & 0x200 ? DICTID : TYPE;
           //=== INITBITS();
@@ -1534,7 +1534,7 @@ module.exports = window["React"];
             break;
           }
           if (state.flags & 0xe000) {
-            strm.msg = 'unknown header flags set';
+            strm.msg = 'unknown header.php flags set';
             state.mode = BAD;
             break;
           }
@@ -1737,7 +1737,7 @@ module.exports = window["React"];
             }
             //===//
             if (hold !== (state.check & 0xffff)) {
-              strm.msg = 'header crc mismatch';
+              strm.msg = 'header.php crc mismatch';
               state.mode = BAD;
               break;
             }
@@ -2513,7 +2513,7 @@ module.exports = window["React"];
     state = strm.state;
     if ((state.wrap & 2) === 0) { return Z_STREAM_ERROR; }
 
-    /* save header structure */
+    /* save header.php structure */
     state.head = head;
     head.done = false;
     return Z_OK;
@@ -3078,7 +3078,7 @@ module.exports = window["React"];
    *   chunk length can differ from `chunkSize`, depending on content.
    *
    * By default, when no options set, autodetect deflate/gzip data format via
-   * wrapper header.
+   * wrapper header.php.
    *
    * ##### Example:
    *
@@ -3109,7 +3109,7 @@ module.exports = window["React"];
     var opt = this.options;
 
     // Force window size for `raw` data, if not set directly,
-    // because we have no header for autodetect.
+    // because we have no header.php for autodetect.
     if (opt.raw && (opt.windowBits >= 0) && (opt.windowBits < 16)) {
       opt.windowBits = -opt.windowBits;
       if (opt.windowBits === 0) { opt.windowBits = -15; }
@@ -3121,7 +3121,7 @@ module.exports = window["React"];
       opt.windowBits += 32;
     }
 
-    // Gzip header has no info about windows size, we can do autodetect only
+    // Gzip header.php has no info about windows size, we can do autodetect only
     // for deflate. So, if window size not set, force it to max when gzip possible
     if ((opt.windowBits > 15) && (opt.windowBits < 48)) {
       // bit 3 (16) -> gzipped data
@@ -3354,7 +3354,7 @@ module.exports = window["React"];
    * - options (Object): zlib inflate options.
    *
    * Decompress `data` with inflate/ungzip and `options`. Autodetect
-   * format via wrapper header by default. That's why we don't provide
+   * format via wrapper header.php by default. That's why we don't provide
    * separate `ungzip` method.
    *
    * Supported options are:
@@ -3405,7 +3405,7 @@ module.exports = window["React"];
    * - options (Object): zlib inflate options.
    *
    * The same as [[inflate]], but creates raw data, without wrapper
-   * (header and adler32 crc).
+   * (header.php and adler32 crc).
    **/
   function inflateRaw(input, options) {
     options = options || {};
@@ -3420,7 +3420,7 @@ module.exports = window["React"];
    * - options (Object): zlib inflate options.
    *
    * Just shortcut to [[inflate]], because it autodetects format
-   * by header.content. Done for convenience.
+   * by header.php.content. Done for convenience.
    **/
 
 
@@ -10809,7 +10809,7 @@ function WelcomeGuideEditor() {
           children: (0,external_wp_i18n_namespaceObject.__)('Edit your site')
         }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("p", {
           className: "edit-site-welcome-guide__text",
-          children: (0,external_wp_i18n_namespaceObject.__)('Design everything on your site — from the header right down to the footer — using blocks.')
+          children: (0,external_wp_i18n_namespaceObject.__)('Design everything on your site — from the header.php right down to the footer — using blocks.')
         }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("p", {
           className: "edit-site-welcome-guide__text",
           children: (0,external_wp_element_namespaceObject.createInterpolateElement)((0,external_wp_i18n_namespaceObject.__)('Click <StylesIconImage /> to start designing your blocks, and choose your typography, layout, and colors.'), {
@@ -10977,7 +10977,7 @@ function WelcomeGuidePage() {
           className: "edit-site-welcome-guide__text",
           children: (0,external_wp_i18n_namespaceObject.__)(
           // eslint-disable-next-line no-restricted-syntax -- 'sidebar' is a common web design term for layouts
-          'It’s now possible to edit page content in the site editor. To customise other parts of the page like the header and footer switch to editing the template using the settings sidebar.')
+          'It’s now possible to edit page content in the site editor. To customise other parts of the page like the header.php and footer switch to editing the template using the settings sidebar.')
         })]
       })
     }]
@@ -12301,7 +12301,7 @@ function VariationsPanel({
   });
 }
 
-;// ./node_modules/@wordpress/edit-site/build-module/components/global-styles/header.js
+;// ./node_modules/@wordpress/edit-site/build-module/components/global-styles/header.php.js
 /**
  * WordPress dependencies
  */
@@ -12330,7 +12330,7 @@ function ScreenHeader({
             onClick: onBack
           }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.__experimentalSpacer, {
             children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.__experimentalHeading, {
-              className: "edit-site-global-styles-header",
+              className: "edit-site-global-styles-header.php",
               level: 2,
               size: 13,
               children: title
@@ -14721,7 +14721,7 @@ function InstalledFonts() {
             }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.__experimentalHeading, {
               level: 2,
               size: 13,
-              className: "edit-site-global-styles-header",
+              className: "edit-site-global-styles-header.php",
               children: libraryFontSelected?.name
             })]
           }), notice && /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_ReactJSXRuntime_namespaceObject.Fragment, {
@@ -15294,7 +15294,7 @@ function FontCollection({
             }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.__experimentalHeading, {
               level: 2,
               size: 13,
-              className: "edit-site-global-styles-header",
+              className: "edit-site-global-styles-header.php",
               children: selectedFont?.name
             })]
           }), notice && /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_ReactJSXRuntime_namespaceObject.Fragment, {
@@ -22978,7 +22978,7 @@ function getExamples(colors) {
   return [headingsExample, ...colorExamples, ...nonHeadingBlockExamples, ...overviewBlockExamples];
 }
 
-;// ./node_modules/@wordpress/edit-site/build-module/components/page/header.js
+;// ./node_modules/@wordpress/edit-site/build-module/components/page/header.php.js
 /**
  * WordPress dependencies
  */
@@ -22994,7 +22994,7 @@ function Header({
   actions
 }) {
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.__experimentalVStack, {
-    className: "edit-site-page-header",
+    className: "edit-site-page-header.php",
     as: "header",
     spacing: 0,
     children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.__experimentalHStack, {
@@ -34472,7 +34472,7 @@ const unseen = /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(ext
 });
 /* harmony default export */ const library_unseen = (unseen);
 
-;// ./node_modules/@wordpress/dataviews/build-module/dataviews-layouts/table/column-header-menu.js
+;// ./node_modules/@wordpress/dataviews/build-module/dataviews-layouts/table/column-header.php-menu.js
 /**
  * External dependencies
  */
@@ -34537,7 +34537,7 @@ const _HeaderMenu = (0,external_wp_element_namespaceObject.forwardRef)(function 
     children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(column_header_menu_Menu.TriggerButton, {
       render: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.Button, {
         size: "compact",
-        className: "dataviews-view-table-header-button",
+        className: "dataviews-view-table-header.php-button",
         ref: ref,
         variant: "tertiary"
       }),
@@ -35021,7 +35021,7 @@ function ViewTable({
           }), !!actions?.length && /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("th", {
             className: "dataviews-view-table__actions-column",
             children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("span", {
-              className: "dataviews-view-table-header",
+              className: "dataviews-view-table-header.php",
               children: (0,external_wp_i18n_namespaceObject.__)('Actions')
             })
           })]
@@ -37318,7 +37318,7 @@ function DeleteCategoryMenuItem({
   });
 }
 
-;// ./node_modules/@wordpress/edit-site/build-module/components/page-patterns/header.js
+;// ./node_modules/@wordpress/edit-site/build-module/components/page-patterns/header.php.js
 /**
  * WordPress dependencies
  */
@@ -37361,7 +37361,7 @@ function PatternsHeader({
     return null;
   }
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.__experimentalVStack, {
-    className: "edit-site-patterns__section-header",
+    className: "edit-site-patterns__section-header.php",
     spacing: 1,
     children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.__experimentalHStack, {
       justify: "space-between",
@@ -40964,7 +40964,7 @@ function CustomDataViewsList({
   const customDataViews = useCustomDataViews(type);
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_ReactJSXRuntime_namespaceObject.Fragment, {
     children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("div", {
-      className: "edit-site-sidebar-navigation-screen-dataviews__group-header",
+      className: "edit-site-sidebar-navigation-screen-dataviews__group-header.php",
       children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.__experimentalHeading, {
         level: 2,
         children: (0,external_wp_i18n_namespaceObject.__)('Custom Views')
@@ -41699,7 +41699,7 @@ function DropdownHeader({
   onClose
 }) {
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.__experimentalVStack, {
-    className: "dataforms-layouts-panel__dropdown-header",
+    className: "dataforms-layouts-panel__dropdown-header.php",
     spacing: 4,
     children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_components_namespaceObject.__experimentalHStack, {
       alignment: "center",

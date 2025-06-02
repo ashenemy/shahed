@@ -1,16 +1,16 @@
 /**
- * @output wp-admin/js/custom-header.js
+ * @output wp-admin/js/custom-header.php.js
  */
 
 /* global isRtl */
 
 /**
- * Initializes the custom header selection page.
+ * Initializes the custom header.php selection page.
  *
  * @since 3.5.0
  *
  * @deprecated 4.1.0 The page this is used on is never linked to from the UI.
- *             Setting a custom header is completely handled by the Customizer.
+ *             Setting a custom header.php is completely handled by the Customizer.
  */
 (function($) {
 	var frame;
@@ -22,7 +22,7 @@
 		// Apply jQuery.masonry once the images have loaded.
 		$headers.imagesLoaded( function() {
 			$headers.masonry({
-				itemSelector: '.default-header',
+				itemSelector: '.default-header.php',
 				isRTL: !! ( 'undefined' != typeof isRtl && isRtl )
 			});
 		});
