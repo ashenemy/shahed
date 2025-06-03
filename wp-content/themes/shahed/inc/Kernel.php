@@ -147,6 +147,8 @@ class Kernel {
 
     private function _setupAssets() {
         Assets::style('main-styles', '/styles.css');
+
+        Assets::script('main-script', '/scripts.js');
     }
 
     private function _setupThemeSupport() {
