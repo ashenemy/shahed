@@ -2,6 +2,7 @@
 namespace Shahed;
 
 require_once __DIR__ . '/Assets.php';
+require_once __DIR__ . '/ShortCodes.php';
 
 class Kernel {
 
@@ -18,7 +19,13 @@ class Kernel {
         $this->_clearTheme();
         $this->_setupThemeSupport();
         $this->_wpRoleClean();
+        $this->_setupShortCodes();
     }
+
+    private function _setupShortCodes() {
+        \Shahed\ShortCodes::init();
+    }
+
     private function _cleanAdmin() {
         add_action('admin_init', function () {
             remove_menu_page('edit.php');
