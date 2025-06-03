@@ -36,6 +36,7 @@ require_once dirname( __DIR__ ) . '/wp-load.php';
 
 nocache_headers();
 
+
 if ( get_option( 'db_upgraded' ) ) {
 
 	flush_rewrite_rules();
