@@ -4971,7 +4971,6 @@
     <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/public/_next/static/media/4a1c6d7cbc093114-s.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust">
     <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/public/_next/static/media/4ee954d817e00e50-s.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust">
     <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/public/_next/static/media/02511ecb6847a87f-s.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust">
-
     <?php wp_head(); ?>
 </head>
 <body>
