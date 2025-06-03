@@ -46,4 +46,13 @@ class Assets {
     public static function isAbsoluteAsset($src){
         return (str_starts_with($src, 'http://') || str_starts_with($src, 'https://') || str_starts_with($src, '//')) && !str_contains($src, home_url());
     }
+
+    public static function toWpAssetSrc($src) {
+        if  (Assets::isAbsoluteAsset($src)) {
+            return $src;
+        }
+
+        return get_template_directory_uri() . '/assets' . $src;
+    }
+
 }
