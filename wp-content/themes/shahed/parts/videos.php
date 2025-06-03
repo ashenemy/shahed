@@ -13,8 +13,9 @@
                     <p data-testid=benefitsDescription class="mt-[8px] text-[14px] font-medium text-light-blue-1 md:vw-text-[18] md:vw-mt-[12] lg:vw-text-[20]">استمتع بمشاهدة المحتوى المفضل لديك عبر عدة أجهزة لتجربة مشاهدة مريحة بلا حدود.</p></div>
                 <div class=flex-grow>
                     <div class="h-[194px] w-full overflow-hidden text-center md:vw-h-[368] md:vw-w-[490] lg:vw-h-[312] lg:vw-w-[416]" style=position:relative!important>
-                        <video class="h-auto max-h-full w-auto max-w-full mix-blend-screen" width=100% autoplay loop playsinline webkit-playsinline=true>
-                            <source type=video/mp4>
+                        <video <video autoplay loop muted playsinline webkit-playsinline class="w-full h-auto">
+  <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/multiple_screen.mp4" type="video/mp4">
+</video>
                         </video>
                         <a href=https://static-vidoes.shahid.net/pages/promo-page/benefits/Multiple+Screen.mp4 target=_blank style=z-index:2147483647!important;position:absolute!important;top:8px!important;left:8px!important;width:16px!important;height:16px!important;min-width:16px!important;min-height:16px!important;max-width:16px!important;max-height:16px!important><img
                                     src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABAAgMAAADXB5lNAAABhmlDQ1BJQ0MgcHJvZmlsZQAAKJF9kj1Iw0AYht+mSkUrDnYQcchQnSyIijqWKhbBQmkrtOpgcukfNGlIUlwcBdeCgz+LVQcXZ10dXAVB8AfEydFJ0UVK/C4ptIjx4LiH9+59+e67A4RGhalm1wSgapaRisfEbG5VDLyiDwEAvZiVmKkn0osZeI6ve/j4ehfhWd7n/hz9St5kgE8kjjLdsIg3iGc2LZ3zPnGIlSSF+Jx43KACiR+5Lrv8xrnosMAzQ0YmNU8cIhaLHSx3MCsZKvE0cVhRNcoXsi4rnLc4q5Uaa9XJbxjMaytprtMcQRxLSCAJETJqKKMCCxFaNVJMpGg/5uEfdvxJcsnkKoORYwFVqJAcP/gb/O6tWZiadJOCMaD7xbY/RoHALtCs2/b3sW03TwD/M3Cltf3VBjD3SXq9rYWPgIFt4OK6rcl7wOUOMPSkS4bkSH6aQqEAvJ/RM+WAwVv6EGtu31r7OH0AMtSr5Rvg4BAYK1L2use9ezr79u+ZVv9+AFlNcp0UUpiqAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5AsHAB8H+DhhoQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAJUExURQAAAICHi4qKioTuJAkAAAABdFJOUwBA5thmAAAAAWJLR0QCZgt8ZAAAAJJJREFUOI3t070NRCEMA2CnYAOyDyPwpHj/Va7hJ3FzV7zy3ET5JIwoAF6Jk4wzAJAkzxAYG9YRTgB+24wBgKmfrGAKTcEfAY4KRlRoIeBTgKOCERVaCPgU4Khge2GqKOBTgKOCERVaAEC/4PNcnyoSWHpjqkhwKxbcig0Q6AorXYF/+A6eIYD1lVbwG/jdA6/kA2THRAURVubcAAAAAElFTkSuQmCC

@@ -715,7 +715,7 @@
                                                                     <video class="h-auto max-h-full w-auto max-w-full mix-blend-screen"
                                                                            width="100%" autoplay="" loop=""
                                                                            playsinline="" webkit-playsinline="true">
-                                                                        <source src="https://static-vidoes.shahid.net/pages/promo-page/benefits/Multiple+Screen.mp4"
+                                                                        <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/multiple_screen.mp4"
                                                                                 type="video/mp4">
                                                                     </video>
                                                                 </div>
