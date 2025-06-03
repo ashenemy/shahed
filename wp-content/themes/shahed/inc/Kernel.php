@@ -139,36 +139,7 @@ class Kernel {
     }
 
     private function _setupAssets() {
-        $styles = [
-            '/_next/static/css/9f6878f49209df01.css',
-            '/_next/static/css/a354dca56718abc4.css',
-            '/subscription/_next/static/css/931.css',
-            '/components/_next/static/css/1632.css',
-            '/_next/static/css/68abe5985d377e6b.css',
-            '/_next/static/css/84ea279932980e7e.css',
-            '/components/_next/static/css/2195.css',
-            '/inline-styles.css',
-        ];
-
-
-        $scripts = [
-                ['src' => '/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js', 'in_footer' => false, 'attrs' => ['defer'=>'', 'crossorigin'=>"anonymous", 'nomodule'=>""]],
-                ['src' => '/_next/static/chunks/7232.4f7fafed62c33245.js', 'in_footer' => false, 'attrs' => ['defer'=>'', 'crossorigin'=>"anonymous"]],
-                ['src' => '/_next/static/chunks/webpack-22f4afb9e51b2973.js', 'in_footer' => false, 'attrs' => ['defer'=>'', 'crossorigin'=>"anonymous"]],
-                ['src' => '/_next/static/chunks/main-0d52b8a775304b71.js', 'in_footer' => false, 'attrs' => ['defer'=>'', 'crossorigin'=>"anonymous"]],
-                ['src' => '/_next/static/chunks/pages/_app-e5b08cffc0494dc9.js', 'in_footer' => false, 'attrs' => ['defer'=>'', 'crossorigin'=>"anonymous"]],
-                ['src' => '/_next/static/chunks/pages/hub/promo-943ecba4518061fa.js', 'in_footer' => false, 'attrs' => ['defer'=>'', 'crossorigin'=>"anonymous"]],
-                ['src' => '/_next/static/tOz2Tw5RSj2z2ewJ8f_1o/_buildManifest.js', 'in_footer' => false, 'attrs' => ['defer'=>'', 'crossorigin'=>"anonymous"]],
-                ['src' => '/_next/static/tOz2Tw5RSj2z2ewJ8f_1o/_ssgManifest.js', 'in_footer' => false, 'attrs' => ['defer'=>'', 'crossorigin'=>"anonymous"]]
-        ];
-
-        foreach ($styles as $style) {
-            Assets::style($style, $style);
-        }
-
-        foreach ($scripts as $script) {
-            Assets::script($script['src'], $script['src'], $script['in_footer'], $script['attrs']);
-        }
+        Assets::style('main-styles', '/styles.css');
     }
 
     private function _setupThemeSupport() {
