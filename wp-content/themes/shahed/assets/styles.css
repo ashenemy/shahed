@@ -1,3 +1,7 @@
+
+.sf-hidden {
+    display: none !important
+}
 *, :after, :before {
     border: 0 solid
 }
@@ -436,3 +440,6 @@ h1, h2, h3 {
         margin-right: .2777777777777778vw
     }
 }
+img[src="data:,"], source[src="data:,"] {
+         display: none !important
+     }
