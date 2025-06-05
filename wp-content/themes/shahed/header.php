@@ -2,8 +2,6 @@
 <html lang="ar" dir="rtl" data-critters-container class="custom_scrollbar smartbanner-margin-top" style="overflow-y:auto">
 <meta charset=utf-8>
 <title>Shahid | اكتشف المزيد مع اشتراك شاهد الخاص بك!</title>
-
-
 <style>
     *, :after, :before {
         border: 0 solid
@@ -6030,61 +6028,21 @@
     .Footer_blurredFooter__8AcG3 {
         background: linear-gradient(0deg, #181d25 77%, transparent) !important
     }</style>
-
-<meta name=referrer content=no-referrer>
-<style>.sf-hidden {
+<style>
+    .sf-hidden {
         display: none !important
-    }</style>
-<meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;">
-<style>img[src="data:,"], source[src="data:,"] {
+    }
+</style>
+<style>
+    img[src="data:,"], source[src="data:,"] {
         display: none !important
-    }</style>
-<noscript>
-    <link rel="stylesheet" href="/_next/static/css/9f6878f49209df01.css" crossorigin="anonymous" data-n-g="">
-</noscript>
-<noscript>
-    <link rel="stylesheet" href="/_next/static/css/a354dca56718abc4.css" crossorigin="anonymous">
-</noscript>
-<noscript data-n-css></noscript>
+    }
+</style>
 
 <?php wp_head(); ?>
 <body>
-<div id=__next>
     <div class="shahid-static appContent_root__tQtPZ appContent_rootForHubPages__1EQgq">
-        <div id=mainContainer class="view_overflowHidden__jCKpL view_mainContainerForHubPages__9qIBa custom_scrollbar">
-            <div id=fullscreenContainer>
-
-                <main id=view-container>
-                    <div id=hub-page-layout class="flex flex-col min-h-screen">
-
-
-                        <div class="relative flex w-full flex-1 flex-col">
-                            <div class="overflow-hidden">
-                                <header class="font-reset fixed m-auto flex h-12 flex-col justify-center text-base leading-[19px] lg:flex-row left-0 right-0 z-[1120] w-full max-w-full md:h-md-48 xl:h-16 2xl:h-2xl-64 md:text-md-14 lg:text-lg-14 xl:text-xl-14 2xl:text-2xl-16 md:leading-md-17 lg:leading-lg-17 xl:leading-xl-17 2xl:leading-2xl-19 md:px-md-6 lg:px-lg-10 xl:px-[42px] 2xl:px-2xl-42 text-white bg-darkBg" id="shahid-header" data-transparent-header="false">
-
-                                    <div id="desktop-menu" class="z-[1] flex w-full max-w-full flex-nowrap items-center justify-start">
-                                        <h2 class="flex flex-none items-center justify-center m-0 ltr:md:mr-md-16 ltr:lg:mr-lg-24 ltr:xl:mr-6 ltr:2xl:mr-2xl-24 cursor-pointer rtl:md:ml-md-16 rtl:lg:ml-lg-24 rtl:xl:ml-6 rtl:2xl:ml-2xl-24">
-                                            <a class="flex items-center justify-center" href="https://shahid.mbc.net/ar">
-                                                <img alt="Shahid VIP" title="Shahid VIP" fetchpriority="Э" width="78" height="22" decoding="async" class="h-[20px] w-auto leading-[0] md:h-md-22 lg:h-lg-24 xl:h-6 2xl:h-2xl-24" src=data:image/webp;base64,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 style=color:transparent>
-                                            </a>
-                                        </h2>
-                                        <div class="flex flex-auto"></div>
-
-
-                                        <h3 class="text-md-12 leading-md-17 lg:text-lg-12 lg:leading-lg-17 xl:text-xl-14 xl:leading-xl-17 2xl:text-2xl-14 2xl:leading-2xl-19">
-                                            <div class="relative flex h-md-32 cursor-pointer items-center capitalize lg:h-lg-32 xl:h-8 2xl:h-2xl-32">
-                                                <div class="text-[14px] md:vw-text-[14]">اللغة (ar)</div>
-                                                <svg xmlns=http://www.w3.org/2000/svg width=20 height=20 viewBox="0 0 20 20" class="h-[20px] w-[20px] self-center ltr:mx-md-4 rtl:mr-md-4 lg:h-lg-8 lg:w-lg-8 xl:m-0 ltr:lg:mx-lg-4 rtl:lg:mr-lg-4 xl:h-2 xl:w-2 ltr:xl:ml-1 ltr:xl-to-2xl:mr-0 rtl:xl:mr-1 2xl:h-2xl-8 2xl:w-2xl-8 ltr:2xl:mx-2xl-4 rtl:2xl:mr-2xl-4 order-1">
-                                                    <g fill=none fill-rule=evenodd>
-                                                        <path d="M20 20V0H0v20z"></path>
-                                                        <path fill=#FFFFFF d="M14.41 7.744a.833.833 0 1 1 1.18 1.179l-5 5a.833.833 0 0 1-1.18 0l-5-5a.833.833 0 0 1 1.18-1.179l4.41 4.41 4.41-4.41z"></path>
-                                                    </g>
-                                                </svg>
-                                                <div class="absolute top-0 z-[1] h-[150%] w-full bg-transparent text-shahidGray">
-                                                    <div class="bg-gradient-to-r from-shahidGreen to-shahidBlue pt-md-1.2 shadow-submenu absolute left-auto top-[99%] w-max min-w-[164px] lg:min-w-lg-164 xl:min-w-[164px] 2xl:min-w-2xl-164 !hidden ltr:right-0 rtl:left-0 sf-hidden"></div>
-                                                </div>
-                                            </div>
-                                        </h3>
-                                    </div>
-                                </header>
-                            </div>
+        <div id="mainContainer" class="view_overflowHidden__jCKpL view_mainContainerForHubPages__9qIBa custom_scrollbar">
+            <div id="hub-page-layout" class="flex flex-col min-h-screen">
+                <div class="relative flex w-full flex-1 flex-col">
+                    <?php get_template_part('parts/header'); ?>
