@@ -1,169 +1,11 @@
 <!DOCTYPE html>
-<html lang=ar dir=rtl data-critters-container data-kantu=1 class="custom_scrollbar smartbanner-margin-top" style=overflow-y:auto>
+<html lang="ar" dir="rtl" data-critters-container class="custom_scrollbar smartbanner-margin-top" style="overflow-y:auto">
 <meta charset=utf-8>
-<meta name=next-head content=1>
-<meta name=version content=9.15.1>
-<meta name=next-head content=1>
-<meta name=hreflang content=ar>
-<meta name=next-head content=1>
-<meta property=fb:app_id content=383938108399432>
-<meta name=next-head content=1>
-<meta property=twitter:card content=summary>
-<meta name=next-head content=1>
-<meta property=twitter:site content=@ShahidVOD>
-<meta name=next-head content=1>
-<meta property=og:site_name content=Shahid>
-<meta name=next-head content=1>
-<meta property=og:type content=website>
-<meta name=next-head content=1>
-<meta property=og:image content=http://static.s3.shahid.mbc.net/rebranding/promo/src/images/ogimage-black.jpg>
-<meta name=next-head content=1>
-<meta property=og:image:width content=1200>
-<meta name=next-head content=1>
-<meta property=og:image:height content=628>
-<meta name=next-head content=1>
-<meta name=viewport content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-<meta name=next-head content=1>
-<meta name=next-head content=1>
-<meta name=next-head content=1>
-<meta name=next-head content=1>
-<link rel=canonical href=https://shahid.mbc.net/ar/hub/promo>
-<meta name=next-head content=1>
-<link rel=alternate hreflang=ar href=https://shahid.mbc.net/ar/hub/promo>
-<meta name=next-head content=1>
-<link rel=alternate hreflang=en href=https://shahid.mbc.net/en/hub/promo>
-<meta name=next-head content=1>
-<link rel=alternate hreflang=fr href=https://shahid.mbc.net/fr/hub/promo>
-<meta name=next-head content=1>
-<link rel=alternate href=https://shahid.mbc.net/ar/hub/promo hreflang=x-default>
-<meta name=next-head content=1>
 <title>Shahid | اكتشف المزيد مع اشتراك شاهد الخاص بك!</title>
-<meta name=next-head content=1>
-<meta property=og:title content="Shahid | اكتشف المزيد مع اشتراك شاهد الخاص بك!">
-<meta name=next-head content=1>
-<meta name=twitter:title content="Shahid | اكتشف المزيد مع اشتراك شاهد الخاص بك!">
-<meta name=next-head content=1>
-<meta name=description content="أعمال شاهد الأصلية، مسلسلات حصرية، عروض أولية لأحدث الأفلام، وإثارة القنوات المباشرة. منصتك للترفيه الشامل والمزيد.">
-<meta name=next-head content=1>
-<meta property=og:description content="أعمال شاهد الأصلية، مسلسلات حصرية، عروض أولية لأحدث الأفلام، وإثارة القنوات المباشرة. منصتك للترفيه الشامل والمزيد.">
-<meta name=next-head content=1>
-<meta name=twitter:description content="أعمال شاهد الأصلية، مسلسلات حصرية، عروض أولية لأحدث الأفلام، وإثارة القنوات المباشرة. منصتك للترفيه الشامل والمزيد.">
-<meta name=next-head content=1>
-<meta name=keywords content="SHAHID_VIP, VIP, SHAHID_VIP_GEA, VIP | BigTime, شاهد, عروض شاهد, صفقات شاهد, خصومات شاهد, عرض شاهد, عروض شاهد vip, عروض شاهد بلس, خصومات اشتراك شاهد, خصم, عرض, ترويج, أفلام عربية, مسلسلات تلفزيونية عربية, بث عربي">
-<script id=promo-metadata type=application/ld+json>{
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "اكتشف المزيد مع اشتراك شاهد الخاص بك!",
-        "description": "أعمال شاهد الأصلية، مسلسلات حصرية، عروض أولية لأحدث الأفلام، وإثارة القنوات المباشرة. منصتك للترفيه الشامل والمزيد.",
-        "inLanguage": "ar",
-        "isAccessibleForFree": false,
-        "provider": {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://shahid.mbc.net/#organization",
-            "url": "https://shahid.mbc.net",
-            "name": "MBC | Shahid",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://shahid-static.s3.us-east-1.amazonaws.com/shahid-subscription-config/DEV-Test/_white_dark_copy.png",
-                "width": "415",
-                "height": "96"
-            },
-            "sameAs": [
-                "https://www.facebook.com/ShahidVOD/",
-                "https://twitter.com/shahidvod",
-                "https://www.instagram.com/shahid.vod/",
-                "https://www.youtube.com/channel/UCokgtRLAWKNPdfFMaSfLLbA",
-                "https://www.dailymotion.com/Shahid_VOD"
-            ]
-        },
-        "offers": [
-            {
-                "@type": "Offer",
-                "acceptedPaymentMethod": [
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/DirectDebit",
-                        "name": "Direct Debit",
-                        "description": "Automatic direct debit from a bank account."
-                    },
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/PhoneCarrierPayment",
-                        "name": "Phone Carrier Billing",
-                        "description": "Charge payments directly to your mobile phone bill."
-                    },
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/Voucher",
-                        "name": "Voucher",
-                        "description": "Redeemable voucher or coupon for payment."
-                    }
-                ],
-                "price": "11.19",
-                "name": "VIP",
-                "priceCurrency": "USD",
-                "description": "أعمال  شاهد الأصلية | العروض الأولية الحصرية | محتوى آمن للأطفال | أعمال عالمية",
-                "availability": "https://schema.org/InStock",
-                "url": "https://shahid.mbc.net/ar/hub/promo/SHAHID_VIP",
-                "potentialAction": {
-                    "@type": "SubscribeAction",
-                    "name": "VIP",
-                    "target": "https://shahid.mbc.net/ar/hub/promo/SHAHID_VIP"
-                }
-            },
-            {
-                "@type": "Offer",
-                "acceptedPaymentMethod": [
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/DirectDebit",
-                        "name": "Direct Debit",
-                        "description": "Automatic direct debit from a bank account."
-                    },
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/PhoneCarrierPayment",
-                        "name": "Phone Carrier Billing",
-                        "description": "Charge payments directly to your mobile phone bill."
-                    },
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/Voucher",
-                        "name": "Voucher",
-                        "description": "Redeemable voucher or coupon for payment."
-                    }
-                ],
-                "price": "13.89",
-                "name": "VIP | BigTime",
-                "priceCurrency": "USD",
-                "description": "حفلات مباشرة | موسم الرياض |  ترفيه الـ VIP",
-                "availability": "https://schema.org/InStock",
-                "url": "https://shahid.mbc.net/ar/hub/promo/SHAHID_VIP_GEA",
-                "potentialAction": {
-                    "@type": "SubscribeAction",
-                    "name": "VIP | BigTime",
-                    "target": "https://shahid.mbc.net/ar/hub/promo/SHAHID_VIP_GEA"
-                }
-            }
-        ]
-    }</script>
-<meta name=next-head content=1>
-<meta name=next-head content=1>
-<meta name=next-head content=1>
-<meta name=next-head content=1>
-<meta name=next-head content=1>
-<meta name=next-head content=1>
-<link rel=icon
-      href="data:image/png;base64,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"
-      sizes=228x228>
-<meta name=msapplication-TileImage content=pinned.png>
-<meta name=msapplication-TileColor content=#FFFFFF>
-<meta name=apple-itunes-app-custom content="app-id=879915134">
-<meta name=google-play-app-custom content="app-id=net.mbc.shahid">
-<meta http-equiv=X-UA-Compatible content="IE=edge">
-<meta name=theme-color content=#0c9>
-<style>*, :after, :before {
+
+
+<style>
+    *, :after, :before {
         border: 0 solid
     }
 
@@ -1127,7 +969,10 @@
     .view_content__O9aFA {
         min-height: 100% !important
     }</style>
-<style>.appContent_root__tQtPZ {
+<style>
+
+
+    .appContent_root__tQtPZ {
         color: #fff;
         font: 500 15px/22px var(--font-shahidMedium);
         height: 100%;
@@ -4889,7 +4734,9 @@
 
     @media only screen and (min-width: 1440px) {
     }</style>
-<style>.notification_default-z-index__tya_2 {
+<style>
+
+    .notification_default-z-index__tya_2 {
         z-index: 1300
     }
 
@@ -4898,15 +4745,23 @@
         position: fixed;
         width: 100%;
         left: 0
-    }</style>
-<style id=__jsx-2255709486>:root {
+    }
+
+</style>
+<style id=__jsx-2255709486>
+
+    :root {
         --font-shahidBold: "__ShahidBold_b3f2b3", "__ShahidBold_Fallback_b3f2b3", sans-serif;
         --font-shahidBlack: "__ShahidBlack_9e6078", "__ShahidBlack_Fallback_9e6078", sans-serif;
         --font-shahidRegular: "__ShahidRegular_cd7f3f", "__ShahidRegular_Fallback_cd7f3f", sans-serif;
         --font-shahid: "__Shahid_e87cfd", "__Shahid_Fallback_e87cfd", serif, sans-serif;
         --font-shahidMedium: "__ShahidMedium_ad5400", "__ShahidMedium_Fallback_ad5400", sans-serif
-    }</style>
-<style>@media (min-width: 768px) {
+    }
+
+</style>
+<style>
+
+    @media (min-width: 768px) {
     }
 
     @media (min-width: 768px) {
@@ -5109,12 +4964,16 @@
 
     @media only screen and (min-width: 1440px) {
     }</style>
-<style>@media screen and (max-width: 768px) {
+<style>
+
+    @media screen and (max-width: 768px) {
     }
 
     @media screen and (max-width: 700px) {
-    }</style>
-<style>@media (min-width: 768px) {
+    }
+</style>
+<style>
+    @media (min-width: 768px) {
     }
 
     @media (min-width: 1024px) {
@@ -6094,7 +5953,8 @@
 
     @media only screen and (min-width: 1440px) {
     }</style>
-<style>.Footer_footer__OQpsI {
+<style>
+    .Footer_footer__OQpsI {
         clear: both;
         position: relative;
         display: flex;
@@ -6170,497 +6030,6 @@
     .Footer_blurredFooter__8AcG3 {
         background: linear-gradient(0deg, #181d25 77%, transparent) !important
     }</style>
-
-<script id=promo-metadata type=application/ld+json>{
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "اكتشف المزيد مع اشتراك شاهد الخاص بك!",
-        "description": "أعمال شاهد الأصلية، مسلسلات حصرية، عروض أولية لأحدث الأفلام، وإثارة القنوات المباشرة. منصتك للترفيه الشامل والمزيد.",
-        "inLanguage": "ar",
-        "isAccessibleForFree": false,
-        "provider": {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://shahid.mbc.net/#organization",
-            "url": "https://shahid.mbc.net",
-            "name": "MBC | Shahid",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://shahid-static.s3.us-east-1.amazonaws.com/shahid-subscription-config/DEV-Test/_white_dark_copy.png",
-                "width": "415",
-                "height": "96"
-            },
-            "sameAs": [
-                "https://www.facebook.com/ShahidVOD/",
-                "https://twitter.com/shahidvod",
-                "https://www.instagram.com/shahid.vod/",
-                "https://www.youtube.com/channel/UCokgtRLAWKNPdfFMaSfLLbA",
-                "https://www.dailymotion.com/Shahid_VOD"
-            ]
-        },
-        "offers": [
-            {
-                "@type": "Offer",
-                "acceptedPaymentMethod": [
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/DirectDebit",
-                        "name": "Direct Debit",
-                        "description": "Automatic direct debit from a bank account."
-                    },
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/PhoneCarrierPayment",
-                        "name": "Phone Carrier Billing",
-                        "description": "Charge payments directly to your mobile phone bill."
-                    },
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/Voucher",
-                        "name": "Voucher",
-                        "description": "Redeemable voucher or coupon for payment."
-                    }
-                ],
-                "price": "11.19",
-                "name": "VIP",
-                "priceCurrency": "USD",
-                "description": "أعمال  شاهد الأصلية | العروض الأولية الحصرية | محتوى آمن للأطفال | أعمال عالمية",
-                "availability": "https://schema.org/InStock",
-                "url": "https://shahid.mbc.net/ar/hub/promo/SHAHID_VIP",
-                "eligibleRegion": [
-                    "AF",
-                    "AO",
-                    "AL",
-                    "AD",
-                    "AE",
-                    "AR",
-                    "AM",
-                    "AG",
-                    "AU",
-                    "AT",
-                    "AZ",
-                    "BI",
-                    "BE",
-                    "BJ",
-                    "BF",
-                    "BD",
-                    "BG",
-                    "BH",
-                    "BS",
-                    "BA",
-                    "BY",
-                    "BZ",
-                    "BO",
-                    "BR",
-                    "BB",
-                    "BN",
-                    "BT",
-                    "BW",
-                    "CF",
-                    "CA",
-                    "CH",
-                    "CL",
-                    "CN",
-                    "CI",
-                    "CM",
-                    "CD",
-                    "CG",
-                    "CO",
-                    "KM",
-                    "CV",
-                    "CR",
-                    "CU",
-                    "CY",
-                    "CZ",
-                    "DE",
-                    "DJ",
-                    "DM",
-                    "DK",
-                    "DO",
-                    "DZ",
-                    "EC",
-                    "EG",
-                    "ER",
-                    "ES",
-                    "EE",
-                    "ET",
-                    "FI",
-                    "FJ",
-                    "FR",
-                    "FM",
-                    "GA",
-                    "GB",
-                    "GE",
-                    "GH",
-                    "GN",
-                    "GM",
-                    "GW",
-                    "GQ",
-                    "GR",
-                    "GD",
-                    "GT",
-                    "GY",
-                    "HN",
-                    "HR",
-                    "HT",
-                    "HU",
-                    "ID",
-                    "IN",
-                    "IE",
-                    "IR",
-                    "IQ",
-                    "IS",
-                    "IL",
-                    "IT",
-                    "JM",
-                    "JO",
-                    "JP",
-                    "KZ",
-                    "KE",
-                    "KG",
-                    "KH",
-                    "KI",
-                    "KN",
-                    "KR",
-                    "KW",
-                    "LA",
-                    "LB",
-                    "LR",
-                    "LY",
-                    "LC",
-                    "LI",
-                    "LK",
-                    "LS",
-                    "LT",
-                    "LU",
-                    "LV",
-                    "MA",
-                    "MC",
-                    "MD",
-                    "MG",
-                    "MV",
-                    "MX",
-                    "MH",
-                    "MK",
-                    "ML",
-                    "MT",
-                    "MM",
-                    "ME",
-                    "MN",
-                    "MZ",
-                    "MR",
-                    "MU",
-                    "MW",
-                    "MY",
-                    "NA",
-                    "NE",
-                    "NG",
-                    "NI",
-                    "NL",
-                    "NO",
-                    "NP",
-                    "NR",
-                    "NZ",
-                    "OM",
-                    "PK",
-                    "PA",
-                    "PE",
-                    "PH",
-                    "PW",
-                    "PG",
-                    "PL",
-                    "KP",
-                    "PT",
-                    "PY",
-                    "QA",
-                    "RO",
-                    "RU",
-                    "RW",
-                    "SA",
-                    "SD",
-                    "SN",
-                    "SG",
-                    "SB",
-                    "SL",
-                    "SV",
-                    "SM",
-                    "SO",
-                    "RS",
-                    "SS",
-                    "ST",
-                    "SR",
-                    "SK",
-                    "SI",
-                    "SE",
-                    "SZ",
-                    "SC",
-                    "SY",
-                    "TD",
-                    "TG",
-                    "TH",
-                    "TJ",
-                    "TM",
-                    "TL",
-                    "TO",
-                    "TT",
-                    "TN",
-                    "TR",
-                    "TV",
-                    "TZ",
-                    "UG",
-                    "UA",
-                    "UY",
-                    "US",
-                    "UZ",
-                    "VA",
-                    "VC",
-                    "VE",
-                    "VN",
-                    "VU",
-                    "WS",
-                    "YE",
-                    "ZM",
-                    "ZW",
-                    "PS"
-                ],
-                "potentialAction": {
-                    "@type": "SubscribeAction",
-                    "name": "VIP",
-                    "target": "https://shahid.mbc.net/ar/hub/promo/SHAHID_VIP"
-                }
-            },
-            {
-                "@type": "Offer",
-                "acceptedPaymentMethod": [
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/DirectDebit",
-                        "name": "Direct Debit",
-                        "description": "Automatic direct debit from a bank account."
-                    },
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/PhoneCarrierPayment",
-                        "name": "Phone Carrier Billing",
-                        "description": "Charge payments directly to your mobile phone bill."
-                    },
-                    {
-                        "@type": "PaymentMethod",
-                        "paymentMethodType": "https://schema.org/Voucher",
-                        "name": "Voucher",
-                        "description": "Redeemable voucher or coupon for payment."
-                    }
-                ],
-                "price": "13.89",
-                "name": "VIP | BigTime",
-                "priceCurrency": "USD",
-                "description": "حفلات مباشرة | موسم الرياض |  ترفيه الـ VIP",
-                "availability": "https://schema.org/InStock",
-                "url": "https://shahid.mbc.net/ar/hub/promo/SHAHID_VIP_GEA",
-                "eligibleRegion": [
-                    "AF",
-                    "AO",
-                    "AL",
-                    "AD",
-                    "AE",
-                    "AR",
-                    "AM",
-                    "AG",
-                    "AU",
-                    "AT",
-                    "AZ",
-                    "BI",
-                    "BE",
-                    "BJ",
-                    "BF",
-                    "BD",
-                    "BG",
-                    "BH",
-                    "BS",
-                    "BA",
-                    "BY",
-                    "BZ",
-                    "BO",
-                    "BR",
-                    "BB",
-                    "BN",
-                    "BT",
-                    "BW",
-                    "CF",
-                    "CA",
-                    "CH",
-                    "CL",
-                    "CN",
-                    "CI",
-                    "CM",
-                    "CD",
-                    "CG",
-                    "CO",
-                    "KM",
-                    "CV",
-                    "CR",
-                    "CU",
-                    "CY",
-                    "CZ",
-                    "DE",
-                    "DJ",
-                    "DM",
-                    "DK",
-                    "DO",
-                    "DZ",
-                    "EC",
-                    "EG",
-                    "ER",
-                    "ES",
-                    "EE",
-                    "ET",
-                    "FI",
-                    "FJ",
-                    "FR",
-                    "FM",
-                    "GA",
-                    "GB",
-                    "GE",
-                    "GH",
-                    "GN",
-                    "GM",
-                    "GW",
-                    "GQ",
-                    "GR",
-                    "GD",
-                    "GT",
-                    "GY",
-                    "HN",
-                    "HR",
-                    "HT",
-                    "HU",
-                    "ID",
-                    "IN",
-                    "IE",
-                    "IR",
-                    "IQ",
-                    "IS",
-                    "IL",
-                    "IT",
-                    "JM",
-                    "JO",
-                    "JP",
-                    "KZ",
-                    "KE",
-                    "KG",
-                    "KH",
-                    "KI",
-                    "KN",
-                    "KR",
-                    "KW",
-                    "LA",
-                    "LB",
-                    "LR",
-                    "LY",
-                    "LC",
-                    "LI",
-                    "LK",
-                    "LS",
-                    "LT",
-                    "LU",
-                    "LV",
-                    "MA",
-                    "MC",
-                    "MD",
-                    "MG",
-                    "MV",
-                    "MX",
-                    "MH",
-                    "MK",
-                    "ML",
-                    "MT",
-                    "MM",
-                    "ME",
-                    "MN",
-                    "MZ",
-                    "MR",
-                    "MU",
-                    "MW",
-                    "MY",
-                    "NA",
-                    "NE",
-                    "NG",
-                    "NI",
-                    "NL",
-                    "NO",
-                    "NP",
-                    "NR",
-                    "NZ",
-                    "OM",
-                    "PK",
-                    "PA",
-                    "PE",
-                    "PH",
-                    "PW",
-                    "PG",
-                    "PL",
-                    "KP",
-                    "PT",
-                    "PY",
-                    "QA",
-                    "RO",
-                    "RU",
-                    "RW",
-                    "SA",
-                    "SD",
-                    "SN",
-                    "SG",
-                    "SB",
-                    "SL",
-                    "SV",
-                    "SM",
-                    "SO",
-                    "RS",
-                    "SS",
-                    "ST",
-                    "SR",
-                    "SK",
-                    "SI",
-                    "SE",
-                    "SZ",
-                    "SC",
-                    "SY",
-                    "TD",
-                    "TG",
-                    "TH",
-                    "TJ",
-                    "TM",
-                    "TL",
-                    "TO",
-                    "TT",
-                    "TN",
-                    "TR",
-                    "TV",
-                    "TZ",
-                    "UG",
-                    "UA",
-                    "UY",
-                    "US",
-                    "UZ",
-                    "VA",
-                    "VC",
-                    "VE",
-                    "VN",
-                    "VU",
-                    "WS",
-                    "YE",
-                    "ZM",
-                    "ZW",
-                    "PS"
-                ],
-                "potentialAction": {
-                    "@type": "SubscribeAction",
-                    "name": "VIP | BigTime",
-                    "target": "https://shahid.mbc.net/ar/hub/promo/SHAHID_VIP_GEA"
-                }
-            }
-        ]
-    }</script>
 
 <meta name=referrer content=no-referrer>
 <style>.sf-hidden {
