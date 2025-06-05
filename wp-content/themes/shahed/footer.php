@@ -109,7 +109,7 @@
          style=color:transparent>
     <p class="text-center text-xs font-medium leading-5.5 text-footerGrayText md:text-md-14 lg:text-lg-14 xl:text-xl-14 2xl:text-2xl-14">جميع الحقوق محفوظة لمجموعة © MBC Group 2025</p></div>
 </div>
-<div test-id=skeleton class="absolute left-0 top-0 z-[201] hidden h-screen w-full bg-body-dark" style=display:none></div>
+<div class="absolute left-0 top-0 z-[201] hidden h-screen w-full bg-body-dark" style=display:none></div>
 </main>
 </div>
 <div></div>
