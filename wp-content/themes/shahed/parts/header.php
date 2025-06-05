@@ -4,7 +4,7 @@
         <div id="desktop-menu" class="z-[1] flex w-full max-w-full flex-nowrap items-center justify-start">
             <h2 class="flex flex-none items-center justify-center m-0 ltr:md:mr-md-16 ltr:lg:mr-lg-24 ltr:xl:mr-6 ltr:2xl:mr-2xl-24 cursor-pointer rtl:md:ml-md-16 rtl:lg:ml-lg-24 rtl:xl:ml-6 rtl:2xl:ml-2xl-24">
                 <a class="flex items-center justify-center" href="/">
-                    <img alt="Shahid VIP" title="Shahid VIP" fetchpriority="high" width="78" height="22" decoding="async" class="h-[20px] w-auto leading-[0] md:h-md-22 lg:h-lg-24 xl:h-6 2xl:h-2xl-24" src="" style="color:transparent">
+                    <img alt="Shahid VIP" title="Shahid VIP" fetchpriority="high" width="78" height="22" decoding="async" class="h-[20px] w-auto leading-[0] md:h-md-22 lg:h-lg-24 xl:h-6 2xl:h-2xl-24" src="<?php _e_(\Shahed\Assets::toWpAssetSrc('/images/logo.webp')); ?>" style="color:transparent">
                 </a>
             </h2>
             <div class="flex flex-auto"></div>

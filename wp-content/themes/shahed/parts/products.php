@@ -47,7 +47,7 @@ $products = [
                         <div class="flex w-full flex-row items-center justify-between font-bold text-white xl:font-medium">
                             <div class="text-[16px] md:vw-text-[16] xl:vw-text-[18]"><?php  _e_($product['title']); ?></div>
                             <?php if ($product['isBestseller']) { ?>
-                                <div class="text-[12px] font-bold text-white vw-rounded-[2] md:vw-text-[12] vw-px-[8] vw-py-[4] md:vw-px-[12] xl:vw-px-[8]" style=background-color:rgb(214,25,98)>&nbsp;الأكثر مبيعاً</div>
+                                <div class="text-[12px] font-bold text-white vw-rounded-[2] md:vw-text-[12] vw-px-[8] vw-py-[4] md:vw-px-[12] xl:vw-px-[8]" style="background-color:rgb(214,25,98)">&nbsp;الأكثر مبيعاً</div>
                             <?php } ?>
                         </div>
                         <div class="flex w-full flex-grow flex-col justify-between gap-[24px] xl:vw-gap-[24]">
