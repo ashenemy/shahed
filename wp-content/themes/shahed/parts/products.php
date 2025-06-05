@@ -21,15 +21,15 @@ $products = [
                 'id' => 3,
                 'title' => 'VIP | BigTime',
                 'price' => 69.99,
-                'description' => 'حفلات مباشرة | موسم الرياض | ترفيه الـ VIP',
+                'description' => 'دوري روبش السعودي، رباعات محلية ودولية مباشرة  إضافة إلى عالم VIP الترفيهي بكل مزايا.  ',
                 'isBestseller' => false,
                 'haveDiscount' => true
         ],
         [
                 'id' => 4,
-                'title' => 'VIP | BigTime',
+                'title' => '# إراغة | VIP  ',
                 'price' => 89.99,
-                'description' => 'حفلات مباشرة | موسم الرياض | ترفيه الـ VIP',
+                'description' => 'أغف SAR 15 واحداً المشاهدة على جهاز GOBX الخاص بك  احصل على كل محتويات ومرازيا شاهد تحت اشتراك واحد  ',
                 'isBestseller' => false,
                 'haveDiscount' => false
         ]
