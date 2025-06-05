@@ -422,3 +422,42 @@ h1, h2, h3 {
 img[src="data:,"], source[src="data:,"] {
          display: none !important
      }
+
+
+.faq-item .faq-content{
+    height: 0px;
+    overflow: hidden;
+    transition-property: all;
+    transition-delay: .15s;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+
+}
+
+
+.faq-item.--open .faq-content{
+    height: auto;
+    padding-bottom: 4px;
+    border-color: rgb(62 73 91 );
+    border-top-width: 1px;
+    border-style: solid;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.faq-item.--open .plus-icon {
+    display: none;
+}
+
+.faq-item.--open .minus-icon {
+    display: block;
+}
+
+
+.faq-item .plus-icon {
+    display: block;
+}
+
+.faq-item .minus-icon {
+    display: none;
+}

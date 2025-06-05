@@ -1,42 +1,35 @@
+<?php
+    $faqs = [
+        ['title' => 'ما هو شاهد؟', 'description' => 'شاهد هي المنصة الترفيهية العالمية الأولى للعرب في منطقة الشرق الأوسط وشمال إفريقيا وجميع أنحاء العالم.<br><br>كأول منصة لخدمة الفيديو حسب الطلب (VOD) في العالم العربي، مدعومة من مجموعة MBC، تقدم شاهد أكبر مكتبة للمحتوى العربي في العالم بالإضافة إلى البرامج الغربية والتركية والكورية وإنتاجات بوليوود. ويشمل ذلك أعمال شاهد الاصلية الحائزة على جوائز، والعروض الأولى الحصرية، وأحدث الأفلام مباشرة بعد عرضها في دور السينما، والأفلام الوثائقية والبث المباشر للقنوات التلفزيونية بتقنية Full HD.<br><br>يمكن للمشاهدين على منصة شاهد متابعة البث المباشر أو إعادة تشغيل الحفلات الموسيقية من موسم الرياض وجدة والمزيد. تقدم شاهد أيضًا مجموعة واسعة من المحتوى الآمن والجذاب والتعليمي والمناسب ثقافيًا للأطفال.<br><br>مهمة شاهد هي اكتشاف وتطوير قصص تحرك وتلهم المجتمع العربي ويسمع صداها في العالم العربي وكافة بقاع العالم. هدفنا هو دفع عجلة الترفيه العربي والارتقاء به وتعزيز حضوره على المستوى العالمي مع دعم المواهب المحلية والإقليمية وتشجيعهم على سرد قصصهم الخاصة وإطلاق روحهم الإبداعية من خلال منصتنا.<br><br>يمكن للمشاهدين من خلال منصة شاهد الاستمتاع بمشاهدة مجموعة متنوعة من البرامج دون الحاجة للاشتراك، كما يمكنهم الاشتراك في إحدى الباقات المتاحة والاستمتاع بعالم كامل من الترفيه على أعلى مستوى. <br><br>محتوى شاهد متاح من خلال تطبيق شاهد على الأجهزة المحمولة وأجهزة التلفزيون الذكية وعلى موقع Shahid.net.'],
+        ['title' => 'كيف يمكنني الاشتراك في الباقات المتاحة؟', 'description' => 'يمكنك الاشتراك في باقات شاهد من خلال زيارة موقع Shahid.net أو تحميل تطبيق شاهد.<br><br>فيما يلي الخطوات البسيطة التي يمكنك اتباعها للاشتراك في باقتك المفضلة:<br> - اختر إحدى الباقات المتاحة<br> - اختر نوع الاشتراك وطريقة الدفع<br>- قم بإنشاء حساب أو تسجيل الدخول باستخدام البريد الإلكتروني أو رقم الهاتف المحمول الخاص بك<br>- أدخل بيانات الدفع الخاصة بك واشترك<br><br>دون عقود أو التزامات، يمكنك إلغاء اشتراكك في أي وقت دون رسوم إلغاء.'],
+        ['title' => 'كم عدد الأجهزة المسموح بها على اشتراكي؟', 'description' => 'يمكنك الاستمتاع بالمشاهدة على عدة أجهزة حسب نوع اشتراكك: <br><br> • باقات الشامل، والشامل | GoBX: المشاهدة على 4 أجهزة في نفس الوقت من أماكن متعددة. <br> • باقات VIP، VIP رياضة، والرياضة | GoBX: المشاهدة على جهازين في نفس الوقت من مكان واحد. <br> • باقة VIP موبايل:المشاهدة على جهاز واحد فقط.'],
+        ['title' => 'كم عدد الملفات الشخصية التي يمكنني إنشاؤها؟', 'description' => 'يمكنك إنشاء ما يصل إلى 5 ملفات شخصية. يحتوي كل حساب مبدئياً على ملفين شخصيين. ملف للكبار وملف للأطفال. يمكن إضافة 3 ملفات شخصية إضافية (للكبار أو للأطفال)<br><br>يمكن لعائلتك وأصدقائك الآن الاستمتاع بتجربة شاهد الشخصية المصممة خصيصاً لتناسب أذواقهم من خلال حسابك حيث يحتوي كل ملف شخصي على:<br>- قائمتي<br>- اللغة المفضلة<br>- تجربة مشاهدة شخصية<br>- اقتراحات محتوى فريدة<br>- محتوى آمن (للأطفال)<br>'],
+        ['title' => 'هل يمكنني إلغاء اشتراكي في أي وقت؟', 'description' => ' بسيطة للإلغاء:<br>لخيارات الدفع عن طريق الهاتف وبطاقات الائتمان:<br>1- ادخل على إعدادات الحساب (باستخدام الملف الشخصي للكبار)<br>2- اضغط على إدارة الاشتراكات<br>3- اضغط على إلغاء الاشتراك<br><br>إذا كان اشتراكك عبر iTunes أو Google play، فما عليك سوى زيارة صفحة إدارة الاشتراك للإلغاء.<br><br>يمكنك مواصلة الدخول والمشاهدة لغاية موعد انتهاء الاشتراك.']
+    ];
+?>
+
+
 <div class="relative pb-[23px] pt-[48px] px-[16px] md:px-[32px] md:vw-pt-[72] xl:vw-px-[280]">
     <div class="flex justify-center">
         <div class="text-center font-sans font-bold text-white text-[16px] md:vw-text-[20] xl:vw-text-[24] vw-pb-[8] xl:vw-pb-[12] border-solid border-b-4 vw-px-[12] md:vw-border-b-[4] border-b-[4px] [border-image:linear-gradient(to_right,rgba(0,204,153,0),#00906c,rgba(0,204,153,0))_1] md:text-[20px]">الأسئلة الشائعة</div>
     </div>
-    <div class="relative pb-[24px] pt-[16px] md:vw-pb-[56] md:vw-pt-[20] before:absolute before:bottom-[0] before:left-0 before:right-0 before:border-t-[0.5px] before:border-solid before:border-dark-blue-4">
-        <div class="mt-[8px] bg-dark-blue px-[12px] py-[10px] vw-rounded-[8] md:vw-mt-[12] md:vw-p-[15.5]">
-            <div data-testid=faqs class="relative flex w-full cursor-pointer items-center justify-between ltr:!leading-tight rtl:leading-normal"><span class="pl-[12px] text-[12px] font-medium text-light-blue-5 md:vw-text-[16] ltr:pl-[0] ltr:pr-[12px]">ما هو شاهد؟</span><img
-                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE3IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMwQzkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTggMmMuNTUyIDAgMSAuNDQ4IDEgMXY0aDRjLjU1MiAwIDEgLjQ0OCAxIDFzLS40NDggMS0xIDFIOXY0YzAgLjU1Mi0uNDQ4IDEtMSAxcy0xLS40NDgtMS0xVjlIM2MtLjU1MiAwLTEtLjQ0OC0xLTFzLjQ0OC0xIDEtMWg0VjNjMC0uNTUyLjQ0OC0xIDEtMXoiLz4KPC9zdmc+Cg==" alt=plus_minus_icon class="h-[16px] w-[16px] md:vw-h-[23] md:vw-w-[23]"></div>
-            <div class="relative overflow-hidden">
-                <div class="hidden sf-hidden"></div>
+    <div class="relative pb-[24px] pt-[16px] md:vw-pb-[56] md:vw-pt-[20] before:absolute before:bottom-[0] before:left-0 before:right-0 before:border-t-[0.5px] before:border-solid before:border-dark-blue-4 faqs">
+        <?php foreach ($faqs as $faq) { ?>
+            <div class="mt-[8px] bg-dark-blue px-[12px] py-[10px] vw-rounded-[8] md:vw-mt-[12] md:vw-p-[15.5] faq-item">
+                <div class="relative flex w-full cursor-pointer items-center justify-between ltr:!leading-tight rtl:leading-normal faq-title">
+                    <span class="pl-[12px] text-[12px] font-medium text-light-blue-5 md:vw-text-[16] ltr:pl-[0] ltr:pr-[12px]"><?php _e_($faq['title']);?></span>
+                    <img src="<?php _e_(\Shahed\Assets::toWpAssetSrc('/images/icons/add-icon.svg')); ?>" class="h-[16px] w-[16px] md:vw-h-[23] md:vw-w-[23] plus-icon">
+                    <img src="<?php _e_(\Shahed\Assets::toWpAssetSrc('/images/icons/remove-icon.svg')); ?>" class="h-[16px] w-[16px] md:vw-h-[23] md:vw-w-[23] minus-icon">
+                </div>
+
+                <div class="relative overflow-hidden">
+                    <div class="block animate-slideDown  vw-mt-[7.5] vw-pt-[8] faq-content">
+                        <div class="rounded-b-[8px] rounded-t-none bg-dark-blue md:vw-rounded-b-[8] lg:vw-mt-1 mt-[6px] font-shahidRegular text-[12px] text-light-blue-2 md:vw-text-[12] leading-en rtl:leading-ar">شاهد هي المنصة الترفيهية العالمية الأولى للعرب في منطقة الشرق الأوسط وشمال إفريقيا وجميع أنحاء العالم.
+                            <?php _e_($faq['description']);?>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="mt-[8px] bg-dark-blue px-[12px] py-[10px] vw-rounded-[8] md:vw-mt-[12] md:vw-p-[15.5]">
-            <div data-testid=faqs class="relative flex w-full cursor-pointer items-center justify-between ltr:!leading-tight rtl:leading-normal"><span class="pl-[12px] text-[12px] font-medium text-light-blue-5 md:vw-text-[16] ltr:pl-[0] ltr:pr-[12px]">كيف يمكنني الاشتراك في الباقات المتاحة؟</span><img
-                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE3IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMwQzkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTggMmMuNTUyIDAgMSAuNDQ4IDEgMXY0aDRjLjU1MiAwIDEgLjQ0OCAxIDFzLS40NDggMS0xIDFIOXY0YzAgLjU1Mi0uNDQ4IDEtMSAxcy0xLS40NDgtMS0xVjlIM2MtLjU1MiAwLTEtLjQ0OC0xLTFzLjQ0OC0xIDEtMWg0VjNjMC0uNTUyLjQ0OC0xIDEtMXoiLz4KPC9zdmc+Cg==" alt=plus_minus_icon class="h-[16px] w-[16px] md:vw-h-[23] md:vw-w-[23]"></div>
-            <div class="relative overflow-hidden">
-                <div class="hidden sf-hidden"></div>
-            </div>
-        </div>
-        <div class="mt-[8px] bg-dark-blue px-[12px] py-[10px] vw-rounded-[8] md:vw-mt-[12] md:vw-p-[15.5]">
-            <div data-testid=faqs class="relative flex w-full cursor-pointer items-center justify-between ltr:!leading-tight rtl:leading-normal"><span class="pl-[12px] text-[12px] font-medium text-light-blue-5 md:vw-text-[16] ltr:pl-[0] ltr:pr-[12px]">كم عدد الأجهزة المسموح بها على اشتراكي؟</span><img
-                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE3IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMwQzkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTggMmMuNTUyIDAgMSAuNDQ4IDEgMXY0aDRjLjU1MiAwIDEgLjQ0OCAxIDFzLS40NDggMS0xIDFIOXY0YzAgLjU1Mi0uNDQ4IDEtMSAxcy0xLS40NDgtMS0xVjlIM2MtLjU1MiAwLTEtLjQ0OC0xLTFzLjQ0OC0xIDEtMWg0VjNjMC0uNTUyLjQ0OC0xIDEtMXoiLz4KPC9zdmc+Cg==" alt=plus_minus_icon class="h-[16px] w-[16px] md:vw-h-[23] md:vw-w-[23]"></div>
-            <div class="relative overflow-hidden">
-                <div class="hidden sf-hidden"></div>
-            </div>
-        </div>
-        <div class="mt-[8px] bg-dark-blue px-[12px] py-[10px] vw-rounded-[8] md:vw-mt-[12] md:vw-p-[15.5]">
-            <div data-testid=faqs class="relative flex w-full cursor-pointer items-center justify-between ltr:!leading-tight rtl:leading-normal"><span class="pl-[12px] text-[12px] font-medium text-light-blue-5 md:vw-text-[16] ltr:pl-[0] ltr:pr-[12px]">كم عدد الملفات الشخصية التي يمكنني إنشاؤها؟</span><img
-                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE3IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMwQzkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTggMmMuNTUyIDAgMSAuNDQ4IDEgMXY0aDRjLjU1MiAwIDEgLjQ0OCAxIDFzLS40NDggMS0xIDFIOXY0YzAgLjU1Mi0uNDQ4IDEtMSAxcy0xLS40NDgtMS0xVjlIM2MtLjU1MiAwLTEtLjQ0OC0xLTFzLjQ0OC0xIDEtMWg0VjNjMC0uNTUyLjQ0OC0xIDEtMXoiLz4KPC9zdmc+Cg==" alt=plus_minus_icon class="h-[16px] w-[16px] md:vw-h-[23] md:vw-w-[23]"></div>
-            <div class="relative overflow-hidden">
-                <div class="hidden sf-hidden"></div>
-            </div>
-        </div>
-        <div class="mt-[8px] bg-dark-blue px-[12px] py-[10px] vw-rounded-[8] md:vw-mt-[12] md:vw-p-[15.5]">
-            <div data-testid=faqs class="relative flex w-full cursor-pointer items-center justify-between ltr:!leading-tight rtl:leading-normal"><span class="pl-[12px] text-[12px] font-medium text-light-blue-5 md:vw-text-[16] ltr:pl-[0] ltr:pr-[12px]">هل يمكنني إلغاء اشتراكي في أي وقت؟</span><img
-                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE3IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiMwQzkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTggMmMuNTUyIDAgMSAuNDQ4IDEgMXY0aDRjLjU1MiAwIDEgLjQ0OCAxIDFzLS40NDggMS0xIDFIOXY0YzAgLjU1Mi0uNDQ4IDEtMSAxcy0xLS40NDgtMS0xVjlIM2MtLjU1MiAwLTEtLjQ0OC0xLTFzLjQ0OC0xIDEtMWg0VjNjMC0uNTUyLjQ0OC0xIDEtMXoiLz4KPC9zdmc+Cg==" alt=plus_minus_icon class="h-[16px] w-[16px] md:vw-h-[23] md:vw-w-[23]"></div>
-            <div class="relative overflow-hidden">
-                <div class="hidden sf-hidden"></div>
-            </div>
-        </div>
+        <?php  } ?>
     </div>
 </div>

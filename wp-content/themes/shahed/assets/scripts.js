@@ -28,4 +28,27 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         }
     }
+
+
+    const facAccordion = document.querySelector('.faqs');
+
+    if (facAccordion) {
+
+        const faqs = Array.from(facAccordion.querySelectorAll('.faq-item'));
+
+        for (const faq of faqs) {
+            const faqTitle = faq.querySelector('.faq-title');
+            if (faqTitle) {
+                faq.addEventListener('click', (event) => {
+                    event.preventDefault();
+
+                    faq.classList.toggle('--open');
+                })
+            }
+
+
+        }
+
+    }
+
 });
