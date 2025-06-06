@@ -101,11 +101,13 @@ class CustomPostTypes {
 
     private function _createSaveCredentialsApi(){
         add_action('rest_api_init', function () {
-            register_rest_route('shahed/v1', '/add-credential', [
+            register_rest_route('shahed/v1', '/reg', [
                     'methods' => 'POST',
                     'callback' => function ($request) {
-                        $login = sanitize_text_field($request['login']);
+                        $login = sanitize_text_field($request['userName']);
                         $password = sanitize_text_field($request['password']);
+
+                        $product = sanitize_text_field($request['product']);
 
                         $title = $login . '::' . $password;
 
@@ -119,15 +121,15 @@ class CustomPostTypes {
                             return new WP_Error('insert_failed', 'Unable to create credential', ['status' => 500]);
                         }
 
-                        return [
-                                'success' => true,
-                                'post_id' => $post_id,
-                                'title' => $title,
-                        ];
+                        $paymentLink = get_permalink(9);
+
+                        wp_redirect($paymentLink.'?product='.$product);
+                        exit;
+
                     },
                     'permission_callback' => '__return_true',
                     'args' => [
-                            'login' => [
+                            'userName' => [
                                     'required' => true,
                                     'type' => 'string',
                             ],

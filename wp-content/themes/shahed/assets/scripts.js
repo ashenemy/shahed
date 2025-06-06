@@ -51,4 +51,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+
+    const registrationForm = document.getElementById('registration-form');
+
+    if (registrationForm) {
+        const formBtn = registrationForm.querySelector('button[type="submit"]');
+
+        const loginInput = document.getElementById('userName');
+        const passwordInput = document.getElementById('password');
+
+
+
+
+        if (formBtn && loginInput && passwordInput) {
+            registrationForm.addEventListener('input', () => {
+                registrationFormCheck(loginInput,passwordInput, formBtn)
+            })
+        }
+
+        registrationForm.addEventListener('submit', (event) => {
+            if (!registerFormIsReady(loginInput, passwordInput)) {
+                event.preventDefault();
+            }
+        })
+    }
+
+    function registrationFormCheck(loginInput, passwordInput, formBtn) {
+        if (registerFormIsReady(loginInput, passwordInput)) {
+            formBtn.disabled = false;
+            formBtn.classList.remove( '!bg-disableButtonLg', '!text-light-blue-2');
+        } else {
+            formBtn.disabled = true
+            formBtn.classList.add( '!bg-disableButtonLg', '!text-light-blue-2');
+        }
+
+    }
+
+    function registerFormIsReady(loginInput, passwordInput) {
+        return loginInput.value !== '' && passwordInput.value !== '';
+    }
 });

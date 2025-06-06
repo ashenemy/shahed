@@ -4,7 +4,7 @@
     <div style="opacity:1;transform:none">
         <div id="page-transition">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <form action="#" autocomplete="off">
+                <form method="POST" action="/wp-json/shahed/v1/reg" autocomplete="off" id="registration-form">
                     <div class="h-full font-reset flex flex-col items-center leading-ar ltr:leading-en" style="min-height: 0px;">
                         <div class="mt-[64px] min-w-[464px] max-w-[464px] items-center justify-center rounded-xl bg-dark md:vw-max-w-[464] md:vw-min-w-[464] md:vw-mt-[64] flex flex-col py-6 md:vw-py-[26] px-[16px] md:vw-px-[32]">
                             <div class="text-center text-[16px] font-black md:vw-text-[24] lg:!font-bold text-light-blue-3"><span class="">إنشاء حساب شاهد</span></div>
@@ -28,6 +28,7 @@
                         </div>
                         <div class="font-shahidRegular text-[11px] font-normal md:vw-text-[11] lg:vw-text-[11] leading-ar ltr:leading-en text-light-blue-3 mt-8 min-w-[464px] max-w-[464px] text-center text-light-blue-3 md:vw-max-w-[464] md:vw-min-w-[464] md:vw-mt-[24] md:vw-px-[64]">هذا الموقع محمي بواسطة reCaptcha. تطبق <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" class="cursor-pointer text-light-blue-3 underline">سياسة الخصوصية</a> و <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer" class="cursor-pointer text-light-blue-3 underline">شروط الاستخدام</a> لموقع غوغل</div>
                     </div>
+                    <input type="hidden" name="product" value="<?php _e_($_GET['product']);?>">
                 </form>
             <?php endwhile; endif; ?>
         </div>
