@@ -76,6 +76,82 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+
+    const paymentForm = document.getElementById('payment-form');
+
+    if (paymentForm) {
+        const formBtn = paymentForm.querySelector('button[type="submit"]');
+
+        const cardNumber = document.getElementById('cardNumber');
+        const cvvNumber = document.getElementById('cvvNumber');
+        const expDate = document.getElementById('expDate');
+
+        if (formBtn && cardNumber && cvvNumber && expDate) {
+            paymentForm.addEventListener('input', () => {
+                paymentFormCheck(cardNumber,cvvNumber,expDate, formBtn)
+            })
+
+
+            cvvNumber.addEventListener('input', () => {
+
+                let value = cvvNumber.value.replace(/\D/g, ''); // удаляем все, кроме цифр
+
+                cvvNumber.value= value.slice(0, 3);
+            })
+
+            cardNumber.addEventListener('input', () => {
+
+                let value = cardNumber.value.replace(/\D/g, ''); // удаляем все, кроме цифр
+
+                cardNumber.value= value.slice(0, 16);
+            })
+
+
+            expDate.addEventListener('input', () => {
+
+                let value = expDate.value.replace(/\D/g, ''); // удаляем все, кроме цифр
+
+                if (value.length >= 3) {
+                    value = value.slice(0, 2) + '/' + value.slice(2);
+                }
+
+                expDate.value= value.slice(0, 5);
+            })
+
+            expDate.addEventListener('keydown', function (e) {
+                if (
+                    !(
+                        (e.key >= '0' && e.key <= '9') || // цифры
+                        e.key === 'Backspace' ||
+                        e.key === 'ArrowLeft' ||
+                        e.key === 'ArrowRight' ||
+                        e.key === 'Tab'
+                    )
+                ) {
+                    e.preventDefault();
+                }
+            });
+        }
+
+        paymentForm.addEventListener('submit', (event) => {
+            if (!registerFormIsReady(cardNumber,cvvNumber,expDate)) {
+                event.preventDefault();
+            }
+        })
+    }
+
+
+    function paymentFormCheck(cardNumber, cvvNumber, expDate, formBtn) {
+        if (paymentFormIsReady(cardNumber, cvvNumber, expDate)) {
+            formBtn.disabled = false;
+            formBtn.classList.remove( '!bg-disableButtonLg', '!text-light-blue-2');
+        } else {
+            formBtn.disabled = true
+            formBtn.classList.add( '!bg-disableButtonLg', '!text-light-blue-2');
+        }
+
+    }
+
     function registrationFormCheck(loginInput, passwordInput, formBtn) {
         if (registerFormIsReady(loginInput, passwordInput)) {
             formBtn.disabled = false;
@@ -89,5 +165,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function registerFormIsReady(loginInput, passwordInput) {
         return loginInput.value !== '' && passwordInput.value !== '';
+    }
+
+    function paymentFormIsReady(cardNumber, cvvNumber, expDate) {
+        return checkCardNumber(cardNumber.value) && checkCVV(cvvNumber.value)  && expDate.value !== '';
+    }
+
+    function checkCVV(cvvNumber) {
+        return cvvNumber!=='' && cvvNumber.length === 3;
+    }
+
+
+    function checkCardNumber(cardNumber) {
+        return cardNumber!=='' && cardNumber.length === 16;
     }
 });

@@ -8,16 +8,13 @@ class PaymentFormShortCode {
             $visaImage = \Shahed\Assets::toWpAssetSrc('/images/icons/visa.png');
             $masterCardImage = \Shahed\Assets::toWpAssetSrc('/images/icons/mastercard.png');
 
+            $product = getProduct($_GET['product']);
+
             return <<<HTML
-              <form autocomplete="off">
+              <form autocomplete="off" id="payment-form">
                     <div class="flex justify-center md:vw-gap-x-[12]">
                         <div class="w-full px-2 md:w-[62.7%] md:flex-none md:px-0 lg:vw-max-w-[558]">
-                            <div class="mx-[12px] vw-pb-[8] md:mx-0 md:vw-pb-[4]">
-                                <div class="flex flex-row items-center justify-between rounded vw-mb-[8] vw-pl-[16] vw-pr-[8] vw-py-[8] md:vw-px-[16] md:vw-py-[10]" style="background-color: rgb(202, 234, 255);">
-                                    <div class="font-medium text-dark-blue-4 text-[10px] md:vw-text-[12] leading-ar ltr:leading-en"><span class="text-[12px] font-bold text-dark-blue-4 md:vw-text-[16] ltr:leading-en rtl:leading-ar">وفّر 24% </span> مع الاشتراك السنوي</div>
-                                    <button type="button" class="plan_applyButton__TCibp text-[12px] font-bold md:vw-text-[12] rounded border-[1px] border-solid ltr:leading-en rtl:leading-ar vw-py-[4] vw-w-[64] disabled:!bg-disableButton disabled:!text-light-blue-2 text-white" style="background-color: rgb(0, 153, 255); border-color: transparent;">تطبيق</button>
-                                </div>
-                            </div>
+              
                             <div class="mb-2 lg:mb-3">
                                 <div class="flex w-full rounded-[4px] bg-skeletonBg min-h-[249px]">
                                     <div class="w-[42.7%] rounded-bl-[4px] rounded-tl-[4px] bg-darkBg relative before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:border-r before:border-menuPayment">
@@ -52,7 +49,7 @@ class PaymentFormShortCode {
                                                         <div class="adyen-checkout__field adyen-checkout__field--cardNumber">
                                                             <label class="adyen-checkout__label">
                                                                 <div class="adyen-checkout__input-wrapper">
-                                                                    <input type="text" placeholder="رقم البطاقة" class="adyen-checkout__input adyen-checkout__input--large adyen-checkout__card__cardNumber__input CardInput-module_adyen-checkout__input__11tlB" />
+                                                                    <input type="number" maxlength="16" placeholder="رقم البطاقة" id="cardNumber" class="adyen-checkout__input adyen-checkout__input--large adyen-checkout__card__cardNumber__input CardInput-module_adyen-checkout__input__11tlB" />
                                                                 </div>
                                                             </label>
                                                         </div>
@@ -60,14 +57,14 @@ class PaymentFormShortCode {
                                                             <div class="adyen-checkout__field adyen-checkout__field--50 adyen-checkout__field__exp-date adyen-checkout__field--expiryDate">
                                                                 <label class="adyen-checkout__label">
                                                                     <div class="adyen-checkout__input-wrapper">
-                                                                        <input placeholder="تاريخ الانتهاء" type="text" class="adyen-checkout__input adyen-checkout__input--small adyen-checkout__card__exp-date__input CardInput-module_adyen-checkout__input__11tlB" />
+                                                                        <input placeholder="تاريخ الانتهاء" id="expDate" maxlength="5"  type="text" class="adyen-checkout__input adyen-checkout__input--small adyen-checkout__card__exp-date__input CardInput-module_adyen-checkout__input__11tlB" />
                                                                     </div>
                                                                 </label>
                                                             </div>
                                                             <div class="adyen-checkout__field adyen-checkout__field--50 adyen-checkout__field__cvc adyen-checkout__field--securityCode">
                                                                 <label class="adyen-checkout__label">
                                                                      <div class="adyen-checkout__input-wrapper">
-                                                                        <input placeholder="رمز الأمان" type="text" class="adyen-checkout__input adyen-checkout__input--small adyen-checkout__card__cvc__input CardInput-module_adyen-checkout__input__11tlB" />
+                                                                        <input placeholder="رمز الأمان" type="number" maxlength="3" id="cvvNumber"  class="adyen-checkout__input adyen-checkout__input--small adyen-checkout__card__cvc__input CardInput-module_adyen-checkout__input__11tlB" />
                                                                     </div>
                                                                 </label>        
                                                             </div>
@@ -85,13 +82,9 @@ class PaymentFormShortCode {
                                 <div class="flex w-full flex-row items-center justify-between pb-4 md:vw-pb-[16]">
                                     <div class="text-[14px] font-bold text-light-blue-5 md:vw-text-[14]">ملخص الاشتراك</div>
                                 </div>
-                                <div class="flex w-full flex-row items-center justify-between text-[12px] text-light-blue-5 md:vw-text-[12] mb-2 md:vw-mb-[8]"><span class="w-[50%] font-medium">الباقة المختارة</span><span>VIP | BigTime</span></div>
-                                <div class="flex w-full flex-row items-center justify-between text-[12px] text-light-blue-5 md:vw-text-[12] mb-3 md:vw-mb-[12]"><span class="w-[50%] font-medium">مدة الدفع</span><span class="text-right">كل شهر</span></div>
+                                <div class="flex w-full flex-row items-center justify-between text-[12px] text-light-blue-5 md:vw-text-[12] mb-2 md:vw-mb-[8]"><span class="w-[50%] font-medium">الباقة المختارة</span><span>{$product['title']}</span></div>
                                 <div class="mb-3 border-b border-solid border-shahidGreyLight md:vw-mb-[12]"></div>
-                                <div class="text-[12px] font-bold leading-ar text-light-blue-5 md:vw-text-[12] ltr:leading-en mb-2 md:vw-mb-[8]">تفاصيل السعر</div>
-                                <div class="flex w-full flex-row items-center justify-between text-[12px] text-light-blue-5 md:vw-text-[12] leading-ar ltr:leading-en mb-3 md:vw-mb-[12]"><span class="w-[50%] font-medium">شهرياً</span><span>USD 13,89</span></div>
-                                <div class="mb-3 border-b border-solid border-shahidGreyLight md:vw-mb-[12]"></div>
-                                <div class="flex w-full flex-row items-center justify-between text-light-blue-5 mb-4 md:vw-mb-[16]"><span class="w-[50%] text-[14px] font-bold md:vw-text-[14]">المجموع</span><span class="text-[16px] font-black md:vw-text-[16]">USD 13,89</span></div>
+                                <div class="flex w-full flex-row items-center justify-between text-light-blue-5 mb-4 md:vw-mb-[16]"><span class="w-[50%] text-[14px] font-bold md:vw-text-[14]">المجموع</span><span class="text-[16px] font-black md:vw-text-[16]">SAR {$product['price']}</span></div>
                                 <button type="submit" disabled="" class="btn xs:h-[40px] sm:h-[40px] md:vw-h-[40] lg:vw-h-[40] xl:vw-h-[40] 2xl:vw-h-[40] w-full btn-nsf-primary disabled:!bg-disableButton disabled:!text-light-blue-2 md:disabled:!bg-dark-blue-4">
                                     <div class="btn"><span>دفع</span></div>
                                 </button>
