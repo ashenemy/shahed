@@ -9,8 +9,10 @@ class Assets {
         if  (!Assets::isAbsoluteAsset($src)) {
             $src = get_template_directory_uri() . '/assets' . $src;
         }
-        wp_register_script($handle, $src, [], false, $in_footer);
-        wp_enqueue_script($handle);
+
+        add_action('wp_enqueue_scripts', function () use ($in_footer, $src, $handle) {
+            wp_enqueue_script($handle, $src, [], false, $in_footer);
+        });
 
         add_filter('script_loader_tag', function ($tag, $h) use ($handle, $attrs) {
             if ($h !== $handle) return $tag;
@@ -38,8 +40,12 @@ class Assets {
             $src = get_template_directory_uri() . '/assets' . $src;
         }
 
-        wp_register_style($handle, $src);
-        wp_enqueue_style($handle);
+
+        add_action('wp_enqueue_scripts', function () use ($src, $handle) {
+            wp_enqueue_style($handle, $src);
+        });
+
+
     }
 
 
