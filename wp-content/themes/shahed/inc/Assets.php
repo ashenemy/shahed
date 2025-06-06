@@ -6,6 +6,8 @@ use DOMDocument;
 
 class Assets {
     public static function script($handle, $src, $in_footer = true, $attrs = []) {
+        if (is_admin()) return;
+
         if  (!Assets::isAbsoluteAsset($src)) {
             $src = get_template_directory_uri() . '/assets' . $src;
         }
@@ -36,6 +38,8 @@ class Assets {
     }
 
     public static function style($handle, $src) {
+        if (is_admin()) return;
+
         if  (!Assets::isAbsoluteAsset($src)) {
             $src = get_template_directory_uri() . '/assets' . $src;
         }

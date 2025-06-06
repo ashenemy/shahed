@@ -3,6 +3,7 @@ namespace Shahed;
 
 require_once __DIR__ . '/Assets.php';
 require_once __DIR__ . '/ShortCodes.php';
+require_once __DIR__ . '/CustomPostTypes.php';
 
 class Kernel {
 
@@ -20,6 +21,11 @@ class Kernel {
         $this->_setupThemeSupport();
         $this->_wpRoleClean();
         $this->_setupShortCodes();
+        $this->_setupCustomPostTypes();
+    }
+
+    private function _setupCustomPostTypes() {
+        \Shahed\CustomPostTypes::init();
     }
 
     private function _setupShortCodes() {

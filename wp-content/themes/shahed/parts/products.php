@@ -1,40 +1,26 @@
 <?php
 
-$products = [
-  [
-            'id' => 2,
-            'title' => 'VIP',
-            'price' => 39.99,
-            'description' => 'أعمال شاهد الأصلية | العروض الأولية الحصرية | محتوى آمن للأطفال | أعمال عالمية',
-            'isBestseller' => true,
-            'haveDiscount' => false
-    ],
-    [
-        'id' => 1,
-        'title' => 'VIP | BigTime',
-        'price' => 49.99,
-        'description' => 'حفلات مباشرة | موسم الرياض | ترفيه الـ VIP',
-        'isBestseller' => false,
-        'haveDiscount' => true
-    ],
-        [
-                'id' => 3,
-                'title' => 'VIP | BigTime',
-                'price' => 69.99,
-                'description' => 'دوري روبش السعودي، رباعات محلية ودولية مباشرة  إضافة إلى عالم VIP الترفيهي بكل مزايا.  ',
-                'isBestseller' => false,
-                'haveDiscount' => true
-        ],
-        [
-                'id' => 4,
-                'title' => '# إراغة | VIP  ',
-                'price' => 89.99,
-                'description' => 'أغف SAR 15 واحداً المشاهدة على جهاز GOBX الخاص بك  احصل على كل محتويات ومرازيا شاهد تحت اشتراك واحد  ',
-                'isBestseller' => false,
-                'haveDiscount' => false
-        ]
-];
+$products = [];
 
+$query = new WP_Query([
+        'post_type'      => 'products',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+]);
+
+if ($query->have_posts()) {
+    foreach ($query->posts as $post) {
+        $products[] = [
+                'id'           => $post->ID,
+                'title'        => get_the_title($post),
+                'price'        => get_post_meta($post->ID, 'price', true),
+                'description'  => $post->post_content,
+                'isBestseller' => (bool) get_post_meta($post->ID, 'isBestseller', true),
+        ];
+    }
+}
+
+wp_reset_postdata();
 ?>
 
 
@@ -59,9 +45,13 @@ $products = [
                             </div>
                             <div class="flex w-full items-center justify-between">
                                 <div style="color:white; font-weight: bold; font-size: 18px;">أول 3 أشهر - 0.99 ريال سعودي</div>
-                                <button type=button class="btn xs:h-[40px] sm:h-[40px] md:vw-h-[40] lg:vw-h-[40] xl:vw-h-[40] 2xl:vw-h-[40] w-full btn-nsf-secondary bg-packageButtonBg !text-[12px] !vw-h-[24] md:mt-0 md:!vw-text-[12] vw-w-[112] md:vw-w-[156] lg:vw-w-[112]">
-                                    <div class="btn"><span>اشتراك</span></div>
-                                </button>
+                                <form method="GET" action="<?php _e_(get_permalink(13));?>">
+                                    <input type="hidden" name="product" value="<?php _e_($product['id']);?>">
+                                    <button type="submit" class="btn xs:h-[40px] sm:h-[40px] md:vw-h-[40] lg:vw-h-[40] xl:vw-h-[40] 2xl:vw-h-[40] w-full btn-nsf-secondary bg-packageButtonBg !text-[12px] !vw-h-[24] md:mt-0 md:!vw-text-[12] vw-w-[112] md:vw-w-[156] lg:vw-w-[112]">
+                                        <div class="btn"><span>اشتراك</span></div>
+                                    </button>
+                                </form>
+
                             </div>
                         </div>
                     </div>

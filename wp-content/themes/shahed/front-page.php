@@ -4,7 +4,6 @@
     <div style="opacity:1;transform:none">
         <div id="page-transition">
             <div>
-                <h1 class="absolute indent-[-9999px]">اكتشف المزيد مع اشتراك شاهد الخاص بك!</h1>
                 <?php get_template_part('parts/banner'); ?>
                 <?php get_template_part('parts/products'); ?>
                 <?php get_template_part('parts/videos'); ?>
