@@ -4,6 +4,9 @@ $local_hosts = ['localhost', '127.0.0.1', '::1'];
 $is_local = in_array($host, $local_hosts) || strpos($host, '.local') !== false;
 
 if ($is_local) {
+
+    define( 'WP_HOME', 'http://localhost' );
+    define( 'WP_SITEURL', 'http://localhost' );
     define('DB_NAME', 'dbmaster');
     define('DB_USER', 'dbmasteruser');
     define('DB_PASSWORD', '9j+:a~+*8)ChnG0V3k~#s?5TiH9:M%GC');
@@ -13,9 +16,12 @@ if ($is_local) {
     define('WP_DEBUG_DISPLAY', true);
     define('SCRIPT_DEBUG', true);
 } else {
-    define('DB_NAME', 'wp_prod');
-    define('DB_USER', 'prod_user');
-    define('DB_PASSWORD', 'super_secure_password');
+    define( 'WP_HOME', 'https://shahid.mbc-vip.net' );
+    define( 'WP_SITEURL', 'https:/shahid.mbc-vip.net' );
+
+    define('DB_NAME', 'mbcv_shahed');
+    define('DB_USER', 'mbcv_shahed_user');
+    define('DB_PASSWORD', 'srv^5GjaAv5HMkcl');
     define('DB_HOST', 'localhost');
     define('WP_DEBUG', false);
     define('WP_DEBUG_LOG', false);
@@ -23,7 +29,7 @@ if ($is_local) {
     define('SCRIPT_DEBUG', false);
 }
 
-jdbc:mysql://:3306/dbmaster
+
 
 define('DB_CHARSET', 'utf8mb4');
 define('DB_COLLATE', '');
