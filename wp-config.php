@@ -17,7 +17,7 @@ if ($is_local) {
     define('SCRIPT_DEBUG', true);
 } else {
     define( 'WP_HOME', 'https://shahid.mbc-vip.net' );
-    define( 'WP_SITEURL', 'https:/shahid.mbc-vip.net' );
+    define( 'WP_SITEURL', 'https://shahid.mbc-vip.net' );
 
     define('DB_NAME', 'mbcv_shahed');
     define('DB_USER', 'mbcv_shahed_user');
