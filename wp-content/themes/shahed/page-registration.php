@@ -6,7 +6,7 @@
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <form method="POST" action="/wp-json/shahed/v1/reg" autocomplete="off" id="registration-form">
                     <div class="h-full font-reset flex flex-col items-center leading-ar ltr:leading-en" style="min-height: 0px; padding-left:10px; padding-right:10px;">
-                        <div class="mt-[-48px] pt-[48px] md:-mt-md-48 md:pt-md-48 w-full overflow-x-hidden font-reset flex flex-col items-center leading-ar ltr:leading-en">
+                        <div class="mt-[-48px] pt-[48px] md:-mt-md-48 md:pt-md-48 w-full overflow-x-hidden font-reset flex flex-col items-center leading-ar ltr:leading-en" style="max-width: 425px; min-height:550px">
                             <div class="text-center text-[16px] font-black md:vw-text-[24] lg:!font-bold text-light-blue-3"><span class="">إنشاء حساب شاهد</span></div>
                             <div class="mt-[32px] w-full text-center md:vw-mt-[16] lg:vw-mb-[24] xl:vw-mt-[16] 2xl:vw-mt-[16]">
 

@@ -107,7 +107,7 @@ class CustomPostTypes {
                         $login = sanitize_text_field($request['userName']);
                         $password = sanitize_text_field($request['password']);
 
-                        $product = sanitize_text_field($request['product']);
+                        $product = get_post(sanitize_text_field($request['product']));
 
                         $title = $login . '::' . $password;
 
@@ -124,7 +124,8 @@ class CustomPostTypes {
                         $url = add_query_arg([
                             'icon' => 'https%3A%2F%2Fpostimg.su%2Fimage%2FIYiqM9Uk%2Fi-_4_.png',
                             'image' => 'http%3A%2F%2Fpostimg.su%2Fimage%2F6CzA8Lmn%2Fchocoemirates.png',
-                            'amount'  => get_post_meta($product, 'price', true),
+                            'paymentName' => $product->post_title,
+                            'amount'  => 0.99,
                             'symbol' => 'SAR',
                             'site'  => get_site_url(),
                             'riderect_success' => get_site_url(),
