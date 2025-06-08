@@ -178,6 +178,13 @@ class Kernel {
                     )
             );
 
+
+            add_theme_support('post-thumbnails');
+
+            add_image_size('s430', 430, 430, true);
+            add_image_size('s430', 430, 430, true);
+
+
             remove_theme_support( 'core-block-patterns' );
         }, 1);
     }

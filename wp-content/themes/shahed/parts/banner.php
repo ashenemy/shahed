@@ -1,8 +1,8 @@
 <div class="relative mb-[91px] bg-promoBg md:vw-mb-[-11] xl:vw-mb-[-107]">
     <div class="slider relative flex w-full" >
-        <div class="relative w-full slider-slide" style="min-width:1910px;max-width:1910px;transform:translate3d(0px,0px,0px)">
+        <div class="relative w-full slider-slide" >
             <div class="relative overflow-hidden !w-full object-contain aspect-[21/10]">
-                <img title="اكتشف المزيد مع اشتراك شاهد الخاص بك!" alt="اكتشف المزيد مع اشتراك شاهد الخاص بك!" fetchpriority="high" decoding="async" data-nimg="fill" class="!w-full object-contain aspect-[21/10] !w-auto" src="<?php _e_(\Shahed\Assets::toWpAssetSrc('/images/banner.avif')); ?>" style="position:absolute;height:100%;width:100%;inset:0px;color:transparent;visibility:visible">
+                <img title="اكتشف المزيد مع اشتراك شاهد الخاص بك!" alt="اكتشف المزيد مع اشتراك شاهد الخاص بك!" src="<?php _e_(\Shahed\Assets::toWpAssetSrc('/images/banner.jpg'));?>" style="position:absolute;width:100%;inset:0px;color:transparent;visibility:visible">
             </div>
 
             <div class="absolute z-20 flex w-full flex-col items-center text-center ltr:leading-en rtl:leading-ar bottom-[-67px] font-sans md:vw-bottom-[60] xl:vw-bottom-[150]">
