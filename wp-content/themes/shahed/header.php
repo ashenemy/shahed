@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl" data-critters-container class="custom_scrollbar smartbanner-margin-top" style="overflow-y:auto">
 <meta charset=utf-8>
 <title>Shahid | اكتشف المزيد مع اشتراك شاهد الخاص بك!</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
 <?php wp_head(); ?>
 <body>

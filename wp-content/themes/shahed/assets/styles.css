@@ -58643,3 +58643,9 @@ button:not(#clear-filters-handler):not(.ot-close-icon):not(#filter-btn-handler):
     width: 100%;
     column-gap: 8px;
 }
+
+@media (min-width: 1024px) {
+    .lg\:aspect-\[21\/10\] {
+        aspect-ratio: 21 / 10;
+    }
+}
