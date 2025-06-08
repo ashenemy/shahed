@@ -42531,7 +42531,7 @@ html.flex-layout.smartbanner-show #appRoot {
 .view_content__O9aFA {
     width: 100%;
     height: auto;
-    min-height: 100% !important;
+    min-height: 100vh;
     flex: 1 0 auto
 }
 

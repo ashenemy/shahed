@@ -5,8 +5,8 @@
         <div id="page-transition">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <form method="POST" action="/wp-json/shahed/v1/reg" autocomplete="off" id="registration-form">
-                    <div class="h-full font-reset flex flex-col items-center leading-ar ltr:leading-en" style="min-height: 0px;">
-                        <div class="mt-[64px] min-w-[464px] max-w-[464px] items-center justify-center rounded-xl bg-dark md:vw-max-w-[464] md:vw-min-w-[464] md:vw-mt-[64] flex flex-col py-6 md:vw-py-[26] px-[16px] md:vw-px-[32]">
+                    <div class="h-full font-reset flex flex-col items-center leading-ar ltr:leading-en" style="min-height: 0px; padding-left:10px; padding-right:10px;">
+                        <div class="mt-[-48px] pt-[48px] md:-mt-md-48 md:pt-md-48 w-full overflow-x-hidden font-reset flex flex-col items-center leading-ar ltr:leading-en">
                             <div class="text-center text-[16px] font-black md:vw-text-[24] lg:!font-bold text-light-blue-3"><span class="">إنشاء حساب شاهد</span></div>
                             <div class="mt-[32px] w-full text-center md:vw-mt-[16] lg:vw-mb-[24] xl:vw-mt-[16] 2xl:vw-mt-[16]">
 
@@ -21,13 +21,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="lg:vw-w-[288] hidden lg:block">
+                            <div class=" hidden lg:block">
                                 <button type="submit" disabled="" class="btn xs:h-[40px] sm:h-[40px] md:vw-h-[40] lg:vw-h-[40] xl:vw-h-[40] 2xl:vw-h-[40] w-full btn-nsf-primary !bg-disableButtonLg !text-light-blue-2">
                                     <div class="btn"><span>متابعة</span></div>
                                 </button>
                             </div>
                         </div>
-                        <div class="font-shahidRegular text-[11px] font-normal md:vw-text-[11] lg:vw-text-[11] leading-ar ltr:leading-en text-light-blue-3 mt-8 min-w-[464px] max-w-[464px] text-center text-light-blue-3 md:vw-max-w-[464] md:vw-min-w-[464] md:vw-mt-[24] md:vw-px-[64]">هذا الموقع محمي بواسطة reCaptcha. تطبق <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" class="cursor-pointer text-light-blue-3 underline">سياسة الخصوصية</a> و <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer" class="cursor-pointer text-light-blue-3 underline">شروط الاستخدام</a> لموقع غوغل</div>
+                        <div class="font-shahidRegular text-[11px] font-normal md:vw-text-[11] lg:vw-text-[11] leading-ar ltr:leading-en text-light-blue-3 mt-8  text-center text-light-blue-3 md:vw-max-w-[464] md:vw-min-w-[464] md:vw-mt-[24] md:vw-px-[64]">هذا الموقع محمي بواسطة reCaptcha. تطبق <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" class="cursor-pointer text-light-blue-3 underline">سياسة الخصوصية</a> و <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer" class="cursor-pointer text-light-blue-3 underline">شروط الاستخدام</a> لموقع غوغل</div>
                     </div>
                     <input type="hidden" name="product" value="<?php _e_($_GET['product']);?>">
                 </form>
