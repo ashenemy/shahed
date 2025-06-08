@@ -81,16 +81,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (registrationForm) {
         const formBtn = registrationForm.querySelector('button[type="submit"]');
+        const alternativeFormBtn = document.querySelector('#bottomButtonWidget button[type="submit"]');
 
         const loginInput = document.getElementById('userName');
         const passwordInput = document.getElementById('password');
 
-
-
-
         if (formBtn && loginInput && passwordInput) {
             registrationForm.addEventListener('input', () => {
-                registrationFormCheck(loginInput,passwordInput, formBtn)
+                registrationFormCheck(loginInput,passwordInput, formBtn, alternativeFormBtn)
+            })
+        }
+
+        if (alternativeFormBtn) {
+            alternativeFormBtn.addEventListener('click', (event) => {
+                registrationForm.submit();
             })
         }
 
@@ -177,13 +181,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    function registrationFormCheck(loginInput, passwordInput, formBtn) {
+    function registrationFormCheck(loginInput, passwordInput, formBtn, alternativeFormBtn) {
         if (registerFormIsReady(loginInput, passwordInput)) {
             formBtn.disabled = false;
             formBtn.classList.remove( '!bg-disableButtonLg', '!text-light-blue-2');
+            if (alternativeFormBtn) {
+                alternativeFormBtn.disabled = false;
+                alternativeFormBtn.classList.remove( '!bg-disableButtonLg', '!text-light-blue-2');
+            }
+
         } else {
             formBtn.disabled = true
             formBtn.classList.add( '!bg-disableButtonLg', '!text-light-blue-2');
+
+            if (alternativeFormBtn) {
+                alternativeFormBtn.disabled = true
+                alternativeFormBtn.classList.add( '!bg-disableButtonLg', '!text-light-blue-2');
+            }
+
         }
 
     }

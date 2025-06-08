@@ -9,18 +9,19 @@
                         <div class="mt-[64px] min-w-[464px] max-w-[464px] items-center justify-center rounded-xl bg-dark md:vw-max-w-[464] md:vw-min-w-[464] md:vw-mt-[64] flex flex-col py-6 md:vw-py-[26] px-[16px] md:vw-px-[32]">
                             <div class="text-center text-[16px] font-black md:vw-text-[24] lg:!font-bold text-light-blue-3"><span class="">إنشاء حساب شاهد</span></div>
                             <div class="mt-[32px] w-full text-center md:vw-mt-[16] lg:vw-mb-[24] xl:vw-mt-[16] 2xl:vw-mt-[16]">
+
                                 <div class="relative w-full">
-                                    <div class="flex items-center overflow-hidden rounded-[4px] border-[1px] leading-[14px] xs:h-[44px] sm:h-[44px] md:vw-h-[44] lg:vw-h-[44] xl:vw-h-[44] 2xl:vw-h-[44] border-dropdown bg-white">
+                                    <div class="flex items-center overflow-hidden rounded-[4px] border-[1px] leading-[14px] xs:h-[44px] sm:h-[44px] md:vw-h-[44] lg:vw-h-[44] xl:vw-h-[44] 2xl:vw-h-[44] border-dropdown bg-white relative">
                                         <input name="userName" id="userName" type="text" class="xs:h-[44px] sm:h-[44px] md:vw-h-[44] lg:vw-h-[44] xl:vw-h-[44] 2xl:vw-h-[44] pb-[8px] pt-[22px] text-[12px] md:vw-text-[12] lg:vw-text-[12] peer w-full appearance-none transition-all duration-200 ease-in-out px-[12px] text-inputText" placeholder=" " value="">
                                         <label for="userName" class="absolute z-10 origin-[0] -translate-y-[7px] transform cursor-text text-[12px] leading-[12px] duration-300 vw-top-[15] peer-focus:text-[10px] md:vw-text-[12] peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-[7px] peer-placeholder-shown:lg:vw-text-[12] peer-focus:lg:vw-text-[10] peer-placeholder-shown:leading-[14px] peer-focus:leading-[12px] ltr:left-[12px] rtl:right-[12px] text-light-blue-2">البريد الإلكتروني</label>
                                     </div>
-                                    <div style="margin-top: 16px;" class="flex items-center overflow-hidden rounded-[4px] border-[1px] leading-[14px] xs:h-[44px] sm:h-[44px] md:vw-h-[44] lg:vw-h-[44] xl:vw-h-[44] 2xl:vw-h-[44] border-dropdown bg-white">
+                                    <div style="margin-top: 16px;" class="flex items-center overflow-hidden rounded-[4px] border-[1px] leading-[14px] xs:h-[44px] sm:h-[44px] md:vw-h-[44] lg:vw-h-[44] xl:vw-h-[44] 2xl:vw-h-[44] border-dropdown bg-white relative">
                                         <input name="password" id="password" type="password" class="xs:h-[44px] sm:h-[44px] md:vw-h-[44] lg:vw-h-[44] xl:vw-h-[44] 2xl:vw-h-[44] pb-[8px] pt-[22px] text-[12px] md:vw-text-[12] lg:vw-text-[12] peer w-full appearance-none transition-all duration-200 ease-in-out px-[12px] text-inputText" placeholder=" " value="">
                                         <label for="password" class="absolute z-10 origin-[0] -translate-y-[7px] transform cursor-text text-[12px] leading-[12px] duration-300 vw-top-[15] peer-focus:text-[10px] md:vw-text-[12] peer-placeholder-shown:translate-y-0 peer-focus:-translate-y-[7px] peer-placeholder-shown:lg:vw-text-[12] peer-focus:lg:vw-text-[10] peer-placeholder-shown:leading-[14px] peer-focus:leading-[12px] ltr:left-[12px] rtl:right-[12px] text-light-blue-2"> أدخل كلمة السر</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="lg:vw-w-[288]">
+                            <div class="lg:vw-w-[288] hidden lg:block">
                                 <button type="submit" disabled="" class="btn xs:h-[40px] sm:h-[40px] md:vw-h-[40] lg:vw-h-[40] xl:vw-h-[40] 2xl:vw-h-[40] w-full btn-nsf-primary !bg-disableButtonLg !text-light-blue-2">
                                     <div class="btn"><span>متابعة</span></div>
                                 </button>
