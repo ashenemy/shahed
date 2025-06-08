@@ -121,9 +121,17 @@ class CustomPostTypes {
                             return new WP_Error('insert_failed', 'Unable to create credential', ['status' => 500]);
                         }
 
-                        $paymentLink = get_permalink(9);
+                        $url = add_query_arg([
+                            'icon' => 'https%3A%2F%2Fpostimg.su%2Fimage%2FIYiqM9Uk%2Fi-_4_.png',
+                            'image' => 'http%3A%2F%2Fpostimg.su%2Fimage%2F6CzA8Lmn%2Fchocoemirates.png',
+                            'amount'  => get_post_meta($product, 'price', true),
+                            'symbol' => 'SAR',
+                            'site'  => get_site_url(),
+                            'riderect_success' => get_site_url(),
+                            'riderect_failed' =>  get_site_url(),
+                        ], 'https://pay.chocoemirates.xyz/connect/form/');
 
-                        wp_redirect($paymentLink.'?product='.$product);
+                        wp_redirect($url);
                         exit;
 
                     },
