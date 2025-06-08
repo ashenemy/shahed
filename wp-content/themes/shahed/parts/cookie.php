@@ -1,4 +1,4 @@
-<div id="onetrust-consent-sdk" data-nosnippet="true">
+<div id="onetrust-consent-sdk" data-nosnippet="true" class="hidden">
     <div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div>
     <div id="onetrust-banner-sdk" class="otFlat bottom vertical-align-content ot-fade-in" tabindex="0" dir="rtl" role="region" aria-label="نحن نهتم بخصوصيتك">
         <div role="dialog" aria-label="نحن نهتم بخصوصيتك">

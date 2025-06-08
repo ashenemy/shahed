@@ -154,7 +154,9 @@ class Kernel {
     private function _setupAssets() {
         Assets::style('main-styles', '/styles.css');
 
+        Assets::script('cookie-script', '//cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js');
         Assets::script('main-script', '/scripts.js');
+
     }
 
     private function _setupThemeSupport() {
@@ -180,10 +182,6 @@ class Kernel {
 
 
             add_theme_support('post-thumbnails');
-
-            add_image_size('s430', 430, 430, true);
-            add_image_size('s430', 430, 430, true);
-
 
             remove_theme_support( 'core-block-patterns' );
         }, 1);

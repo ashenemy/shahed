@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const closeCookieBtn  = document.getElementById('onetrust-accept-btn-handler');
+
+    const cookieBlock =  document.getElementById('onetrust-consent-sdk');
+
+    if (closeCookieBtn) {
+        closeCookieBtn.addEventListener('click', () => {
+            Cookies.set('cbsh', 'true', { expires: 9999 })
+
+
+
+            if (cookieBlock) {
+                cookieBlock.classList.add("hidden");
+            }
+        })
+
+    }
+
+    if (cookieBlock) {
+        if (!Cookies.get('cbsh')) {
+            cookieBlock.classList.remove("hidden");
+        }
+    }
+
+
+
     const forms = Array.from(document.querySelectorAll('.formzzz'));
 
     for (const form of forms) {

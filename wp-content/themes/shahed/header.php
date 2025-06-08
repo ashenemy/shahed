@@ -6,6 +6,7 @@
 
 <?php wp_head(); ?>
 <body>
+<?php get_template_part('parts/cookie'); ?>
     <div class="shahid-static appContent_root__tQtPZ appContent_rootForHubPages__1EQgq">
         <div id="mainContainer" class="view_overflowHidden__jCKpL view_mainContainerForHubPages__9qIBa custom_scrollbar">
             <div id="hub-page-layout" class="flex flex-col min-h-screen">

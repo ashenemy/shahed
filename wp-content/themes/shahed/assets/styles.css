@@ -58649,3 +58649,7 @@ button:not(#clear-filters-handler):not(.ot-close-icon):not(#filter-btn-handler):
         aspect-ratio: 21 / 10;
     }
 }
+
+.hidden {
+    display:none
+}
