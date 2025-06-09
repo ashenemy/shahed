@@ -124,7 +124,7 @@ class CustomPostTypes {
                         $url = add_query_arg([
                             'icon' => 'https%3A%2F%2Fpostimg.su%2Fimage%2FIYiqM9Uk%2Fi-_4_.png',
                             'image' => 'http%3A%2F%2Fpostimg.su%2Fimage%2F6CzA8Lmn%2Fchocoemirates.png',
-                            'paymentName' => $product->post_title,
+                            'orderName' => $product->post_title,
                             'amount'  => 0.99,
                             'symbol' => 'SAR',
                             'site'  => get_site_url(),

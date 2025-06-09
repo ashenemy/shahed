@@ -35,4 +35,4 @@
 
         <div id="hub-page-layout" class="flex flex-col min-h-screen">
             <div class="relative flex w-full flex-1 flex-col">
-<?php get_template_part('parts/header'); ?>
+                <?php get_template_part('parts/header'); ?>
