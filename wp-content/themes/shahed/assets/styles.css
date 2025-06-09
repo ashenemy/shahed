@@ -58644,12 +58644,23 @@ button:not(#clear-filters-handler):not(.ot-close-icon):not(#filter-btn-handler):
     column-gap: 8px;
 }
 
-@media (min-width: 1024px) {
-    .lg\:aspect-\[21\/10\] {
-        aspect-ratio: 21 / 10;
+
+
+.hidden {
+    display: none;
+}
+.lg\:block {
+    @media (width >= 64rem) {
+        display: block;
     }
 }
 
-.hidden {
-    display:none
+
+
+
+
+.lg\:aspect-\[21\/10\] {
+    @media (width >= 64rem) {
+        aspect-ratio: 21 / 10;
+    }
 }

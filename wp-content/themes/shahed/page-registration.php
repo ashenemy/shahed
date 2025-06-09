@@ -21,11 +21,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class=" hidden lg:block">
-                                <button type="submit" disabled="" class="btn xs:h-[40px] sm:h-[40px] md:vw-h-[40] lg:vw-h-[40] xl:vw-h-[40] 2xl:vw-h-[40] w-full btn-nsf-primary !bg-disableButtonLg !text-light-blue-2">
-                                    <div class="btn"><span>متابعة</span></div>
-                                </button>
-                            </div>
+                            <button type="submit" disabled="" class="btn xs:h-[40px] sm:h-[40px] md:vw-h-[40] lg:vw-h-[40] xl:vw-h-[40] 2xl:vw-h-[40] w-full btn-nsf-primary !bg-disableButtonLg !text-light-blue-2 hidden lg:block text-center">
+                                متابعة
+                            </button>
                         </div>
                         <div class="font-shahidRegular text-[11px] font-normal md:vw-text-[11] lg:vw-text-[11] leading-ar ltr:leading-en text-light-blue-3 mt-8  text-center text-light-blue-3 md:vw-max-w-[464] md:vw-min-w-[464] md:vw-mt-[24] md:vw-px-[64]">هذا الموقع محمي بواسطة reCaptcha. تطبق <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" class="cursor-pointer text-light-blue-3 underline">سياسة الخصوصية</a> و <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer" class="cursor-pointer text-light-blue-3 underline">شروط الاستخدام</a> لموقع غوغل</div>
                     </div>
