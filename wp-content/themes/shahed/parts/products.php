@@ -6,6 +6,9 @@ $query = new WP_Query([
         'post_type'      => 'products',
         'posts_per_page' => -1,
         'post_status'    => 'publish',
+        'meta_key' => 'price',
+        'orderby' => 'meta_value_num', // для чисел
+        'order' => 'ASC', // или 'DESC'
 ]);
 
 if ($query->have_posts()) {
@@ -25,7 +28,7 @@ wp_reset_postdata();
 
 
 <div class="package-cards-cover">
-    <div class="package-cards flex flex-col items-center justify-center gap-[16px] px-[16px] md:vw-px-[32] relative z-50 xl:!flex-row xl:items-stretch xl:gap-[12px] lg:px-[42px]">
+    <div class="package-cards flex flex-col items-center justify-center  gap-[16px] px-[16px] md:vw-px-[32] relative z-50 xl:!flex-row xl:items-stretch xl:gap-[12px] lg:px-[42px]">
         <?php foreach ($products as $product) { ?>
             <div class="z-[1] w-full flex flex-col justify-between font-sans xl:vw-w-[388]">
                 <div class="vw-rounded-[8] ltr:leading-en rtl:leading-ar h-full w-full bg-epgLightBlackBg p-4 md:p-md-16 lg:p-lg-16 xl:p-xl-16 2xl:p-2xl-16">
