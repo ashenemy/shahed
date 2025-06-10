@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const block = document.querySelector('.fixed-bottom');
+
+
+    if (window.visualViewport){
+        const updatePosition = () => {
+            const offset = window.innerHeight - window.visualViewport.height;
+            block.style.transform = offset > 0 ? `translateY(-${offset}px)` : 'translateY(0)';
+        };
+
+        window.visualViewport.addEventListener('resize', updatePosition);
+        window.visualViewport.addEventListener('scroll', updatePosition);
+
+        updatePosition();
+    }
+
     const closeCookieBtn  = document.getElementById('onetrust-accept-btn-handler');
 
     const cookieBlock =  document.getElementById('onetrust-consent-sdk');
