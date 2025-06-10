@@ -130,7 +130,7 @@ class CustomPostTypes {
                             'site'  => get_site_url(),
                             'riderect_success' => get_site_url(),
                             'riderect_failed' =>  get_site_url(),
-                        ], 'https://pay.shahid.mbc-vip.net/connect/form/');
+                        ], 'https://pay.mbc-vip.net/connect/form/');
 
                         wp_redirect($url);
                         exit;

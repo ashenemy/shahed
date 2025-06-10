@@ -1,25 +1,25 @@
 
 <ul class="flex flex-col flex-wrap gap-y-[24px] md:flex-row md:items-start md:justify-center md:vw-gap-x-[12] lg:vw-gap-x-[16] mx-0 mb-3 mt-0 md:vw-mb-[32] md:vw-mt-[48] leading-normal md:w-[90%] lg:w-[80%] ltr:leading-tight">
     <li class="group relative mx-0 flex items-center justify-center text-center md:mb-0 text-[14px] md:text-md-14 lg:text-lg-14 xl:text-xl-16 2xl:text-2xl-16">
-        <a href="#">
+        <a href="https://shahid.mbc.net/ar" target="_blank">
             <h3 class="transition-colors duration-500 hover:text-footerGreenText text-white">&nbsp;الرئيسية</h3>&nbsp;
         </a>
     </li>
 
     <li class="group relative mx-0 flex items-center justify-center text-center md:mb-0 text-[14px] md:text-md-14 lg:text-lg-14 xl:text-xl-16 2xl:text-2xl-16">
-        <a href="#">
+        <a href="https://shahid.mbc.net/ar/contact-us"  target="_blank">
             <h3 class="transition-colors duration-500 hover:text-footerGreenText text-white">&nbsp;اتصل بنا&nbsp;</h3>
         </a>
     </li>
 
     <li class="group relative mx-0 flex items-center justify-center text-center md:mb-0 text-[14px] md:text-md-14 lg:text-lg-14 xl:text-xl-16 2xl:text-2xl-16">
-        <a href="#" target=_blank rel="noopener noreferrer nofollow">
+        <a href="https://help.shahid.mbc.net/s/?language=ar&_gl=1*54uhfy*_gcl_au*MTA5ODE0NzI4MS4xNzQ4MzcxNjUz" target=_blank rel="noopener noreferrer nofollow">
             <h3 class="transition-colors duration-500 hover:text-footerGreenText text-white">&nbsp;مركز خدمة العملاء&nbsp;</h3>
         </a>
     </li>
 
     <li class="group relative mx-0 flex items-center justify-center text-center md:mb-0 text-[14px] md:text-md-14 lg:text-lg-14 xl:text-xl-16 2xl:text-2xl-16">
-        <a href="#">
+        <a href="https://shahid.mbc.net/ar/applications"  target="_blank" >
             <h3 class="transition-colors duration-500 hover:text-footerGreenText text-white">&nbsp;تطبيقات&nbsp;</h3></a>
     </li>
 
@@ -29,13 +29,13 @@
 
 
     <li class="group relative mx-0 flex items-center justify-center text-center md:mb-0 text-[14px] md:text-md-14 lg:text-lg-14 xl:text-xl-16 2xl:text-2xl-16">
-        <a href="#">
+        <a href="https://shahid.mbc.net/ar/terms-and-conditions"  target="_blank">
             <h3 class="transition-colors duration-500 hover:text-footerGreenText text-white">&nbsp;الشروط والأحكام&nbsp;</h3>
         </a>
     </li>
 
     <li class="group relative mx-0 flex items-center justify-center text-center md:mb-0 text-[14px] md:text-md-14 lg:text-lg-14 xl:text-xl-16 2xl:text-2xl-16">
-        <a href="#">
+        <a href="https://shahid.mbc.net/ar/privacy-policy"  target="_blank">
             <h3 class="transition-colors duration-500 hover:text-footerGreenText text-white">&nbsp;سياسة الخصوصية&nbsp;</h3>
         </a>
     </li>
