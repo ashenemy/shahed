@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const block = document.querySelector('.fixed-bottom');
 
 
-    if (window.visualViewport){
+    if (window.visualViewport && block){
         const updatePosition = () => {
             const offset = window.innerHeight - window.visualViewport.height;
             block.style.transform = offset > 0 ? `translateY(-${offset}px)` : 'translateY(0)';

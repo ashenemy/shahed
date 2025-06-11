@@ -58664,3 +58664,15 @@ button:not(#clear-filters-handler):not(.ot-close-icon):not(#filter-btn-handler):
         aspect-ratio: 21 / 10;
     }
 }
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Убираем стрелки в Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
