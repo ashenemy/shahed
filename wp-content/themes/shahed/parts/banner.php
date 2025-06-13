@@ -1,7 +1,7 @@
 <div class="relative mb-[91px] bg-promoBg md:vw-mb-[-11] xl:vw-mb-[-107]">
     <div class="slider relative flex w-full">
         <div class="relative w-full slider-slide w-full">
-            <div class="relative overflow-hidden !w-full object-cover aspect-square lg:aspect-[21/10]">
+            <div class="relative overflow-hidden !w-full object-cover aspect-square lg:aspect-[21/10]" style="max-height: 100vh">
                 <img title="اكتشف المزيد مع اشتراك شاهد الخاص بك!" alt="اكتشف المزيد مع اشتراك شاهد الخاص بك!" fetchpriority="high" decoding="async" data-nimg="fill" class="!w-full object-cover aspect-square lg:aspect-[21/10] !w-auto"
                      src="<?php _e_(\Shahed\Assets::toWpAssetSrc('/images/banner.jpg'));?>" >
             </div>

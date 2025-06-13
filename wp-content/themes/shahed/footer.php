@@ -18,6 +18,13 @@
 <?php wp_footer(); ?>
 <?php //get_template_part('parts/cookie'); ?>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ8DLJF7M7"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-HZ8DLJF7M7');
+</script>
 </body>
 </html>
