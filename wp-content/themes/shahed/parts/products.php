@@ -58,6 +58,13 @@ wp_reset_postdata();
                                 </div>
                                 <form method="GET" action="<?php _e_(get_permalink(13));?>">
                                     <input type="hidden" name="product" value="<?php _e_($product['id']);?>">
+                                    <?php
+                                        if (!empty($_GET['countryCode'])) {
+                                            ?>
+                                            <input type="hidden" name="countryCode" value="<?php _e_($_GET['countryCode']);?>">
+                                            <?php
+                                        }
+                                    ?>
                                     <button type="submit" class="btn xs:h-[40px] sm:h-[40px] md:vw-h-[40] lg:vw-h-[40] xl:vw-h-[40] 2xl:vw-h-[40] w-full btn-nsf-secondary bg-packageButtonBg !text-[12px] !vw-h-[24] md:mt-0 md:!vw-text-[12] vw-w-[112] md:vw-w-[156] lg:vw-w-[112]">
                                         <div class="btn"><span>اشتراك</span></div>
                                     </button>
