@@ -16,8 +16,9 @@ if ($query->have_posts()) {
         $products[] = [
                 'id'           => $post->ID,
                 'title'        => get_the_title($post),
-                'price'        => get_post_meta($post->ID, 'price', true),
+                'prices'        => get_post_meta($post->ID, 'prices', true),
                 'description'  => $post->post_content,
+                'discountPrices' => get_post_meta($post->ID, 'discount_prices', true),
                 'isBestseller' => (bool) get_post_meta($post->ID, 'isBestseller', true),
         ];
     }
@@ -41,13 +42,20 @@ wp_reset_postdata();
                         </div>
                         <div class="flex w-full flex-grow flex-col justify-between gap-[24px] xl:vw-gap-[24]">
                             <div class="flex w-full flex-col items-start">
-                                <div class="font-black text-light-blue-5 text-[16px] md:vw-text-[20] xl:vw-text-[18] mb-[8px] md:vw-mb-[12] xl:vw-mb-[8] font-shahidBlack"> SAR <?php  _e_($product['price']); ?> <span class="font-sans text-[14px] font-medium md:font-black md:vw-text-[16] xl:vw-text-[14] undefined"> /شهرياً</span></div>
+
+                                <div class="font-black text-light-blue-5 text-[16px] md:vw-text-[20] xl:vw-text-[18] mb-[8px] md:vw-mb-[12] xl:vw-mb-[8] font-shahidBlack">
+                                    <?php _e_priceFormat($product['prices'], 'eastern');?><span class="font-sans text-[14px] font-medium md:font-black md:vw-text-[16] xl:vw-text-[14] undefined"> / شهرياً</span>
+                                </div>
                                 <div class="flex w-full flex-col items-start justify-between">
                                     <div class="text-right font-shahid font-normal text-light-blue-4 ltr:text-left leading-ar ltr:leading-en ltr:md:vw-pr-[4] rtl:md:vw-pl-[4] text-[14px] lg:vw-text-[14] md:vw-text-[16]"><?php  _e_($product['description']); ?></div>
                                 </div>
                             </div>
                             <div class="flex w-full items-center justify-between">
-                                <div style="color:white; font-weight: bold; font-size: 18px;">أول 3 أشهر - 0.99 ريال سعودي</div>
+                                <div style="color:white; font-weight: bold; font-size: 18px;">
+                                    <?php _e_priceFormat($product['discountPrices'], 'eastern');?>
+                                    لأول ٣ أشهر
+
+                                </div>
                                 <form method="GET" action="<?php _e_(get_permalink(13));?>">
                                     <input type="hidden" name="product" value="<?php _e_($product['id']);?>">
                                     <button type="submit" class="btn xs:h-[40px] sm:h-[40px] md:vw-h-[40] lg:vw-h-[40] xl:vw-h-[40] 2xl:vw-h-[40] w-full btn-nsf-secondary bg-packageButtonBg !text-[12px] !vw-h-[24] md:mt-0 md:!vw-text-[12] vw-w-[112] md:vw-w-[156] lg:vw-w-[112]">

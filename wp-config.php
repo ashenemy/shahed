@@ -4,7 +4,7 @@ $local_hosts = ['localhost', '127.0.0.1', '::1'];
 $is_local = in_array($host, $local_hosts) || strpos($host, '.local') !== false;
 
 if ($is_local) {
-
+    $_SERVER['REMOTE_ADDR'] = '193.188.106.24';
     define( 'WP_HOME', 'http://localhost' );
     define( 'WP_SITEURL', 'http://localhost' );
     define('DB_NAME', 'dbmaster');
@@ -12,7 +12,6 @@ if ($is_local) {
     define('DB_PASSWORD', '9j+:a~+*8)ChnG0V3k~#s?5TiH9:M%GC');
     define('DB_HOST', 'ls-6966b38bee91e6175b5c26a090c0fcdb5230a22d.c5ema0cewprd.eu-central-1.rds.amazonaws.com');
     define('WP_DEBUG', true);
-    define('WP_DEBUG_LOG', false);
     define('WP_DEBUG_DISPLAY', true);
     define('SCRIPT_DEBUG', true);
 } else {

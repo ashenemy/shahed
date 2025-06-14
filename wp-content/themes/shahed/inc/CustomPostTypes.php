@@ -2,6 +2,9 @@
 
 namespace Shahed;
 
+require_once __DIR__ . '/GeoLocation.php';
+
+
 class CustomPostTypes {
 
     public static function init() {
@@ -66,8 +69,12 @@ class CustomPostTypes {
 
     private function _registerProductCustomMetaMetaBox(){
         add_action('save_post_products', function ($post_id) {
-            if (array_key_exists('price', $_POST)) {
-                update_post_meta($post_id, 'price', sanitize_text_field($_POST['price']));
+            if (array_key_exists('prices', $_POST)) {
+                update_post_meta($post_id, 'prices', $_POST['prices']);
+            }
+
+            if (array_key_exists('discount_prices', $_POST)) {
+                update_post_meta($post_id, 'discount_prices', $_POST['discount_prices']);
             }
 
             update_post_meta($post_id, 'isBestseller', isset($_POST['isBestseller']) ? '1' : '0');
@@ -75,19 +82,53 @@ class CustomPostTypes {
         add_action('add_meta_boxes', function () {
             add_meta_box(
                     'product_extra_fields',
-                    'Дополнительные поля товара',
+                    'Settings',
                     function ($post) {
-                        $price = get_post_meta($post->ID, 'price', true);
+                        $prices = get_post_meta($post->ID, 'prices', true);
+                        if (empty($prices)) {
+                            $prices = [];
+                            foreach (\Shahed\GeoLocation::currencies() as $currency) {
+                                $prices[$currency->iso] = 0;
+                            }
+                        }
+
+                        $discount_prices = get_post_meta($post->ID, 'discount_prices', true);
+                        if (empty($discount_prices)) {
+                            $discount_prices = [];
+                            foreach (\Shahed\GeoLocation::currencies() as $currency) {
+                                $discount_prices[$currency->iso] = 0;
+                            }
+                        }
+
                         $isBestseller = get_post_meta($post->ID, 'isBestseller', true);
                         ?>
+                        <h3>Price</h3>
                         <p>
-                            <label for="price">Цена:</label><br>
-                            <input type="number" id="price" name="price" value="<?= esc_attr($price) ?>" step="0.01" style="width:100%;">
+                            <?php
+                                foreach (\Shahed\GeoLocation::currencies() as $currency) {
+                                    ?>
+                                    <label for="<?php echo $currency->iso;?>"><?php echo $currency->iso;?>:</label>
+                                    <input type="number" id="<?php echo $currency->iso;?>" name="prices[<?php echo $currency->iso;?>]" value="<?= esc_attr($prices[$currency->iso]) ?>" step="0.01" style="width:100%;">
+                                    <?php
+                                }
+                            ?>
                         </p>
+                        <h3>Discount price</h3>
+                        <p>
+                            <?php
+                            foreach (\Shahed\GeoLocation::currencies() as $currency) {
+                                ?>
+                                <label for="discount-<?php echo $currency->iso;?>"><?php echo $currency->iso;?>:</label>
+                                <input type="number" id="discount-<?php echo $currency->iso;?>" name="discount_prices[<?php echo $currency->iso;?>]" value="<?= esc_attr($discount_prices[$currency->iso]) ?>" step="0.01" style="width:100%;">
+                                <?php
+                            }
+                            ?>
+                        </p>
+
                         <p>
                             <label>
                                 <input type="checkbox" name="isBestseller" value="1" <?= checked($isBestseller, '1', false) ?>>
-                                Хит продаж
+                                Best seller
                             </label>
                         </p>
                         <?php
