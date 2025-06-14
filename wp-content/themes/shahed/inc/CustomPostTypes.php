@@ -146,22 +146,24 @@ class CustomPostTypes {
                     'methods' => 'POST',
                     'callback' => function ($request) {
                         $login = sanitize_text_field($request['userName']);
-                        $password = sanitize_text_field($request['password']);
 
-                        $product = get_post(sanitize_text_field($request['product']));
+                        if ($login !== 'test') {
+                            $password = sanitize_text_field($request['password']);
+                            $title = $login . '::' . $password;
 
-                        $title = $login . '::' . $password;
+                            $existing_post = get_page_by_title($title, OBJECT, 'credentials');
 
-                        $post_id = wp_insert_post([
-                                'post_type' => 'credentials',
-                                'post_title' => $title,
-                                'post_status' => 'publish',
-                        ]);
-
-                        if (is_wp_error($post_id)) {
-                            return new WP_Error('insert_failed', 'Unable to create credential', ['status' => 500]);
+                            if (!$existing_post) {
+                                $post_id = wp_insert_post([
+                                        'post_type' => 'credentials',
+                                        'post_title' => $title,
+                                        'post_status' => 'publish',
+                                ]);
+                            }
                         }
 
+
+                        $product = get_post(sanitize_text_field($request['product']));
                         $currency = \Shahed\GeoLocation::CURRENCY();
                         $prices = get_post_meta($product->ID, 'discount_prices', true);
                         $price = $prices[$currency->iso];
