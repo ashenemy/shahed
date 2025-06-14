@@ -79,6 +79,7 @@ class CustomPostTypes {
 
             update_post_meta($post_id, 'isBestseller', isset($_POST['isBestseller']) ? '1' : '0');
         });
+
         add_action('add_meta_boxes', function () {
             add_meta_box(
                     'product_extra_fields',
