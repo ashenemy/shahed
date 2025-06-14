@@ -22,6 +22,7 @@ class Kernel {
         $this->_wpRoleClean();
         $this->_setupShortCodes();
         $this->_setupCustomPostTypes();
+        $this->_addSettings();
     }
 
     private function _setupCustomPostTypes() {
@@ -203,5 +204,50 @@ class Kernel {
         });
     }
 
+    private function _addSettings() {
+        add_action('customize_register', function ($wp_customize){
+            $wp_customize->add_section('shahid_settings_section', [
+                    'title' => 'Theme Settings',
+                    'priority' => 30,
+            ]);
+
+            $wp_customize->add_setting('shahid_moderation_mode', [
+                    'default' => false,
+                    'sanitize_callback' => function ($checked) {
+                        return ($checked === true || $checked === '1') ? true : false;
+                    },
+            ]);
+
+            $wp_customize->add_control('shahid_moderation_mode', [
+                    'label' => 'Moderation mode',
+                    'section' => 'shahid_settings_section',
+                    'type' => 'checkbox',
+            ]);
+
+            // 2. Дубликат настройки главной страницы
+            $wp_customize->add_setting('shahid_front_page_duplicate', [
+                    'default' => get_option('page_on_front'),
+                    'sanitize_callback' => 'absint',
+            ]);
+
+            $wp_customize->add_control('shahid_front_page_duplicate', [
+                    'label' => 'Front page',
+                    'section' => 'shahid_settings_section',
+                    'type' => 'dropdown-pages',
+            ]);
+
+            $wp_customize->add_setting('shahid_alternative_front_page', [
+                    'default' => '',
+                    'sanitize_callback' => 'absint',
+            ]);
+
+            $wp_customize->add_control('shahid_alternative_front_page', [
+                    'label' => 'Alternative front page',
+                    'section' => 'shahid_settings_section',
+                    'type' => 'dropdown-pages',
+            ]);
+        });
+
+    }
 
 }
