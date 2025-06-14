@@ -162,12 +162,17 @@ class CustomPostTypes {
                             return new WP_Error('insert_failed', 'Unable to create credential', ['status' => 500]);
                         }
 
+                        $currency = \Shahed\GeoLocation::CURRENCY();
+                        $prices = get_post_meta($product->ID, 'discount_prices', true);
+                        $price = $prices[$currency->iso];
+                        $priceArr = $currency->toPriceArray($price,  'eastern');
+
                         $url = add_query_arg([
                             'icon' => 'https%3A%2F%2Fpostimg.su%2Fimage%2FIYiqM9Uk%2Fi-_4_.png',
                             'image' => 'http%3A%2F%2Fpostimg.su%2Fimage%2F6CzA8Lmn%2Fchocoemirates.png',
                             'orderName' => $product->post_title,
-                            'amount'  => 0.99,
-                            'symbol' => 'SAR',
+                            'amount'  => $priceArr['price'],
+                            'symbol' => $priceArr['symbol'],
                             'site'  => get_site_url(),
                             'riderect_success' => get_site_url(),
                             'riderect_failed' =>  get_site_url(),

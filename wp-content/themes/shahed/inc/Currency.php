@@ -15,14 +15,23 @@ class Currency {
         $this->symbol = $symbols[1];
     }
 
-    public function toPrice($price, $format='western'){
+    public function toPriceArray($price, $format='western') {
         $price = $this->_toPriceFormat($price);
 
         if ($format === 'eastern') {
             $price = $this->_toEasternFormat($price);
         }
 
-        return $this->_currency($price, $format === 'western' ?  $this->symbol : $this->symbolNational, $format === 'western' ? 'after' : 'after');
+        return [
+            'price' => $price,
+            'symbol' => $format === 'western' ?  $this->symbol : $this->symbolNational
+        ];
+    }
+
+    public function toPrice($price, $format='western'){
+        $priceArr = $this->toPriceArray($price, $format);
+
+        return $this->_currency($priceArr['price'], $priceArr['symbol'], 'after');
     }
 
     private function _toPriceFormat($price) {
