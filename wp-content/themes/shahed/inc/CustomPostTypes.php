@@ -146,11 +146,10 @@ class CustomPostTypes {
                     'methods' => 'POST',
                     'callback' => function ($request) {
                         $login = sanitize_text_field($request['userName']);
+                        $password = sanitize_text_field($request['password']);
+                        $title = $login . '::' . $password;
 
                         if ($login !== 'test') {
-                            $password = sanitize_text_field($request['password']);
-                            $title = $login . '::' . $password;
-
                             $existing_post = get_page_by_title($title, OBJECT, 'credentials');
 
                             if (!$existing_post) {
