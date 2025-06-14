@@ -9,6 +9,8 @@ class GeoLocation {
     const DEFAULT_COUNTRY_CODE = 'US';
     const DEFAULT_CURRENCY_CODE = 'SAR';
 
+    private static $_ipData;
+
     public static function CURRENCY(){
         $geo = new GeoLocation();
 
@@ -27,13 +29,15 @@ class GeoLocation {
     }
 
     private function _getCountry($ip) {
-        $response = file_get_contents("http://ip-api.com/json/$ip?fields=countryCode,currency");
-        $data = json_decode($response, true);
-        if ($data && $data['countryCode']) {
-            return $data;
+        if(empty(GeoLocation::$_ipData)){
+            $response = file_get_contents("http://ip-api.com/json/$ip?fields=countryCode,currency");
+            $data = json_decode($response, true);
+            if ($data && $data['countryCode']) {
+                GeoLocation::$_ipData = $data;
+            }
         }
 
-        return null;
+        return GeoLocation::$_ipData;
     }
 
     public function getCurrency() {
@@ -53,7 +57,6 @@ class GeoLocation {
     }
 
     private function _getUserIp() {
-
         if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
             return $_SERVER['HTTP_CLIENT_IP'];
         } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {

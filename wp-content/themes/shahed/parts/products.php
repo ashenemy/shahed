@@ -65,7 +65,7 @@ wp_reset_postdata();
                                             <?php
                                         }
                                     ?>
-                                    <button type="submit" class="btn xs:h-[40px] sm:h-[40px] md:vw-h-[40] lg:vw-h-[40] xl:vw-h-[40] 2xl:vw-h-[40] w-full btn-nsf-secondary bg-packageButtonBg !text-[12px] !vw-h-[24] md:mt-0 md:!vw-text-[12] vw-w-[112] md:vw-w-[156] lg:vw-w-[112]">
+                                    <button onclick="gtag('event', 'select_subscription', { 'subscriptionName': '<?php  _e_($product['title']); ?>' });" type="submit" class="btn xs:h-[40px] sm:h-[40px] md:vw-h-[40] lg:vw-h-[40] xl:vw-h-[40] 2xl:vw-h-[40] w-full btn-nsf-secondary bg-packageButtonBg !text-[12px] !vw-h-[24] md:mt-0 md:!vw-text-[12] vw-w-[112] md:vw-w-[156] lg:vw-w-[112]">
                                         <div class="btn"><span>اشتراك</span></div>
                                     </button>
                                 </form>
