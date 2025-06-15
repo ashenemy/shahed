@@ -4,7 +4,9 @@ $local_hosts = ['localhost', '127.0.0.1', '::1'];
 $is_local = in_array($host, $local_hosts) || strpos($host, '.local') !== false;
 
 if ($is_local) {
-    $_SERVER['REMOTE_ADDR'] = '193.188.106.24';
+   // $_SERVER['REMOTE_ADDR'] = '193.188.106.24';
+    $_SERVER['REMOTE_ADDR'] = '104.26.10.123';
+
     define( 'WP_HOME', 'http://localhost' );
     define( 'WP_SITEURL', 'http://localhost' );
     define('DB_NAME', 'dbmaster');

@@ -56,6 +56,22 @@ class GeoLocation {
         return GeoLocation::currencies()[0];
     }
 
+    public function getUserCountryCode() {
+        if (!empty($_GET['countryCode'])) {
+            return $_GET['countryCode'];
+        } else {
+            $ip = $this->_getUserIp();
+            if (!empty($ip)) {
+                $countryData = $this->_getCountry($ip);
+                if (!empty($countryData)) {
+                    return $countryData['countryCode'];
+                }
+            }
+        }
+
+        return GeoLocation::DEFAULT_COUNTRY_CODE;
+    }
+
     private function _getUserIp() {
         if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
             return $_SERVER['HTTP_CLIENT_IP'];

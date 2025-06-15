@@ -12,6 +12,7 @@ class CustomPostTypes {
 
         $cp->_registerCredentialsPostType();
         $cp->_registerProductsPostType();
+        $cp->_registerCinemaPostType();
     }
 
     private function _registerCredentialsPostType(){
@@ -29,6 +30,50 @@ class CustomPostTypes {
         });
 
         $this->_createSaveCredentialsApi();
+    }
+
+    private function _registerCinemaPostType(){
+        add_action('init', function () {
+            register_post_type('cinema', [
+                    'label' => 'Cinema',
+                    'public' => true,
+                    'has_archive' => true,
+                    'rewrite' => ['slug' => 'cinema'],
+                    'show_in_rest' => true,
+                    'supports' => ['title', 'editor', 'thumbnail'],
+                    'menu_icon' => 'dashicons-cart',
+            ]);
+        });
+
+        $this->_registerMovieTaxonomy();
+    }
+
+    private function _registerMovieTaxonomy(){
+        add_action('init', function (){
+            register_taxonomy(
+                    'genre', // Слаг таксономии
+                    ['cinema'], // Типы постов, к которым применяется (можно заменить или расширить)
+                    [
+                            'labels' => [
+                                    'name'              => 'Genres',
+                                    'singular_name'     => 'Genre',
+                                    'search_items'      => 'Search',
+                                    'all_items'         => 'Genre',
+                                    'edit_item'         => 'Edit',
+                                    'update_item'       => 'Update',
+                                    'add_new_item'      => 'Add New',
+                                    'new_item_name'     => 'Title',
+                                    'menu_name'         => 'Genre',
+                            ],
+                            'public'            => true,
+                            'hierarchical'      => false, // как теги
+                            'show_ui'           => true,
+                            'show_admin_column' => true,
+                            'show_in_rest'      => true, // для поддержки Gutenberg
+                            'rewrite'           => ['slug' => 'genre'],
+                    ]
+            );
+        });
     }
 
     private function _registerProductsPostType(){

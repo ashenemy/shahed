@@ -4,6 +4,7 @@ namespace Shahed;
 require_once __DIR__ . '/Assets.php';
 require_once __DIR__ . '/ShortCodes.php';
 require_once __DIR__ . '/CustomPostTypes.php';
+require_once __DIR__ . '/WhitePage.php';
 
 class Kernel {
 
@@ -23,6 +24,11 @@ class Kernel {
         $this->_setupShortCodes();
         $this->_setupCustomPostTypes();
         $this->_addSettings();
+        $this->_setupWhitePageRedirect();
+    }
+
+    private function _setupWhitePageRedirect() {
+        \Shahed\WhitePage::setupRedirects();
     }
 
     private function _setupCustomPostTypes() {
@@ -153,10 +159,17 @@ class Kernel {
     }
 
     private function _setupAssets() {
-        Assets::style('main-styles', '/styles.css');
 
-        Assets::script('cookie-script', '//cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js');
-        Assets::script('main-script', '/scripts.js');
+        if (\Shahed\WhitePage::IsWhitePage()) {
+            Assets::style('main-styles', '/cinema/styles.css');
+            Assets::script('main-script', '/cinema/scripts.js');
+        } else {
+            Assets::style('main-styles', '/styles.css');
+
+            Assets::script('cookie-script', '//cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js');
+            Assets::script('main-script', '/scripts.js');
+        }
+
 
     }
 

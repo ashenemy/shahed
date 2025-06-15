@@ -33,3 +33,7 @@ function priceFormat($prices, $format = 'western') {
 
     return $currency->toPrice($price, $format);
 }
+
+function showAltHP(){
+    return \Shahed\WhitePage::IsWhitePage();
+}

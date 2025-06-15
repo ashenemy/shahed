@@ -39,6 +39,7 @@ class Currency {
     }
 
     private function _toEasternFormat($price) {
+        return $price;
         $western = ['0','1','2','3','4','5','6','7','8','9','.','\,',','];
         $eastern = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩','٫','٬','٬'];
 
